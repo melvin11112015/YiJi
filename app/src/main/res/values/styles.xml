@@ -1,0 +1,33 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="BaseAppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+    </style>
+
+    <style name="AppTheme" parent="BaseAppTheme">
+        <item name="android:windowTranslucentStatus" tools:targetApi="19">true</item>
+        <item name="actionBarStyle">@style/Theme.AppCompat.NoActionBar</item>
+        <item name="android:navigationBarColor" tools:targetApi="21">@color/toolbarColor</item>
+    </style>
+    <style name="BaseAppTheme.Activity" parent="BaseAppTheme">
+    </style>
+
+    <style name="MaterialToolbar" parent="@style/ThemeOverlay.AppCompat.ActionBar">
+        <item name="android:fitsSystemWindows">true</item>
+        <item name="android:textColorPrimary">@color/colorWhite</item>
+        <item name="android:background">@color/toolbarColor</item>
+    </style>
+
+    <style name="SplashActivityTheme" parent="BaseAppTheme">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowTranslucentNavigation" tools:targetApi="19">true</item>
+
+    </style>
+
+</resources>

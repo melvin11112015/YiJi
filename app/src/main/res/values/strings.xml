@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">易记</string>
+
+    <string name="sync">立即同步</string>
+    <string name="setting">设置</string>
+
+
+    <string name="exit">退出</string>
+    <string name="publicKey">MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCplL7aQorlDn8U+hhYGQ6PM4UUKkNMsgwgf/Ia
+VTFuFXIurpsjAeJjSiNj+nfEqzbb1Fwp+GPg/69bwwWJSN9xLBka3DiBCAKZZ8r2AQy60RA6DCui
+MJ9Fu3Vg+v9IhdrGG7QjCx/JJsMtcPgUzQ99EQVhY2uBO29g9UW2NY6L0wIDAQAB</string>
+    <string name="drawer_open">Drawer Open</string>
+    <string name="drawer_close">Drawer Close</string>
+</resources>
