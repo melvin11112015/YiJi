@@ -3,6 +3,10 @@ package io.github.yylyingy.yiji.tools.db;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
+import android.util.Log;
+
+import com.orhanobut.logger.Logger;
+import com.yangyl.myspending.BuildConfig;
 
 import java.io.IOException;
 
@@ -28,7 +32,7 @@ public class DB {
         mSQLiteDatabase = mDBHelper.getWritableDatabase();
     }
     public static DB getInstance(Context context) throws IOException {
-        if (db == null){
+        if (checkDBIsInit == null){
             initInstance(context);
         }
         return db;
@@ -42,11 +46,15 @@ public class DB {
 
     public void saveTag(Tag tag){
         StringBuilder sql = new StringBuilder();
-        sql.append("INSERT INTO TAG(" + "NAME,WEIGHT)" + "VALUES" + "(").append(tag.getName()).append(",").append(tag.getWeight()).append(");");
+        sql.append("INSERT INTO TAG(" + "NAME,WEIGHT)" + "VALUES" + "(").append("\"" + tag.getName() + "\"").append(",").append("\"" + tag.getWeight() + "\"").append(");");
 //        ContentValues contentValues = new ContentValues();
 //        contentValues.put("NAME",tag.getName());
 //        contentValues.put("WEIGHT",tag.getWeight());
-//        mSQLiteDatabase.execSQL();
+        if (BuildConfig.DEBUG){
+            Log.d("",sql.toString());
+        }
+        Logger.d(sql);
+        mSQLiteDatabase.execSQL(sql.toString());
     }
 
 }

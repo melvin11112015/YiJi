@@ -49,6 +49,7 @@ public class MainActivity extends BaseActivity {
                 actionBar.setHomeButtonEnabled(true);
             }
         }
+        setTitle("");
         ActionBarDrawerToggle actionBarDrawerToggle = new ActionBarDrawerToggle(
                 this,mDrawerLayout,mToolbar,R.string.drawer_open,R.string.drawer_close
         );

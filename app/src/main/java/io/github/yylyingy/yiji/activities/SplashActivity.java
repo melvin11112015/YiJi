@@ -10,7 +10,11 @@ import android.os.Bundle;
 import android.widget.Toast;
 
 import com.yangyl.myspending.R;
+
+import java.io.IOException;
+
 import io.github.yylyingy.yiji.base.BaseActivity;
+import io.github.yylyingy.yiji.tools.db.DataManager;
 import io.github.yylyingy.yiji.tools.permissions.PermissionListener;
 import io.github.yylyingy.yiji.tools.permissions.PermissionTools;
 
@@ -28,6 +32,11 @@ public class SplashActivity extends BaseActivity implements PermissionListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
+        try {
+            DataManager.getsInstance(getApplicationContext());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         mUnbinder = ButterKnife.bind(this);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M){
             permissionTools = PermissionTools.with(this);

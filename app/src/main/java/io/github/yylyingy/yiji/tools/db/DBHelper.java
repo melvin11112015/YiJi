@@ -22,11 +22,11 @@ public class DBHelper extends SQLiteOpenHelper {
                     "OBJECT_ID text," +
                     "IS_UPLOADED integer" +
                     ");";
-    public static final String CREATE_TAG_SQL =
+    private static final String CREATE_TAG_SQL =
             "CREATE TABLE TAG" +
                     "(" +
                     "ID INTEGER PRIMARY KEY AUTOINCREMENT," +
-                    "NAME VARCHAR" +
+                    "NAME VARCHAR," +
                     "WEIGHT INTEGER" +
                     ");";
     /**
@@ -54,7 +54,8 @@ public class DBHelper extends SQLiteOpenHelper {
      */
     @Override
     public void onCreate(SQLiteDatabase db) {
-
+        db.execSQL(CREATE_RECORD_SQL);
+        db.execSQL(CREATE_TAG_SQL);
     }
 
     /**
