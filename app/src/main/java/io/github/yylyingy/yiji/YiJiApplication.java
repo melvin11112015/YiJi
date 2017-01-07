@@ -29,7 +29,6 @@ public class YiJiApplication extends Application {
         super.onCreate();
         if (LeakCanary.isInAnalyzerProcess(this)){
             return;
-        }else {
         }
         Log.d(TAG,"init");
 //        LeakCanary.install(this);

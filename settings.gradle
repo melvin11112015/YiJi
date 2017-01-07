@@ -1,1 +1,1 @@
-include ':app', ':encryptdecrypt', ':materialList'
+include ':app', ':encryptdecrypt', ':materialList', ':MaterialDesign'
