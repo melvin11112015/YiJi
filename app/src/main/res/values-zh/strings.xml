@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">易记</string>
+
+    <string name="sync">立即同步</string>
+    <string name="setting">设置</string>
+
+
+    <string name="exit">退出</string>
+    <string name="publicKey">MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCplL7aQorlDn8U+hhYGQ6PM4UUKkNMsgwgf/Ia
+VTFuFXIurpsjAeJjSiNj+nfEqzbb1Fwp+GPg/69bwwWJSN9xLBka3DiBCAKZZ8r2AQy60RA6DCui
+MJ9Fu3Vg+v9IhdrGG7QjCx/JJsMtcPgUzQ99EQVhY2uBO29g9UW2NY6L0wIDAQAB</string>
+    <string name="drawer_open">Drawer Open</string>
+    <string name="drawer_close">Drawer Close</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="addRecord">记一笔</string>
+
+    <string name="tag_sum_pie">总和饼图</string>
+    <string name="tag_sum_histogram">总和直方图</string>
+    <string name="tag_meal">晚餐</string>
+    <string name="tag_closet">衣鞋</string>
+    <string name="tag_home">家居</string>
+    <string name="tag_traffic">交通</string>
+    <string name="tag_vehicle_maintenance">汽车保养</string>
+    <string name="tag_book">书籍</string>
+    <string name="tag_hobby">爱好</string>
+    <string name="tag_internet">网络</string>
+    <string name="tag_friend">朋友</string>
+    <string name="tag_education">教育</string>
+    <string name="tag_entertainment">娱乐</string>
+    <string name="tag_medical">医疗保健</string>
+    <string name="tag_insurance">保险</string>
+    <string name="tag_donation">捐赠</string>
+    <string name="tag_sport">运动</string>
+    <string name="tag_snack">小吃</string>
+    <string name="tag_music">音乐</string>
+    <string name="tag_fund">股票基金</string>
+    <string name="tag_drink">饮料</string>
+    <string name="tag_fruit">水果</string>
+    <string name="tag_film">电影</string>
+    <string name="tag_baby">孩子</string>
+    <string name="tag_partner">伴侣</string>
+    <string name="tag_housing_loan">房贷</string>
+    <string name="tag_pet">宠物</string>
+    <string name="tag_telephone_bill">电话费</string>
+    <string name="tag_travel">旅游</string>
+    <string name="tag_lunch">午餐</string>
+    <string name="tag_breakfast">早餐</string>
+    <string name="tag_midnight_snack">宵夜</string>
+
+    <string name="tag_empty">无记录</string>
+    <string name="remark_hint">添加备注</string>
+</resources>

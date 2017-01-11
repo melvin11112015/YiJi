@@ -4,8 +4,11 @@ import android.content.Context;
 import android.content.SharedPreferences;
 
 import java.io.IOException;
+import java.util.LinkedList;
+import java.util.List;
 
 import io.github.yylyingy.yiji.javabeans.Tag;
+import io.github.yylyingy.yiji.javabeans.YiJiRecord;
 
 /**
  * Created by Yangyl on 2016/12/21.
@@ -15,8 +18,12 @@ public class DataManager {
     private DB db;
     private volatile static DataManager sInstance = null;
     private static DataManager checkSInstanceIsInit = null;
+    public static List<Tag>TAGS ;
+    public static List<YiJiRecord> RECORDS;
     private DataManager(Context context) throws IOException {
         db = DB.getInstance(context);
+        TAGS = new LinkedList<>();
+        RECORDS = new LinkedList<>();
         SharedPreferences preferences =
                 context.getSharedPreferences("Values", Context.MODE_PRIVATE);
         if (preferences.getBoolean("FIRST_TIME", true)) {
@@ -26,6 +33,7 @@ public class DataManager {
             editor.putBoolean("FIRST_TIME", false);
             editor.apply();
         }
+        initTAGS();
     }
     public static DataManager getsInstance(Context context) throws IOException {
         if (checkSInstanceIsInit == null){
@@ -39,6 +47,10 @@ public class DataManager {
             sInstance = new DataManager(context);
             checkSInstanceIsInit = sInstance;
         }
+    }
+
+    private void initTAGS(){
+        db.initTags();
     }
 
     private void createTags(){

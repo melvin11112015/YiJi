@@ -30,5 +30,7 @@ ext {
     targetSdkVersion = 24
 
 //    App dependencies
-    supportLibraryVersion = '23.4.0'
+    supportLibraryVersion = '25.1.0'
+    nineoldandroidsVersion = '2.4.0'
+    picassoVersion         = '2.5.2'
 }

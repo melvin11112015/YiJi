@@ -1,7 +1,9 @@
 package io.github.yylyingy.yiji.base;
 
 import android.os.Bundle;
+import android.support.annotation.LayoutRes;
 import android.support.annotation.Nullable;
+import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 
 
@@ -16,10 +18,18 @@ import butterknife.Unbinder;
 public abstract class BaseActivity extends AppCompatActivity {
 
     protected Unbinder mUnbinder = null;
+    protected FragmentManager mFragmentManager;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         ((YiJiApplication)getApplication()).addActivity(this);
+        mFragmentManager = getSupportFragmentManager();
+    }
+
+    @Override
+    public void setContentView(@LayoutRes int layoutResID){
+        super.setContentView(layoutResID);
+        initButterKnife();
     }
 
     @Override
@@ -30,4 +40,5 @@ public abstract class BaseActivity extends AppCompatActivity {
         }
 //        ((YiJiApplication)getApplication()).removeActivity(this);
     }
+    abstract protected void initButterKnife();
 }

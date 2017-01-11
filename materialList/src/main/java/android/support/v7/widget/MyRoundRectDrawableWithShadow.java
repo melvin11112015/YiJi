@@ -1,5 +1,6 @@
 package android.support.v7.widget;
 
+import android.content.res.ColorStateList;
 import android.content.res.Resources;
 
 /*
@@ -8,7 +9,7 @@ import android.content.res.Resources;
  */
 public class MyRoundRectDrawableWithShadow extends RoundRectDrawableWithShadow {
 
-    public MyRoundRectDrawableWithShadow(Resources resources, int backgroundColor, float radius,
+    public MyRoundRectDrawableWithShadow(Resources resources, ColorStateList backgroundColor, float radius,
                                          float shadowSize, float maxShadowSize) {
         super(resources, backgroundColor, radius, shadowSize, maxShadowSize);
     }

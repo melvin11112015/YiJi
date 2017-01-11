@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.yangyl.myspending">
+          package="io.github.yylyingy.yiji">
 
     <!-- 允许联网 -->
     <uses-permission android:name="android.permission.INTERNET"/>
@@ -15,7 +15,6 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
     <!-- 允许读取手机状态 用于创建BmobInstallation -->
     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
-
     <uses-permission android:name="android.permission.READ_LOGS"/>
 
     <application
@@ -34,8 +33,11 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name="io.github.yylyingy.yiji.activities.MainActivity"
+        <activity
+            android:name="io.github.yylyingy.yiji.activities.MainActivity"
             android:theme="@style/AppTheme">
+        </activity>
+        <activity android:name="io.github.yylyingy.yiji.activities.AddRecordActivity">
         </activity>
     </application>
 

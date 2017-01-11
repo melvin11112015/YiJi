@@ -9,10 +9,10 @@ import android.support.annotation.NonNull;
 import android.os.Bundle;
 import android.widget.Toast;
 
-import com.yangyl.myspending.R;
 
 import java.io.IOException;
 
+import io.github.yylyingy.yiji.R;
 import io.github.yylyingy.yiji.base.BaseActivity;
 import io.github.yylyingy.yiji.tools.db.DataManager;
 import io.github.yylyingy.yiji.tools.permissions.PermissionListener;
@@ -26,7 +26,6 @@ public class SplashActivity extends BaseActivity implements PermissionListener {
     public static final String TAG = SplashActivity.class.getCanonicalName();
     private Unbinder mUnbinder;
     private static final int REQUEST_PERMISSION_CODE = 0x123;
-    boolean isDebug = true;
     private PermissionTools permissionTools;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,7 +36,6 @@ public class SplashActivity extends BaseActivity implements PermissionListener {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        mUnbinder = ButterKnife.bind(this);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M){
             permissionTools = PermissionTools.with(this);
             permissionTools.addRequestCode(REQUEST_PERMISSION_CODE)
@@ -46,6 +44,11 @@ public class SplashActivity extends BaseActivity implements PermissionListener {
 //            tryRequestPermission();
 
         }
+    }
+
+    @Override
+    protected void initButterKnife() {
+        mUnbinder = ButterKnife.bind(this);
     }
 
     @TargetApi(23)
@@ -60,7 +63,7 @@ public class SplashActivity extends BaseActivity implements PermissionListener {
 
     @OnClick(R.id.activity_splash)
     void startMainActivity(){
-        startActivity(new Intent(SplashActivity.this,MainActivity.class));
+        startActivity(new Intent(SplashActivity.this,AddRecordActivity.class));
         finish();
     }
 

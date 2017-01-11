@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/YiJi.iml" filepath="$PROJECT_DIR$/YiJi.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/encryptdecrypt/encryptdecrypt.iml" filepath="$PROJECT_DIR$/encryptdecrypt/encryptdecrypt.iml" />
+      <module fileurl="file://$PROJECT_DIR$/magicindicator/magicindicator.iml" filepath="$PROJECT_DIR$/magicindicator/magicindicator.iml" />
       <module fileurl="file://$PROJECT_DIR$/materialList/materialList.iml" filepath="$PROJECT_DIR$/materialList/materialList.iml" />
     </modules>
   </component>

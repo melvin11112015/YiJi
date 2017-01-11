@@ -16,8 +16,8 @@ android {
                 cppFlags ""
             }
         }
-        ndk{
-            abiFilters 'armeabi','armeabi-v7a','x86_64', 'arm64-v8a','x86'
+        ndk {
+            abiFilters 'armeabi', 'armeabi-v7a', 'x86_64', 'arm64-v8a', 'x86'
         }
     }
     buildTypes {
@@ -49,35 +49,36 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     compile "com.android.support:appcompat-v7:$rootProject.supportLibraryVersion"
-    testCompile 'junit:junit:4.12'
+    compile "com.android.support:support-v4:$rootProject.supportLibraryVersion"
     compile files('libs/BmobSDK_3.5.2_20161027.jar')
     compile files('libs/rxandroid-1.2.0.jar')
     compile files('libs/rxjava-1.1.6.jar')
-    compile 'com.squareup.okhttp3:okhttp:3.4.2'
-    compile 'com.squareup.okio:okio:1.11.0'
-    compile 'com.google.code.gson:gson:2.8.0'
-    compile 'com.jakewharton:butterknife:8.4.0'
-    apt 'com.jakewharton:butterknife-compiler:8.4.0'
     compile files('libs/bugly_crash_release.jar')
     // icons
-    compile 'net.steamcrafted:materialiconlib:1.0.8'
-    compile 'com.daimajia.slider:library:1.1.5@aar'
     // ripple effect
-    compile 'com.balysv:material-ripple:1.0.2'
     // material viewpager
     compile('com.github.florent37:materialviewpager:1.1.2@aar') {
         transitive = true
     }
     //    leakCanary lib
-    debugCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5'
-    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.5'
     // icons
-    compile 'net.steamcrafted:materialiconlib:1.1.1'
-    compile 'com.orhanobut:logger:1.15'
     // charts
-    compile 'com.github.lecho:hellocharts-library:1.5.8@aar'
     // snack bar
-    compile 'com.nispok:snackbar:2.11.0'
     compile project(':encryptdecrypt')
     compile project(':materialList')
+    compile 'com.squareup.okhttp3:okhttp:3.4.2'
+    compile 'com.squareup.okio:okio:1.11.0'
+    compile 'com.google.code.gson:gson:2.8.0'
+    compile 'com.jakewharton:butterknife:8.4.0'
+    compile 'net.steamcrafted:materialiconlib:1.1.1'
+    compile 'com.daimajia.slider:library:1.1.5@aar'
+    compile 'com.balysv:material-ripple:1.0.2'
+    compile 'com.orhanobut:logger:1.15'
+    compile 'com.github.lecho:hellocharts-library:1.5.8@aar'
+    compile 'com.nispok:snackbar:2.11.0'
+    testCompile 'junit:junit:4.12'
+    apt 'com.jakewharton:butterknife-compiler:8.4.0'
+    debugCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5'
+    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.5'
+    compile 'com.rengwuxian.materialedittext:library:2.1.4'
 }

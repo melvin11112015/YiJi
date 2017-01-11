@@ -13,6 +13,7 @@ import java.util.ArrayList;
 
 import cn.bmob.v3.Bmob;
 import cn.bmob.v3.BmobConfig;
+import io.github.yylyingy.yiji.tools.YiJiUtil;
 import io.github.yylyingy.yiji.tools.db.DB;
 
 /**
@@ -53,6 +54,7 @@ public class YiJiApplication extends Application {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        YiJiUtil.init(this);
     }
 
 

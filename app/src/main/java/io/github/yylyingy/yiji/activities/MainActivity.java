@@ -11,7 +11,8 @@ import android.widget.Toast;
 import com.balysv.materialripple.MaterialRippleLayout;
 import com.yangyl.encryptdecrypt.secrect.EncryptDecryptTool;
 import com.yangyl.encryptdecrypt.secrect.base64.BASE64Encoder;
-import com.yangyl.myspending.R;
+
+import io.github.yylyingy.yiji.R;
 import io.github.yylyingy.yiji.YiJiApplication;
 import io.github.yylyingy.yiji.base.BaseActivity;
 
@@ -37,7 +38,6 @@ public class MainActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        mUnbinder = ButterKnife.bind(this);
         setSupportActionBar(mToolbar);
         if (mToolbar != null){
             final ActionBar actionBar = getSupportActionBar();
@@ -66,6 +66,10 @@ public class MainActivity extends BaseActivity {
         }
     }
 
+    @Override
+    protected void initButterKnife(){
+        mUnbinder = ButterKnife.bind(this);
+    }
     @OnClick(R.id.exit)
     protected void exitApp(){
         ((YiJiApplication)getApplication()).exitApp();
