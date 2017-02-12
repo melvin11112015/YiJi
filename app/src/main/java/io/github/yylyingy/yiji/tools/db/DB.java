@@ -9,10 +9,12 @@ import android.util.Log;
 import com.orhanobut.logger.Logger;
 
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.util.List;
 
 import io.github.yylyingy.yiji.BuildConfig;
 import io.github.yylyingy.yiji.javabeans.Tag;
+import io.github.yylyingy.yiji.javabeans.YiJiRecord;
 
 /**
  * Created by Yangyl on 2016/12/19.
@@ -30,7 +32,7 @@ public class DB {
     private static DB checkDBIsInit = null;
     private SQLiteDatabase mSQLiteDatabase;
     private DBHelper        mDBHelper;
-    private DB(Context context)throws IOException{
+    private DB(Context context){
         mDBHelper = new DBHelper(context,DB_NAME_STRING,null,VERSION);
         mSQLiteDatabase = mDBHelper.getWritableDatabase();
     }
@@ -72,4 +74,43 @@ public class DB {
         mSQLiteDatabase.execSQL(sql.toString());
     }
 
+    public void saveRecord(YiJiRecord record){
+        StringBuilder insertSql = new StringBuilder();
+        insertSql.append("INSERT INTO RECORD (" +
+                "\"MONEY\"," +
+                "\"CURRENCY\"," +
+                "\"TAG\"," +
+                "\"TIME\"," +
+                "\"REMARK\"," +
+                "\"USER_ID\"," +
+                "\"OBJECT_ID\"," +
+                "\"IS_UPLOADED\") VALUES (?,?,?,?,?,?,?,?)");
+        mSQLiteDatabase.execSQL(insertSql.toString(),new Object []{
+                record.getMoney(),
+                record.getCurrency(),
+                record.getTag(),
+                new SimpleDateFormat("yyyy-MM-dd HH:mm")
+                        .format(record.getCalendar().getTime()),
+                record.getRemark(),
+                record.getUserId(),
+                record.getObjectId(),
+                record.getIsUploaded()
+        });
+    }
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

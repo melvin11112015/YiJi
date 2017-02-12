@@ -9,21 +9,30 @@ import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
+
+import com.daimajia.androidanimations.library.Techniques;
+import com.daimajia.androidanimations.library.YoYo;
+import com.github.johnpersano.supertoasts.SuperToast;
 
 import net.steamcrafted.materialiconlib.MaterialIconView;
 
 import java.io.IOException;
+import java.util.Calendar;
 import java.util.List;
 
 import butterknife.BindView;
 import io.github.yylyingy.yiji.R;
 import io.github.yylyingy.yiji.base.BaseFragment;
 import io.github.yylyingy.yiji.javabeans.Tag;
+import io.github.yylyingy.yiji.javabeans.YiJiRecord;
+import io.github.yylyingy.yiji.tools.YiJiToast;
 import io.github.yylyingy.yiji.tools.db.DataManager;
 import io.github.yylyingy.yiji.ui.EditMoneyFragment;
 import io.github.yylyingy.yiji.ui.EditMoneyRemarkFragmentAdapter;
 import io.github.yylyingy.yiji.ui.TagChooseFragment;
 import io.github.yylyingy.yiji.ui.TagChooseFragmentAdapter;
+import io.github.yylyingy.yiji.ui.WrapContentHeightViewPager;
 import io.github.yylyingy.yiji.ui.YiJiScrollableViewPager;
 
 
@@ -43,7 +52,7 @@ public class AddRecordFragment extends BaseFragment {
     private String mParam2;
 
     @BindView(R.id.viewpager)
-    public ViewPager tagViewPager;
+    public WrapContentHeightViewPager tagViewPager;
     @BindView(R.id.check)
     MaterialIconView check;
 //    @BindView(R.id.edit_pager)
@@ -108,6 +117,39 @@ public class AddRecordFragment extends BaseFragment {
         getFragmentManager().beginTransaction()
                 .replace(R.id.edit_pager,editMoneyFragment)
                 .commit();
+        check.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (editMoneyFragment.getTagId() == -1){
+                    YiJiToast.getInstance().showToast(R.string.toast_no_tag, SuperToast.Background.RED);
+                    YoYo.with(Techniques.Shake).duration(1000).playOn(tagViewPager);
+                    return;
+                }
+                Calendar calendar = Calendar.getInstance();
+                try {
+                    YiJiRecord record = new YiJiRecord(
+                            -1,
+                            Float.valueOf(editMoneyFragment.getNumberText()),
+                            "RMB",
+                            editMoneyFragment.getTagId(),
+                            calendar);
+                    DataManager.getsInstance(getActivity().getApplicationContext())
+                            .saveRecord(record);
+                    editMoneyFragment.setTagImage(R.color.transparent);
+                    editMoneyFragment.setTagName("");
+                    editMoneyFragment.setTagId(-1);
+                    editMoneyFragment.setNumberText("");
+                    editMoneyFragment.setHelpText(" ");
+                    YiJiToast.getInstance().showToast(R.string.save_success, SuperToast.Background.GREEN);
+                } catch (NumberFormatException e) {
+                    YiJiToast.getInstance().showToast(R.string.number_format_error, SuperToast.Background.RED);
+                    YoYo.with(Techniques.Shake).duration(1000).playOn(editMoneyFragment.editView);
+                    e.printStackTrace();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
 
     }
 

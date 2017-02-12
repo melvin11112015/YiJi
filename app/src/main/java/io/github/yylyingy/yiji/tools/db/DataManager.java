@@ -86,5 +86,10 @@ public class DataManager {
         db.saveTag(new Tag(-1, "MidnightSnack",      0));
     }
 
+    public void saveRecord(YiJiRecord record){
+        RECORDS.add(record);
+        db.saveRecord(record);
+    }
+
 
 }

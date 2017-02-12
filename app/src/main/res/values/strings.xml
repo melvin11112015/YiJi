@@ -51,4 +51,68 @@ MJ9Fu3Vg+v9IhdrGG7QjCx/JJsMtcPgUzQ99EQVhY2uBO29g9UW2NY6L0wIDAQAB</string>
 
     <string name="tag_empty">No records!</string>
     <string name="remark_hint">Add remarks for your record</string>
+    <string name="number_format_error">Number cannot be null!</string>
+    <string name="save_success">Save success!</string>
+
+    <string name="toast_no_tag">Just...give me a tag~</string>
+
+    <string name="today_view_today">Today</string>
+    <string name="today_view_yesterday">Yesterday</string>
+    <string name="today_view_this_week">This Week</string>
+    <string name="today_view_last_week">Last Week</string>
+    <string name="today_view_this_month">This Month</string>
+    <string name="today_view_last_month">Last Month</string>
+    <string name="today_view_this_year">This Year</string>
+    <string name="today_view_last_year">Last Year</string>
+
+    <string name="today_date_string">today</string>
+    <string name="yesterday_date_string">yesterday</string>
+    <string name="this_week_date_string">this week</string>
+    <string name="last_week_date_string">last week</string>
+    <string name="this_month_date_string">this month</string>
+    <string name="last_month_date_string">last month</string>
+    <string name="this_year_date_string">this year</string>
+    <string name="last_year_date_string">last year</string>
+
+    <string name="january_short">Jan.</string>
+    <string name="february_short">Feb.</string>
+    <string name="march_short">Mar.</string>
+    <string name="april_short">Apr.</string>
+    <string name="may_short">May</string>
+    <string name="june_short">June</string>
+    <string name="july_short">July</string>
+    <string name="august_short">Aug.</string>
+    <string name="september_short">Sept.</string>
+    <string name="october_short">Oct.</string>
+    <string name="november_short">Nov.</string>
+    <string name="december_short">Dec.</string>
+
+    <string name="today_empty">New day!</string>
+    <string name="yesterday_empty">No records.</string>
+    <string name="this_week_empty">New week!</string>
+    <string name="last_week_empty">No records.</string>
+    <string name="this_month_empty">New month!</string>
+    <string name="last_month_empty">No records.</string>
+    <string name="this_year_empty">Happy new year!</string>
+    <string name="last_year_empty">No records.</string>
+
+    <string name="monday_short">MON</string>
+    <string name="tuesday_short">TUE</string>
+    <string name="wednesday_short">WED</string>
+    <string name="thursday_short">THU</string>
+    <string name="friday_short">FRI</string>
+    <string name="saturday_short">SAT</string>
+    <string name="sunday_short">SUN</string>
+
+    <string name="check">check</string>
+
+    <string name="get">Get!</string>
+
+    <string name="at">at </string>
+    <string name="on">on </string>
+    <string name="in">in </string>
+
+    <string name="o_clock">o\'clock</string>
+    <string name="last">last</string>
+
 </resources>
