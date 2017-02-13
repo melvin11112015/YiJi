@@ -6,6 +6,7 @@ import java.util.Calendar;
 import java.util.Date;
 
 import cn.bmob.v3.BmobObject;
+import io.github.yylyingy.yiji.tools.YiJiUtil;
 
 /**
  * Created by Yangyl on 2017/1/8.
@@ -81,18 +82,18 @@ public class YiJiRecord extends BmobObject {
         return (!this.calendar.before(c1)) && this.calendar.before(c2);
     }
 
-//    public boolean isInMoney(double money1, double money2, String currency) {
-//        return CoCoinUtil.ToDollas(money1, currency) <= CoCoinUtil.ToDollas(this.money, this.currency)
-//                && CoCoinUtil.ToDollas(money2, currency) > CoCoinUtil.ToDollas(this.money, this.currency);
-//    }
-//
-//    public String getCalendarString() {
-//        return String.format("%02d", calendar.get(Calendar.HOUR_OF_DAY)) + ":"
-//                + String.format("%02d", calendar.get(Calendar.MINUTE)) + " "
-//                + CoCoinUtil.GetMonthShort(calendar.get(Calendar.MONTH) + 1) + " "
-//                + calendar.get(Calendar.DAY_OF_MONTH) + " "
-//                + calendar.get(Calendar.YEAR);
-//    }
+    public boolean isInMoney(double money1, double money2, String currency) {
+        return YiJiUtil.ToDollas(money1, currency) <= YiJiUtil.ToDollas(this.money, this.currency)
+                && YiJiUtil.ToDollas(money2, currency) > YiJiUtil.ToDollas(this.money, this.currency);
+    }
+
+    public String getCalendarString() {
+        return String.format("%02d", calendar.get(Calendar.HOUR_OF_DAY)) + ":"
+                + String.format("%02d", calendar.get(Calendar.MINUTE)) + " "
+                + YiJiUtil.GetMonthShort(calendar.get(Calendar.MONTH) + 1) + " "
+                + calendar.get(Calendar.DAY_OF_MONTH) + " "
+                + calendar.get(Calendar.YEAR);
+    }
 
     public long getId() {
         return id;

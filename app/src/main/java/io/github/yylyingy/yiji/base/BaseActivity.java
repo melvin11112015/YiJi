@@ -7,6 +7,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 
 
+import butterknife.ButterKnife;
 import io.github.yylyingy.yiji.YiJiApplication;
 
 import butterknife.Unbinder;
@@ -40,5 +41,7 @@ public abstract class BaseActivity extends AppCompatActivity {
         }
 //        ((YiJiApplication)getApplication()).removeActivity(this);
     }
-    abstract protected void initButterKnife();
+    protected  void initButterKnife(){
+        mUnbinder = ButterKnife.bind(this);
+    }
 }

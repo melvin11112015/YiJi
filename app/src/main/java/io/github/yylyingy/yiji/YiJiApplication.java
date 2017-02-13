@@ -16,6 +16,7 @@ import cn.bmob.v3.Bmob;
 import cn.bmob.v3.BmobConfig;
 import io.github.yylyingy.yiji.tools.YiJiUtil;
 import io.github.yylyingy.yiji.tools.db.DB;
+import io.github.yylyingy.yiji.tools.db.DataManager;
 
 /**
  * Created by Yangyl on 2016/11/29.
@@ -38,7 +39,7 @@ public class YiJiApplication extends Application {
 //        LeakCanary.install(this);
         CrashReport.UserStrategy strategy = new CrashReport.UserStrategy(getApplicationContext());
         strategy.setAppChannel("myChannel")
-                .setAppVersion("v0.0.1");
+                .setAppVersion("v0.0.2");
         CrashReport.initCrashReport(getApplicationContext(),"a9c67cbbf9",true,strategy);
 //      Bmob init
         BmobConfig config =new BmobConfig.Builder(this)
@@ -54,6 +55,11 @@ public class YiJiApplication extends Application {
         Bmob.initialize(config);
         try {
             DB.getInstance(getApplicationContext());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        try {
+            DataManager.getsInstance(getApplicationContext());
         } catch (IOException e) {
             e.printStackTrace();
         }

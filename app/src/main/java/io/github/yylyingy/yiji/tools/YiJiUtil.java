@@ -148,6 +148,40 @@ public class YiJiUtil {
             R.string.saturday_short,
             R.string.sunday_short
     };
+
+    public static int[] TAG_DRAWABLE = {
+            R.drawable.transparent
+//            R.drawable.sum_header_pie,
+//            R.drawable.sum_header_histogram,
+//            R.drawable.meal_header,
+//            R.drawable.closet_header,
+//            R.drawable.home_header,
+//            R.drawable.traffic_header,
+//            R.drawable.vehicle_maintenance_header,
+//            R.drawable.book_header,
+//            R.drawable.hobby_header,
+//            R.drawable.internet_header,
+//            R.drawable.friend_header,
+//            R.drawable.education_header,
+//            R.drawable.entertainment_header,
+//            R.drawable.medical_header,
+//            R.drawable.insurance_header,
+//            R.drawable.donation_header,
+//            R.drawable.sport_header,
+//            R.drawable.snack_header,
+//            R.drawable.sum_header_pie,
+//            R.drawable.sum_header_pie,
+//            R.drawable.sum_header_pie,
+//            R.drawable.sum_header_pie,
+//            R.drawable.sum_header_pie,
+//            R.drawable.sum_header_pie,
+//            R.drawable.sum_header_pie,
+//            R.drawable.sum_header_pie,
+//            R.drawable.sum_header_pie,
+//            R.drawable.sum_header_pie,
+//            R.drawable.sum_header_pie,
+//            R.drawable.sum_header_pie
+    };
     public static void init(Context context) {
 
         typefaceLatoRegular = Typeface.createFromAsset(
@@ -168,6 +202,20 @@ public class YiJiUtil {
 //        random = new Random();
 //
 //        MY_BLUE = ContextCompat.getColor(CoCoinApplication.getAppContext(), R.color.my_blue);
+    }
+
+    public static double ToDollas(double money, String currency) {
+
+        return 1.0 * money;
+
+    }
+    public static int GetTagColor(int tag) {
+        return ContextCompat.getColor(YiJiApplication.getAppContext(), TAG_COLOR[tag + 3]);
+    }
+
+    public static Drawable GetTagDrawable(int tagId) {
+        return ContextCompat.getDrawable(
+                YiJiApplication.getAppContext(), TAG_DRAWABLE[tagId + 3]);
     }
 
     public static String GetAxisDateName(int type, int position) {
