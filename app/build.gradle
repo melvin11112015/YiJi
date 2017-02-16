@@ -48,36 +48,27 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    compile "com.android.support:appcompat-v7:$rootProject.supportLibraryVersion"
-    compile "com.android.support:support-v4:$rootProject.supportLibraryVersion"
-    compile files('libs/BmobSDK_3.5.2_20161027.jar')
-    compile files('libs/rxandroid-1.2.0.jar')
-    compile files('libs/rxjava-1.1.6.jar')
-    compile files('libs/bugly_crash_release.jar')
-    // icons
-    // ripple effect
     // material viewpager
     compile('com.github.florent37:materialviewpager:1.1.2@aar') {
         transitive = true
     }
-    //    leakCanary lib
-    // icons
-    // charts
-    // snack bar
-    compile project(':encryptdecrypt')
-    compile project(':materialList')
     compile 'com.squareup.okhttp3:okhttp:3.4.2'
     compile 'com.squareup.okio:okio:1.11.0'
     compile 'com.google.code.gson:gson:2.8.0'
-    compile 'com.jakewharton:butterknife:8.4.0'
+    compile 'com.jakewharton:butterknife:8.5.1'
+    // icons
     compile 'net.steamcrafted:materialiconlib:1.1.1'
     compile 'com.daimajia.slider:library:1.1.5@aar'
+    // ripple effect
     compile 'com.balysv:material-ripple:1.0.2'
     compile 'com.orhanobut:logger:1.15'
+    // charts
     compile 'com.github.lecho:hellocharts-library:1.5.8@aar'
+    // snack bar
     compile 'com.nispok:snackbar:2.11.0'
     testCompile 'junit:junit:4.12'
     apt 'com.jakewharton:butterknife-compiler:8.4.0'
+    //    leakCanary lib
     debugCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5'
     debugCompile 'com.squareup.leakcanary:leakcanary-android:1.5'
     compile 'com.rengwuxian.materialedittext:library:2.1.4'
@@ -87,4 +78,14 @@ dependencies {
     compile 'com.nineoldandroids:library:2.4.0'
     compile 'com.daimajia.easing:library:1.0.1@aar'
     compile 'com.daimajia.androidanimations:library:1.1.3@aar'
+    compile 'com.afollestad.material-dialogs:core:0.9.3.0'
+
+    compile "com.android.support:appcompat-v7:$rootProject.supportLibraryVersion"
+    compile "com.android.support:support-v4:$rootProject.supportLibraryVersion"
+    compile files('libs/BmobSDK_3.5.2_20161027.jar')
+    compile files('libs/rxandroid-1.2.0.jar')
+    compile files('libs/rxjava-1.1.6.jar')
+    compile files('libs/bugly_crash_release.jar')
+    compile project(':encryptdecrypt')
+    compile project(':materialList')
 }

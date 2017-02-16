@@ -55,6 +55,8 @@ public class AddRecordFragment extends BaseFragment {
     public WrapContentHeightViewPager tagViewPager;
     @BindView(R.id.check)
     MaterialIconView check;
+    @BindView(R.id.eraser)
+    MaterialIconView eraser;
 //    @BindView(R.id.edit_pager)
 //    YiJiScrollableViewPager editViewPager;
     private FragmentPagerAdapter tagAdapter;
@@ -148,6 +150,17 @@ public class AddRecordFragment extends BaseFragment {
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
+            }
+        });
+
+        eraser.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                editMoneyFragment.setTagImage(R.color.transparent);
+                editMoneyFragment.setTagName("");
+                editMoneyFragment.setTagId(-1);
+                editMoneyFragment.setNumberText("");
+                editMoneyFragment.setHelpText(" ");
             }
         });
 

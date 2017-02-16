@@ -34,6 +34,8 @@ public class DataManager {
             editor.apply();
         }
         initTAGS();
+        prepareData();
+
     }
     public static DataManager getsInstance(Context context) throws IOException {
         if (checkSInstanceIsInit == null){
@@ -51,6 +53,10 @@ public class DataManager {
 
     private void initTAGS(){
         db.initTags();
+    }
+
+    private void prepareData(){
+        db.prepareData();
     }
 
     private void createTags(){

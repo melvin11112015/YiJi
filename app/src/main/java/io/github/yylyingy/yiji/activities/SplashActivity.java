@@ -31,11 +31,6 @@ public class SplashActivity extends BaseActivity implements PermissionListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
-        try {
-            DataManager.getsInstance(getApplicationContext());
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M){
             permissionTools = PermissionTools.with(this);
             permissionTools.addRequestCode(REQUEST_PERMISSION_CODE)
