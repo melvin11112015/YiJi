@@ -8,12 +8,12 @@
         "source": "D:\\Android\\WorkSpaseForAS\\YiJi\\magicindicator\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\select_dialog_singlechoice_material.xml"
     },
     {
-        "merged": "D:\\Android\\WorkSpaseForAS\\YiJi\\magicindicator\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\pager_navigator_layout.xml",
-        "source": "D:\\Android\\WorkSpaseForAS\\YiJi\\magicindicator\\build\\intermediates\\bundles\\debug\\res\\layout\\pager_navigator_layout.xml"
-    },
-    {
         "merged": "D:\\Android\\WorkSpaseForAS\\YiJi\\magicindicator\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\abc_action_bar_view_list_nav_layout.xml",
         "source": "D:\\Android\\WorkSpaseForAS\\YiJi\\magicindicator\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\layout\\abc_action_bar_view_list_nav_layout.xml"
+    },
+    {
+        "merged": "D:\\Android\\WorkSpaseForAS\\YiJi\\magicindicator\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\pager_navigator_layout.xml",
+        "source": "D:\\Android\\WorkSpaseForAS\\YiJi\\magicindicator\\build\\intermediates\\bundles\\debug\\res\\layout\\pager_navigator_layout.xml"
     },
     {
         "merged": "D:\\Android\\WorkSpaseForAS\\YiJi\\magicindicator\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\notification_action_tombstone.xml",

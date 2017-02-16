@@ -20,6 +20,7 @@ public class DataManager {
     private static DataManager checkSInstanceIsInit = null;
     public static List<Tag>TAGS ;
     public static List<YiJiRecord> RECORDS;
+    private boolean isInit = false;
     private DataManager(Context context) throws IOException {
         db = DB.getInstance(context);
         TAGS = new LinkedList<>();
@@ -35,6 +36,7 @@ public class DataManager {
         }
         initTAGS();
         prepareData();
+        isInit = true;
 
     }
     public static DataManager getsInstance(Context context) throws IOException {
@@ -98,4 +100,7 @@ public class DataManager {
     }
 
 
+    public boolean isInit() {
+        return isInit;
+    }
 }
