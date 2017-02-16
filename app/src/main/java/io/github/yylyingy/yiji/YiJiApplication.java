@@ -27,14 +27,14 @@ public class YiJiApplication extends Application {
     public static final String TAG = YiJiApplication.class.getSimpleName();
     private ArrayList<Activity> mArrayList = new ArrayList<>();
     private static final Object lock = new Object();
-    private static Context context;
+    private static ExitAppThread mExitApp;
     @Override
     public void onCreate() {
         super.onCreate();
         if (LeakCanary.isInAnalyzerProcess(this)){
             return;
         }
-        context = this;
+        mExitApp = new ExitAppThread(this);
         Log.d(TAG,"init");
 //        LeakCanary.install(this);
         CrashReport.UserStrategy strategy = new CrashReport.UserStrategy(getApplicationContext());
@@ -67,7 +67,7 @@ public class YiJiApplication extends Application {
     }
 
     public static Context getAppContext(){
-        return context;
+        return mExitApp.application;
     }
 
     public void exitApp(){
