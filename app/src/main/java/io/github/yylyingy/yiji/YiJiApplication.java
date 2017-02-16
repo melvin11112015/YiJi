@@ -14,6 +14,7 @@ import java.util.ArrayList;
 
 import cn.bmob.v3.Bmob;
 import cn.bmob.v3.BmobConfig;
+import io.github.yylyingy.yiji.tools.ThreadPoolTool;
 import io.github.yylyingy.yiji.tools.YiJiUtil;
 import io.github.yylyingy.yiji.tools.db.DB;
 import io.github.yylyingy.yiji.tools.db.DataManager;
@@ -53,17 +54,22 @@ public class YiJiApplication extends Application {
         .setFileExpiration(2500)
         .build();
         Bmob.initialize(config);
-        try {
-            DB.getInstance(getApplicationContext());
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        try {
-            DataManager.getsInstance(getApplicationContext());
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
         YiJiUtil.init(this);
+        ThreadPoolTool.exeTask(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    DB.getInstance(getApplicationContext());
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                try {
+                    DataManager.getsInstance(getApplicationContext());
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
     }
 
     public static Context getAppContext(){

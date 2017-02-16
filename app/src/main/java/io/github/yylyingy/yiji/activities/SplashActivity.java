@@ -14,6 +14,7 @@ import java.io.IOException;
 
 import io.github.yylyingy.yiji.R;
 import io.github.yylyingy.yiji.base.BaseActivity;
+import io.github.yylyingy.yiji.tools.ThreadPoolTool;
 import io.github.yylyingy.yiji.tools.db.DataManager;
 import io.github.yylyingy.yiji.tools.permissions.PermissionListener;
 import io.github.yylyingy.yiji.tools.permissions.PermissionTools;
@@ -33,17 +34,13 @@ public class SplashActivity extends BaseActivity implements PermissionListener {
         setContentView(R.layout.activity_splash);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M){
             permissionTools = PermissionTools.with(this);
+            permissionTools.setPermissionsListener(this);
             permissionTools.addRequestCode(REQUEST_PERMISSION_CODE)
                     .permissions(Manifest.permission.READ_EXTERNAL_STORAGE)
                     .request();
 //            tryRequestPermission();
 
         }
-    }
-
-    @Override
-    protected void initButterKnife() {
-        mUnbinder = ButterKnife.bind(this);
     }
 
     @TargetApi(23)
@@ -79,7 +76,23 @@ public class SplashActivity extends BaseActivity implements PermissionListener {
      */
     @Override
     public void onGranted() {
-        Toast.makeText(this,"权限被允许",Toast.LENGTH_SHORT).show();
+//        Toast.makeText(this,"权限被允许",Toast.LENGTH_SHORT).show();
+        ThreadPoolTool.exeTask(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    Thread.sleep(2000);
+                    while (!DataManager.getsInstance(getApplicationContext()).isInit()){
+                        Thread.sleep(100);
+                    }
+                    startMainActivity();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
     }
 
     /**
