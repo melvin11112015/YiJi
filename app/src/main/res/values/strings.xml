@@ -114,5 +114,10 @@ MJ9Fu3Vg+v9IhdrGG7QjCx/JJsMtcPgUzQ99EQVhY2uBO29g9UW2NY6L0wIDAQAB</string>
 
     <string name="o_clock">o\'clock</string>
     <string name="last">last</string>
+    
+    <!--tab text-->
+    <string name="homePage">HomePage</string>
+    <string name="zhihuDaily">Daily</string>
+    <string name="me">Me</string>
 
 </resources>

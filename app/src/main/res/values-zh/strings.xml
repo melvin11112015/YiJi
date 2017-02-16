@@ -115,4 +115,9 @@ MJ9Fu3Vg+v9IhdrGG7QjCx/JJsMtcPgUzQ99EQVhY2uBO29g9UW2NY6L0wIDAQAB</string>
 
     <string name="o_clock">点</string>
     <string name="last">上</string>
+
+    <!--tab text-->
+    <string name="homePage">主页</string>
+    <string name="zhihuDaily">知乎日报</string>
+    <string name="me">我</string>
 </resources>
