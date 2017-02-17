@@ -5,6 +5,7 @@ import android.app.Application;
 import android.content.Context;
 import android.util.Log;
 
+import com.facebook.drawee.backends.pipeline.Fresco;
 import com.squareup.leakcanary.LeakCanary;
 import com.tencent.bugly.crashreport.CrashReport;
 
@@ -37,6 +38,7 @@ public class YiJiApplication extends Application {
         if (LeakCanary.isInAnalyzerProcess(this)){
             return;
         }
+        Fresco.initialize(getApplicationContext());
         mExitApp = new ExitAppThread(this);
         Log.d(TAG,"init");
 //        LeakCanary.install(this);

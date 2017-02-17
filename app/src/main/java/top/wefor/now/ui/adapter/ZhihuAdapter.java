@@ -46,7 +46,7 @@ public class ZhihuAdapter extends BaseListAdapter<Zhihu> {
             }
             case TYPE_CELL: {
                 view = LayoutInflater.from(parent.getContext())
-                        .inflate(getSmallViewResId(), parent, false);
+                        .inflate(R.layout.item_zhihu, parent, false);
                 return new CardViewHolder(view) {
                 };
             }

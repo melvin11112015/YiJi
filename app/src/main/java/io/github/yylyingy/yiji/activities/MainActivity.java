@@ -32,6 +32,7 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.OnClick;
 import io.github.yylyingy.yiji.main.showrecord.MainFragment;
+import io.github.yylyingy.yiji.main.zhihu.ZhihuListFragment;
 
 public class MainActivity extends BaseActivity {
     public static final String TAG = MainActivity.class.getSimpleName();
@@ -48,6 +49,7 @@ public class MainActivity extends BaseActivity {
 
 //    ShowChartsAdapter mShowChartsAdapter;
     MainFragment mFragment;
+    ZhihuListFragment mZhihuListFragment;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -59,8 +61,9 @@ public class MainActivity extends BaseActivity {
         };
         tabList = Arrays.asList(TABLIST);
         mFragment = new MainFragment();
+        mZhihuListFragment = ZhihuListFragment.newInstance();
         getSupportFragmentManager().beginTransaction()
-                .replace(R.id.fragmentContainer,mFragment)
+                .replace(R.id.fragmentContainer,mZhihuListFragment)
                 .commit();
 //        mToolbar = materialViewPager.getToolbar();
 //        if (mToolbar != null){

@@ -39,6 +39,8 @@
         </activity>
         <activity android:name="io.github.yylyingy.yiji.activities.AddRecordActivity">
         </activity>
+        <activity android:name="top.wefor.now.ui.activity.WebActivity"/>
+        <activity android:name="top.wefor.now.ui.activity.BigImageActivity"/>
     </application>
 
 </manifest>

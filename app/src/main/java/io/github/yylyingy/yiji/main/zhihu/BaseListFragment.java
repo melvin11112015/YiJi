@@ -13,10 +13,10 @@ import io.github.yylyingy.yiji.YiJiApplication;
 import io.github.yylyingy.yiji.base.BaseFragment;
 import io.github.yylyingy.yiji.tools.App;
 import io.github.yylyingy.yiji.tools.Constants;
-import io.github.yylyingy.yiji.ui.widget.LoadMoreRecyclerView;
 import io.realm.Realm;
 import io.realm.RealmConfiguration;
 import io.realm.exceptions.RealmMigrationNeededException;
+import top.wefor.now.ui.widget.LoadMoreRecyclerView;
 
 /**
  * Created by ice on 15/10/28.
