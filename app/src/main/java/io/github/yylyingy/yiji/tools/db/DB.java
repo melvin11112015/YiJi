@@ -39,7 +39,7 @@ public class DB {
     }
     public static DB getInstance(Context context) throws IOException {
         if (checkDBIsInit == null){
-            initInstance(context);
+            initInstance(context.getApplicationContext());
         }
         return db;
     }
@@ -52,22 +52,26 @@ public class DB {
 
     public void prepareData(){
         Cursor cursor = mSQLiteDatabase.rawQuery(QUERY_RECORD,null);
-        while (cursor.moveToNext()){
-            YiJiRecord yiJiRecord = new YiJiRecord();
-            yiJiRecord.setId(cursor.getLong(cursor.getColumnIndex("ID")));
-            yiJiRecord.setMoney(cursor.getFloat(cursor.getColumnIndex("MONEY")));
-            yiJiRecord.setCurrency(cursor.getString(cursor.getColumnIndex("CURRENCY")));
-            yiJiRecord.setTag(cursor.getInt(cursor.getColumnIndex("TAG")));
-            yiJiRecord.setCalendar(cursor.getString(cursor.getColumnIndex("TIME")));
-            yiJiRecord.setRemark(cursor.getString(cursor.getColumnIndex("REMARK")));
-            yiJiRecord.setUserId(cursor.getString(cursor.getColumnIndex("USER_ID")));
-            yiJiRecord.setLocalObjectId(cursor.getString(cursor.getColumnIndex("OBJECT_ID")));
-            yiJiRecord.setIsUploaded(
-                    cursor.getInt(cursor.getColumnIndex("IS_UPLOADED")) == 0 ? false : true);
-            DataManager.RECORDS.add(yiJiRecord);
-            if (BuildConfig.DEBUG) Log.d("CoCoin Debugger", "Load " + yiJiRecord.toString() + " S");
+        try {
+            while (cursor.moveToNext()) {
+                YiJiRecord yiJiRecord = new YiJiRecord();
+                yiJiRecord.setId(cursor.getLong(cursor.getColumnIndex("ID")));
+                yiJiRecord.setMoney(cursor.getFloat(cursor.getColumnIndex("MONEY")));
+                yiJiRecord.setCurrency(cursor.getString(cursor.getColumnIndex("CURRENCY")));
+                yiJiRecord.setTag(cursor.getInt(cursor.getColumnIndex("TAG")));
+                yiJiRecord.setCalendar(cursor.getString(cursor.getColumnIndex("TIME")));
+                yiJiRecord.setRemark(cursor.getString(cursor.getColumnIndex("REMARK")));
+                yiJiRecord.setUserId(cursor.getString(cursor.getColumnIndex("USER_ID")));
+                yiJiRecord.setLocalObjectId(cursor.getString(cursor.getColumnIndex("OBJECT_ID")));
+                yiJiRecord.setIsUploaded(
+                        cursor.getInt(cursor.getColumnIndex("IS_UPLOADED")) == 0 ? false : true);
+                DataManager.RECORDS.add(yiJiRecord);
+                if (BuildConfig.DEBUG)
+                    Log.d("CoCoin Debugger", "Load " + yiJiRecord.toString() + " S");
+            }
+        }finally {
+            cursor.close();
         }
-        cursor.close();
     }
     public void initTags(){
         Cursor cursor = mSQLiteDatabase.rawQuery(QUERY_TAG,null);

@@ -41,7 +41,7 @@ public class DataManager {
     }
     public static DataManager getsInstance(Context context) throws IOException {
         if (checkSInstanceIsInit == null){
-            initInstance(context);
+            initInstance(context.getApplicationContext());
         }
         return sInstance;
     }
