@@ -114,10 +114,17 @@ MJ9Fu3Vg+v9IhdrGG7QjCx/JJsMtcPgUzQ99EQVhY2uBO29g9UW2NY6L0wIDAQAB</string>
 
     <string name="o_clock">o\'clock</string>
     <string name="last">last</string>
-    
+
     <!--tab text-->
     <string name="homePage">HomePage</string>
     <string name="zhihuDaily">Daily</string>
     <string name="me">Me</string>
+
+    <string name="share_summary_zhihu">From Zhihu</string>
+    <string name="we_chat">WeChat</string>
+    <string name="moments">Moments</string>
+    <string name="qzone">Qzone</string>
+    <string name="other">Other</string>
+    <string name="share_to">Share to</string>
 
 </resources>

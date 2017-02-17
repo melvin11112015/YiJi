@@ -5,4 +5,21 @@
 
     <dimen name="view_card_top_padding">5dp</dimen>
     <dimen name="view_card_bottom_padding">5dp</dimen>
+
+    <dimen name="h1">32sp</dimen>
+    <dimen name="h2">24sp</dimen>
+    <dimen name="h3">20sp</dimen>
+    <dimen name="h4">16sp</dimen>
+    <dimen name="h5">14sp</dimen>
+    <dimen name="h6">12sp</dimen>
+    <dimen name="h7">10sp</dimen>
+
+    <dimen name="d1">2dp</dimen>
+    <dimen name="d2">4dp</dimen>
+    <dimen name="d3">8dp</dimen>
+    <dimen name="d4">16dp</dimen>
+    <dimen name="d5">32dp</dimen>
+    <dimen name="d6">64dp</dimen>
+    <dimen name="d7">128dp</dimen>
+    <dimen name="card_view_margin">@dimen/d3</dimen>
 </resources>

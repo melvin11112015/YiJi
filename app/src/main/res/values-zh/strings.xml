@@ -120,4 +120,12 @@ MJ9Fu3Vg+v9IhdrGG7QjCx/JJsMtcPgUzQ99EQVhY2uBO29g9UW2NY6L0wIDAQAB</string>
     <string name="homePage">主页</string>
     <string name="zhihuDaily">知乎日报</string>
     <string name="me">我</string>
+
+    <string name="share_summary_zhihu">From 知乎</string>
+    <string name="we_chat">微信</string>
+    <string name="moments">朋友圈</string>
+    <string name="qzone">QQ空间</string>
+    <string name="other">其它</string>
+    <string name="share_to">分享到</string>
+
 </resources>

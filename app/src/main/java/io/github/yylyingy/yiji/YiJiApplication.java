@@ -15,6 +15,7 @@ import java.util.ArrayList;
 import cn.bmob.v3.Bmob;
 import cn.bmob.v3.BmobConfig;
 import io.github.yylyingy.yiji.tools.ThreadPoolTool;
+import io.github.yylyingy.yiji.tools.Toaster;
 import io.github.yylyingy.yiji.tools.YiJiUtil;
 import io.github.yylyingy.yiji.tools.db.DB;
 import io.github.yylyingy.yiji.tools.db.DataManager;
@@ -29,6 +30,7 @@ public class YiJiApplication extends Application {
     private ArrayList<Activity> mArrayList = new ArrayList<>();
     private static final Object lock = new Object();
     private static ExitAppThread mExitApp;
+    private static Toaster sToaster;
     @Override
     public void onCreate() {
         super.onCreate();
@@ -97,6 +99,11 @@ public class YiJiApplication extends Application {
         }
     }
 
+    public static void showToast(String msg) {
+        if (sToaster == null)
+            sToaster = new Toaster();
+        sToaster.showToast(msg);
+    }
     private static final class ExitAppThread extends Thread{
         private YiJiApplication application;
         private ExitAppThread(YiJiApplication app){

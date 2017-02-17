@@ -199,6 +199,12 @@ public class MainActivity extends BaseActivity {
         actionBarDrawerToggle.syncState();
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        mToolbar = null;
+    }
+
     @OnClick(R.id.exit)
     protected void exitApp(){
         ((YiJiApplication)getApplication()).exitApp();
