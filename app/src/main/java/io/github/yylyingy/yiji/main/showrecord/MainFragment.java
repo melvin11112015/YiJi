@@ -1,4 +1,4 @@
-package io.github.yylyingy.yiji.showrecord;
+package io.github.yylyingy.yiji.main.showrecord;
 
 
 import android.os.Bundle;

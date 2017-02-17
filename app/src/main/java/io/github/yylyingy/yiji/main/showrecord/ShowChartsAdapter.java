@@ -1,4 +1,4 @@
-package io.github.yylyingy.yiji.showrecord;
+package io.github.yylyingy.yiji.main.showrecord;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;

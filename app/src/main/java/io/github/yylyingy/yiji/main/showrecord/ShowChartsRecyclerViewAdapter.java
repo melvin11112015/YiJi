@@ -1,4 +1,4 @@
-package io.github.yylyingy.yiji.showrecord;
+package io.github.yylyingy.yiji.main.showrecord;
 
 import android.content.Context;
 import android.graphics.Color;
@@ -30,7 +30,6 @@ import java.util.TreeMap;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.Optional;
 import io.github.yylyingy.yiji.R;
 import io.github.yylyingy.yiji.javabeans.YiJiRecord;
 import io.github.yylyingy.yiji.tools.YiJiUtil;

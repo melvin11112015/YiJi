@@ -2,24 +2,16 @@ package io.github.yylyingy.yiji.activities;
 
 import android.content.Context;
 import android.graphics.Color;
-import android.graphics.drawable.Drawable;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.balysv.materialripple.MaterialRippleLayout;
-import com.github.florent37.materialviewpager.MaterialViewPager;
-import com.github.florent37.materialviewpager.header.HeaderDesign;
-import com.yangyl.encryptdecrypt.secrect.EncryptDecryptTool;
-import com.yangyl.encryptdecrypt.secrect.base64.BASE64Encoder;
 
 import net.lucode.hackware.magicindicator.MagicIndicator;
 import net.lucode.hackware.magicindicator.buildins.commonnavigator.CommonNavigator;
@@ -34,18 +26,12 @@ import io.github.yylyingy.yiji.R;
 import io.github.yylyingy.yiji.YiJiApplication;
 import io.github.yylyingy.yiji.base.BaseActivity;
 
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
-import io.github.yylyingy.yiji.showrecord.MainFragment;
-import io.github.yylyingy.yiji.showrecord.ShowChartsAdapter;
-import io.github.yylyingy.yiji.tools.YiJiUtil;
+import io.github.yylyingy.yiji.main.showrecord.MainFragment;
 
 public class MainActivity extends BaseActivity {
     public static final String TAG = MainActivity.class.getSimpleName();
