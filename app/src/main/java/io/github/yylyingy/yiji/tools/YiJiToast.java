@@ -21,6 +21,7 @@ public class YiJiToast {
 
     public void showToast(int text, int color) {
         SuperToast.cancelAllSuperToasts();
+        SuperToast.cancelAllSuperToasts();
         SuperToast superToast = new SuperToast(YiJiApplication.getAppContext());
         superToast.setAnimations(YiJiUtil.TOAST_ANIMATION);
         superToast.setDuration(SuperToast.Duration.SHORT);

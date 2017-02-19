@@ -13,6 +13,7 @@ import android.view.ViewGroup;
 
 import com.github.florent37.materialviewpager.MaterialViewPagerHelper;
 import com.github.florent37.materialviewpager.adapter.RecyclerViewMaterialAdapter;
+import com.github.johnpersano.supertoasts.SuperToast;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -22,6 +23,7 @@ import java.util.List;
 import io.github.yylyingy.yiji.R;
 import io.github.yylyingy.yiji.base.BaseFragment;
 import io.github.yylyingy.yiji.javabeans.YiJiRecord;
+import io.github.yylyingy.yiji.tools.YiJiToast;
 import io.github.yylyingy.yiji.tools.YiJiUtil;
 import io.github.yylyingy.yiji.tools.db.DataManager;
 

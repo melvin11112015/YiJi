@@ -7,6 +7,8 @@ import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 
 
+import com.orhanobut.logger.Logger;
+
 import butterknife.ButterKnife;
 import io.github.yylyingy.yiji.YiJiApplication;
 
@@ -34,12 +36,19 @@ public abstract class BaseActivity extends AppCompatActivity {
     }
 
     @Override
+    protected void onResume() {
+        super.onResume();
+        Logger.d("Activity onResume");
+    }
+
+    @Override
     protected void onDestroy() {
         super.onDestroy();
         if (mUnbinder != null) {
             mUnbinder.unbind();
         }
-//        ((YiJiApplication)getApplication()).removeActivity(this);
+        ((YiJiApplication)getApplication()).removeActivity(this);
+        YiJiApplication.getRefWatcher(getApplicationContext()).watch(this);
     }
     protected  void initButterKnife(){
         mUnbinder = ButterKnife.bind(this);

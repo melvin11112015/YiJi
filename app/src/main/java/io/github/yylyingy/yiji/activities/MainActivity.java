@@ -2,6 +2,7 @@ package io.github.yylyingy.yiji.activities;
 
 import android.content.Context;
 import android.graphics.Color;
+import android.support.v4.app.Fragment;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -14,6 +15,7 @@ import android.widget.TextView;
 import com.balysv.materialripple.MaterialRippleLayout;
 
 import net.lucode.hackware.magicindicator.MagicIndicator;
+import net.lucode.hackware.magicindicator.ViewPagerHelper;
 import net.lucode.hackware.magicindicator.buildins.commonnavigator.CommonNavigator;
 import net.lucode.hackware.magicindicator.buildins.commonnavigator.abs.CommonNavigatorAdapter;
 import net.lucode.hackware.magicindicator.buildins.commonnavigator.abs.IPagerIndicator;
@@ -26,20 +28,26 @@ import io.github.yylyingy.yiji.R;
 import io.github.yylyingy.yiji.YiJiApplication;
 import io.github.yylyingy.yiji.base.BaseActivity;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 import butterknife.BindView;
 import butterknife.OnClick;
+import io.github.yylyingy.yiji.main.account.AccountFragment;
 import io.github.yylyingy.yiji.main.showrecord.MainFragment;
 import io.github.yylyingy.yiji.main.zhihu.ZhihuListFragment;
+import io.github.yylyingy.yiji.ui.widget.ForbidScrollViewPager;
+import io.github.yylyingy.yiji.ui.widget.adapter.ForbidScrollViewpagerAdapter;
 
-public class MainActivity extends BaseActivity {
+public class MainActivity extends BaseActivity implements MainFragment.OnBindToolbar{
     public static final String TAG = MainActivity.class.getSimpleName();
-    protected Toolbar mToolbar;
     private List<String> tabList ;//= Arrays.asList(TABLIST);
 //    @BindView(R.id.materialViewPager)
 //    MaterialViewPager materialViewPager;
+    @BindView(R.id.forbidScrollViewpager)
+    ForbidScrollViewPager                mForbidScrollViewPager;
+    ForbidScrollViewpagerAdapter        mForbidScrollViewpagerAdapter;
     @BindView(R.id.exit)
     MaterialRippleLayout exit;
     @BindView(R.id.drawerLayout)
@@ -48,8 +56,9 @@ public class MainActivity extends BaseActivity {
     MagicIndicator mMagicIndicator;
 
 //    ShowChartsAdapter mShowChartsAdapter;
-    MainFragment mFragment;
-    ZhihuListFragment mZhihuListFragment;
+//    MainFragment mFragment;
+//    ZhihuListFragment mZhihuListFragment;
+//    AccountFragment  mAccountFragment;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -60,11 +69,21 @@ public class MainActivity extends BaseActivity {
                 getResources().getString(R.string.me)
         };
         tabList = Arrays.asList(TABLIST);
-        mFragment = new MainFragment();
-        mZhihuListFragment = ZhihuListFragment.newInstance();
-        getSupportFragmentManager().beginTransaction()
-                .replace(R.id.fragmentContainer,mZhihuListFragment)
-                .commit();
+//        mFragment =          new MainFragment();
+//        mZhihuListFragment = ZhihuListFragment.newInstance();
+//        mAccountFragment   = new AccountFragment();
+//        mFragmentList.add(mFragment);
+//        mFragmentList.add(mZhihuListFragment);
+//        mFragmentList.add(mAccountFragment);
+        mForbidScrollViewpagerAdapter = new ForbidScrollViewpagerAdapter(
+                getSupportFragmentManager()
+        );
+        mForbidScrollViewPager.setAdapter(mForbidScrollViewpagerAdapter);
+//        getSupportFragmentManager().beginTransaction()
+//                .replace(R.id.fragmentContainer,mZhihuListFragment)
+//                .commit();
+
+
 //        mToolbar = materialViewPager.getToolbar();
 //        if (mToolbar != null){
 //            setSupportActionBar(mToolbar);
@@ -163,7 +182,7 @@ public class MainActivity extends BaseActivity {
                 commonPagerTitleView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-//                        mViewPager.setCurrentItem(index);
+                        mForbidScrollViewPager.setCurrentItem(index);
                     }
                 });
 
@@ -176,15 +195,28 @@ public class MainActivity extends BaseActivity {
             }
         });
         mMagicIndicator.setNavigator(commonNavigator);
-
+        ViewPagerHelper.bind(mMagicIndicator,mForbidScrollViewPager);
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        mToolbar = mFragment.getToolbar();
-        if (mToolbar != null){
-            setSupportActionBar(mToolbar);
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+    }
+
+    @OnClick(R.id.exit)
+    protected void exitApp(){
+        ((YiJiApplication)getApplication()).exitApp();
+    }
+
+    @Override
+    public void bindToolbar(Toolbar toolbar) {
+        if (toolbar != null){
+            setSupportActionBar(toolbar);
             final ActionBar actionBar = getSupportActionBar();
             if (actionBar != null){
                 actionBar.setDisplayHomeAsUpEnabled(true);
@@ -192,24 +224,15 @@ public class MainActivity extends BaseActivity {
                 actionBar.setDisplayShowTitleEnabled(true);
                 actionBar.setDisplayUseLogoEnabled(false);
                 actionBar.setHomeButtonEnabled(true);
+                toolbar.setFitsSystemWindows(true);
+                toolbar.setTitleMarginTop(100);
             }
         }
         setTitle("");
         ActionBarDrawerToggle actionBarDrawerToggle = new ActionBarDrawerToggle(
-                this,mDrawerLayout,mToolbar,R.string.drawer_open,R.string.drawer_close
+                this,mDrawerLayout,toolbar,R.string.drawer_open,R.string.drawer_close
         );
         mDrawerLayout.addDrawerListener(actionBarDrawerToggle);
         actionBarDrawerToggle.syncState();
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        mToolbar = null;
-    }
-
-    @OnClick(R.id.exit)
-    protected void exitApp(){
-        ((YiJiApplication)getApplication()).exitApp();
     }
 }

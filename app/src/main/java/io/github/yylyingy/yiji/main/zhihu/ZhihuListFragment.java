@@ -6,11 +6,13 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
 import com.github.florent37.materialviewpager.MaterialViewPagerHelper;
+import com.github.johnpersano.supertoasts.SuperToast;
 
 import java.util.Calendar;
 import java.util.Date;
 
 import io.github.yylyingy.yiji.tools.Constants;
+import io.github.yylyingy.yiji.tools.YiJiToast;
 import jp.wasabeef.recyclerview.adapters.AlphaInAnimationAdapter;
 import jp.wasabeef.recyclerview.adapters.ScaleInAnimationAdapter;
 import jp.wasabeef.recyclerview.animators.FadeInAnimator;
@@ -58,7 +60,6 @@ public class ZhihuListFragment extends BaseListFragment<Zhihu> {
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
         // use this setting to improve performance if you know that changes
         // in content do not change the layout size of the RecyclerView
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getActivity());

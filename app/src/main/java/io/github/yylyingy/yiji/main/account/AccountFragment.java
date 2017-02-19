@@ -8,11 +8,12 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import io.github.yylyingy.yiji.R;
+import io.github.yylyingy.yiji.base.BaseFragment;
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class AccountFragment extends Fragment {
+public class AccountFragment extends BaseFragment {
 
 
     public AccountFragment() {

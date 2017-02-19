@@ -41,6 +41,16 @@
         </activity>
         <activity android:name="top.wefor.now.ui.activity.WebActivity"/>
         <activity android:name="top.wefor.now.ui.activity.BigImageActivity"/>
+<!--Leakcanary service-->
+        <service
+            android:name="com.squareup.leakcanary.internal.HeapAnalyzerService"
+            android:enabled="false"
+            android:process=":leakcanary" />
+        <service
+            android:name="com.squareup.leakcanary.DisplayLeakService"
+            android:enabled="false" />
+<!--Leakcanary service-->
+
     </application>
 
 </manifest>

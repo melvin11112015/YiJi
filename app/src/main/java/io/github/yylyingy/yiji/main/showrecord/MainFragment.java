@@ -1,6 +1,7 @@
 package io.github.yylyingy.yiji.main.showrecord;
 
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -11,11 +12,13 @@ import android.view.ViewGroup;
 
 import com.github.florent37.materialviewpager.MaterialViewPager;
 import com.github.florent37.materialviewpager.header.HeaderDesign;
+import com.orhanobut.logger.Logger;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import io.github.yylyingy.yiji.R;
 import io.github.yylyingy.yiji.base.BaseFragment;
+import io.github.yylyingy.yiji.tools.YiJiToast;
 import io.github.yylyingy.yiji.tools.YiJiUtil;
 
 /**
@@ -26,11 +29,10 @@ public class MainFragment extends BaseFragment {
     @BindView(R.id.materialViewPager)
     MaterialViewPager materialViewPager;
     ShowChartsAdapter mShowChartsAdapter;
-    public MainFragment() {
-        // Required empty public constructor
+    OnBindToolbar mBindToolbar;
+    public MainFragment(){
+
     }
-
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -43,22 +45,49 @@ public class MainFragment extends BaseFragment {
         super.onViewCreated(view, savedInstanceState);
         mUnbinder = ButterKnife.bind(this,view);
         mToolbar = materialViewPager.getToolbar();
-        mShowChartsAdapter = new ShowChartsAdapter(getFragmentManager());
+        mShowChartsAdapter = new ShowChartsAdapter(getChildFragmentManager());
         materialViewPager.getViewPager().setOffscreenPageLimit(mShowChartsAdapter.getCount());
         materialViewPager.getViewPager().setAdapter(mShowChartsAdapter);
         materialViewPager.getPagerTitleStrip().setViewPager(materialViewPager.getViewPager());
-        materialViewPager.setMaterialViewPagerListener(new MaterialViewPager.Listener() {
-            @Override
-            public HeaderDesign getHeaderDesign(int page) {
-                return HeaderDesign.fromColorAndDrawable(
-                        YiJiUtil.GetTagColor(page - 2),
-                        YiJiUtil.GetTagDrawable(-3)
-                );
-            }
-        });
+        materialViewPager.setMaterialViewPagerListener(page -> HeaderDesign.fromColorAndDrawable(
+                YiJiUtil.GetTagColor(page - 2),
+                YiJiUtil.GetTagDrawable(-3)
+        ));
+        if (mContext instanceof OnBindToolbar){
+            ((OnBindToolbar)mContext).bindToolbar(mToolbar);
+        }
+    }
+
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        mContext = context;
+        Logger.d("onAttach");
+    }
+
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        Logger.d("onCreate");
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        Logger.d("onStart");
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        Logger.d("onResume");
     }
 
     public Toolbar getToolbar(){
         return mToolbar;
+    }
+
+    public interface OnBindToolbar{
+        void bindToolbar(Toolbar toolbar);
     }
 }

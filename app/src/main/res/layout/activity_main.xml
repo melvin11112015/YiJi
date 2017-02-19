@@ -28,33 +28,40 @@
                 android:layout_alignParentBottom="true"
                 android:layout_width="match_parent"
                 android:layout_height="40dp" />
-            <FrameLayout
-                android:id="@+id/fragmentContainer"
+            <io.github.yylyingy.yiji.ui.widget.ForbidScrollViewPager
+                android:id="@+id/forbidScrollViewpager"
                 android:layout_above="@id/magic_indicator"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
-                <!--<com.github.florent37.materialviewpager.MaterialViewPager-->
-                <!--android:id="@+id/materialViewPager"-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="match_parent"-->
-                <!--app:viewpager_logo="@layout/header_logo"-->
-                <!--app:viewpager_pagerTitleStrip="@layout/material_view_pager_pagertitlestrip_newstand"-->
-                <!--app:viewpager_logoMarginTop="100dp"-->
-                <!--app:viewpager_color="@color/toolbarColor"-->
-                <!--app:viewpager_headerHeight="200dp"-->
-                <!--app:viewpager_headerAlpha="1.0"-->
-                <!--app:viewpager_imageHeaderDarkLayerAlpha="0.2"-->
-                <!--app:viewpager_hideLogoWithFade="false"-->
-                <!--app:viewpager_hideToolbarAndTitle="true"-->
-                <!--app:viewpager_enableToolbarElevation="true"-->
-                <!--app:viewpager_parallaxHeaderFactor="1.5"-->
-                <!--app:viewpager_headerAdditionalHeight="20dp"-->
-                <!--app:viewpager_displayToolbarWhenSwipe="true"-->
-                <!--app:viewpager_transparentToolbar="false"-->
-                <!--app:viewpager_animatedHeaderImage="false"-->
-                <!--/>-->
 
-            </FrameLayout>
+            </io.github.yylyingy.yiji.ui.widget.ForbidScrollViewPager>
+            <!--<FrameLayout-->
+                <!--android:id="@+id/fragmentContainer"-->
+                <!--android:layout_above="@id/magic_indicator"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent">-->
+                <!--&lt;!&ndash;<com.github.florent37.materialviewpager.MaterialViewPager&ndash;&gt;-->
+                <!--&lt;!&ndash;android:id="@+id/materialViewPager"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_height="match_parent"&ndash;&gt;-->
+                <!--&lt;!&ndash;app:viewpager_logo="@layout/header_logo"&ndash;&gt;-->
+                <!--&lt;!&ndash;app:viewpager_pagerTitleStrip="@layout/material_view_pager_pagertitlestrip_newstand"&ndash;&gt;-->
+                <!--&lt;!&ndash;app:viewpager_logoMarginTop="100dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;app:viewpager_color="@color/toolbarColor"&ndash;&gt;-->
+                <!--&lt;!&ndash;app:viewpager_headerHeight="200dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;app:viewpager_headerAlpha="1.0"&ndash;&gt;-->
+                <!--&lt;!&ndash;app:viewpager_imageHeaderDarkLayerAlpha="0.2"&ndash;&gt;-->
+                <!--&lt;!&ndash;app:viewpager_hideLogoWithFade="false"&ndash;&gt;-->
+                <!--&lt;!&ndash;app:viewpager_hideToolbarAndTitle="true"&ndash;&gt;-->
+                <!--&lt;!&ndash;app:viewpager_enableToolbarElevation="true"&ndash;&gt;-->
+                <!--&lt;!&ndash;app:viewpager_parallaxHeaderFactor="1.5"&ndash;&gt;-->
+                <!--&lt;!&ndash;app:viewpager_headerAdditionalHeight="20dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;app:viewpager_displayToolbarWhenSwipe="true"&ndash;&gt;-->
+                <!--&lt;!&ndash;app:viewpager_transparentToolbar="false"&ndash;&gt;-->
+                <!--&lt;!&ndash;app:viewpager_animatedHeaderImage="false"&ndash;&gt;-->
+                <!--&lt;!&ndash;/>&ndash;&gt;-->
+
+            <!--</FrameLayout>-->
 
         </RelativeLayout>
 

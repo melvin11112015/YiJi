@@ -102,10 +102,12 @@ dependencies {
     compile "com.squareup.retrofit2:adapter-rxjava:$RETROFIT_VERSION"
     compile "com.android.support:appcompat-v7:$rootProject.supportLibraryVersion"
     compile "com.android.support:support-v4:$rootProject.supportLibraryVersion"
-    compile files('libs/BmobSDK_3.5.2_20161027.jar')
     compile "com.android.support:design:$rootProject.supportLibraryVersion"
     //    compile files('libs/rxjava-1.1.6.jar')
     compile 'com.android.support:multidex:1.0.1'
+//    EventBus
+    compile 'org.greenrobot:eventbus:3.0.0'
+    compile files('libs/BmobSDK_3.5.2_20161027.jar')
     compile files('libs/rxandroid-1.2.0.jar')
     compile files('libs/bugly_crash_release.jar')
     compile project(':encryptdecrypt')
