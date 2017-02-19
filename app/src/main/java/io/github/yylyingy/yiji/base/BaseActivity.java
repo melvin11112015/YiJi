@@ -9,10 +9,15 @@ import android.support.v7.app.AppCompatActivity;
 
 import com.orhanobut.logger.Logger;
 
+import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
+
 import butterknife.ButterKnife;
 import io.github.yylyingy.yiji.YiJiApplication;
 
 import butterknife.Unbinder;
+import io.github.yylyingy.yiji.tools.MessageEvent;
 
 /**
  * Created by Yangyl on 2016/11/29.
@@ -25,14 +30,15 @@ public abstract class BaseActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        ((YiJiApplication)getApplication()).addActivity(this);
+        EventBus.getDefault().register(this);
+//        ((YiJiApplication)getApplication()).addActivity(this);
         mFragmentManager = getSupportFragmentManager();
     }
 
     @Override
     public void setContentView(@LayoutRes int layoutResID){
         super.setContentView(layoutResID);
-        initButterKnife();
+        mUnbinder = ButterKnife.bind(this);
     }
 
     @Override
@@ -41,16 +47,20 @@ public abstract class BaseActivity extends AppCompatActivity {
         Logger.d("Activity onResume");
     }
 
+    @Subscribe(threadMode = ThreadMode.MAIN)
+    public void onEventBusFinishActivity(MessageEvent e){
+        finish();
+    }
+
     @Override
     protected void onDestroy() {
         super.onDestroy();
+        EventBus.getDefault().unregister(this);
         if (mUnbinder != null) {
             mUnbinder.unbind();
         }
-        ((YiJiApplication)getApplication()).removeActivity(this);
+//        ((YiJiApplication)getApplication()).removeActivity(this);
         YiJiApplication.getRefWatcher(getApplicationContext()).watch(this);
     }
-    protected  void initButterKnife(){
-        mUnbinder = ButterKnife.bind(this);
-    }
+
 }

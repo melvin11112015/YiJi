@@ -24,6 +24,8 @@ import net.lucode.hackware.magicindicator.buildins.commonnavigator.titles.Common
 import net.steamcrafted.materialiconlib.MaterialDrawableBuilder;
 import net.steamcrafted.materialiconlib.MaterialIconView;
 
+import org.greenrobot.eventbus.EventBus;
+
 import io.github.yylyingy.yiji.R;
 import io.github.yylyingy.yiji.YiJiApplication;
 import io.github.yylyingy.yiji.base.BaseActivity;
@@ -37,6 +39,7 @@ import butterknife.OnClick;
 import io.github.yylyingy.yiji.main.account.AccountFragment;
 import io.github.yylyingy.yiji.main.showrecord.MainFragment;
 import io.github.yylyingy.yiji.main.zhihu.ZhihuListFragment;
+import io.github.yylyingy.yiji.tools.MessageEvent;
 import io.github.yylyingy.yiji.ui.widget.ForbidScrollViewPager;
 import io.github.yylyingy.yiji.ui.widget.adapter.ForbidScrollViewpagerAdapter;
 
@@ -50,6 +53,8 @@ public class MainActivity extends BaseActivity implements MainFragment.OnBindToo
     ForbidScrollViewpagerAdapter        mForbidScrollViewpagerAdapter;
     @BindView(R.id.exit)
     MaterialRippleLayout exit;
+    @BindView(R.id.sync)
+    MaterialRippleLayout sync;
     @BindView(R.id.drawerLayout)
     DrawerLayout mDrawerLayout;
     @BindView(R.id.magic_indicator)
@@ -76,7 +81,7 @@ public class MainActivity extends BaseActivity implements MainFragment.OnBindToo
 //        mFragmentList.add(mZhihuListFragment);
 //        mFragmentList.add(mAccountFragment);
         mForbidScrollViewpagerAdapter = new ForbidScrollViewpagerAdapter(
-                getSupportFragmentManager()
+                mFragmentManager
         );
         mForbidScrollViewPager.setAdapter(mForbidScrollViewpagerAdapter);
 //        getSupportFragmentManager().beginTransaction()
@@ -210,7 +215,12 @@ public class MainActivity extends BaseActivity implements MainFragment.OnBindToo
 
     @OnClick(R.id.exit)
     protected void exitApp(){
-        ((YiJiApplication)getApplication()).exitApp();
+//        ((YiJiApplication)getApplication()).exitApp();
+        EventBus.getDefault().post(new MessageEvent("stop"));
+    }
+
+    @OnClick(R.id.sync)
+    protected void sync(){
     }
 
     @Override

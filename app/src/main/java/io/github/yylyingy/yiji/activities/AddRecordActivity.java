@@ -54,10 +54,10 @@ public class AddRecordActivity extends BaseActivity implements TagChooseFragment
         return super.onOptionsItemSelected(item);
     }
 
-    @Override
-    protected void initButterKnife() {
-        mUnbinder = ButterKnife.bind(this);
-    }
+//    @Override
+//    protected void initButterKnife() {
+//        mUnbinder = ButterKnife.bind(this);
+//    }
 
     @Override
     public void onTagItemPicked(int position) {

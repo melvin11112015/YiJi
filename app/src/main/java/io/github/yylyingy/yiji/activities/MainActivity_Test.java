@@ -69,13 +69,9 @@ public class MainActivity_Test extends BaseActivity {
         }
     }
 
-    @Override
-    protected void initButterKnife(){
-        mUnbinder = ButterKnife.bind(this);
-    }
     @OnClick(R.id.exit)
     protected void exitApp(){
-        ((YiJiApplication)getApplication()).exitApp();
+//        ((YiJiApplication)getApplication()).exitApp();
     }
 
     public static String Encrypt(String strSrc, String encName) {

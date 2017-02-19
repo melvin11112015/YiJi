@@ -31,7 +31,7 @@ public class YiJiApplication extends Application {
     public static final String TAG = YiJiApplication.class.getSimpleName();
     private ArrayList<Activity> mArrayList = new ArrayList<>();
     private static final Object lock = new Object();
-    private static ExitAppThread mExitApp;
+    private static getApp mGetApp;
     private static Toaster sToaster;
     private RefWatcher refWatcher;
     public static RefWatcher getRefWatcher(Context context) {
@@ -48,7 +48,7 @@ public class YiJiApplication extends Application {
             @Override
             public void run() {
                 Fresco.initialize(getApplicationContext());
-                mExitApp = new ExitAppThread(YiJiApplication.this);
+                mGetApp = new getApp(YiJiApplication.this);
                 Log.d(TAG,"init");
                 refWatcher = LeakCanary.install(YiJiApplication.this);
                 CrashReport.UserStrategy strategy = new CrashReport.UserStrategy(getApplicationContext());
@@ -83,47 +83,46 @@ public class YiJiApplication extends Application {
     }
 
     public static Context getAppContext(){
-        return mExitApp.application;
+        return mGetApp.application;
     }
-
-    public void exitApp(){
-        new ExitAppThread(this).start();
-    }
-
-    public void addActivity(Activity activity){
-        synchronized (lock) {
-            mArrayList.add(activity);
-        }
-    }
-
-    public void removeActivity(Activity activity){
-        synchronized (lock) {
-            for (int i = 0; i < mArrayList.size(); i++) {
-                if (activity == mArrayList.get(i)) {
-                    mArrayList.remove(i);
-                    break;
-                }
-            }
-        }
-    }
+//    public void exitApp(){
+//        new ExitAppThread(this).start();
+//    }
+//
+//    public void addActivity(Activity activity){
+//        synchronized (lock) {
+//            mArrayList.add(activity);
+//        }
+//    }
+//
+//    public void removeActivity(Activity activity){
+//        synchronized (lock) {
+//            for (int i = 0; i < mArrayList.size(); i++) {
+//                if (activity == mArrayList.get(i)) {
+//                    mArrayList.remove(i);
+//                    break;
+//                }
+//            }
+//        }
+//    }
 
     public static void showToast(String msg) {
         if (sToaster == null)
             sToaster = new Toaster();
         sToaster.showToast(msg);
     }
-    private static final class ExitAppThread extends Thread{
+    private static final class getApp {
         private YiJiApplication application;
-        private ExitAppThread(YiJiApplication app){
+        private getApp(YiJiApplication app){
             application = new WeakReference<>(app).get();
         }
-        @Override
-        public void run() {
-            for (Activity activity: application.mArrayList){
-                if (!activity.isFinishing()){
-                    activity.finish();
-                }
-            }
-        }
+//        @Override
+//        public void run() {
+//            for (Activity activity: application.mArrayList){
+//                if (!activity.isFinishing()){
+//                    activity.finish();
+//                }
+//            }
+//        }
     }
 }
