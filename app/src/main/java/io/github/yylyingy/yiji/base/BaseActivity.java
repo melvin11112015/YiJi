@@ -7,6 +7,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 
 
+import com.github.johnpersano.supertoasts.SuperToast;
 import com.orhanobut.logger.Logger;
 
 import org.greenrobot.eventbus.EventBus;
@@ -18,6 +19,8 @@ import io.github.yylyingy.yiji.YiJiApplication;
 
 import butterknife.Unbinder;
 import io.github.yylyingy.yiji.tools.MessageEvent;
+import rx.Subscription;
+import rx.subscriptions.CompositeSubscription;
 
 /**
  * Created by Yangyl on 2016/11/29.
@@ -28,6 +31,7 @@ public abstract class BaseActivity extends AppCompatActivity {
     private   String TAG ;
     protected Unbinder mUnbinder = null;
     protected FragmentManager mFragmentManager;
+    private CompositeSubscription mCompositeSubscription;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,6 +53,16 @@ public abstract class BaseActivity extends AppCompatActivity {
         Logger.d("Activity onResume");
     }
 
+    /**
+     * 解决Subscription内存泄露问题
+     * @param s
+     */
+    protected void addSubscription(Subscription s) {
+        if (this.mCompositeSubscription == null) {
+            this.mCompositeSubscription = new CompositeSubscription();
+        }
+        this.mCompositeSubscription.add(s);
+    }
     @Subscribe(threadMode = ThreadMode.MAIN)
     public void onEventBusFinishActivity(MessageEvent e){
         finish();
@@ -57,6 +71,8 @@ public abstract class BaseActivity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
+        mCompositeSubscription = null;
+        SuperToast.cancelAllSuperToasts();
         EventBus.getDefault().unregister(this);
         if (mUnbinder != null) {
             mUnbinder.unbind();

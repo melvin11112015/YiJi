@@ -7,7 +7,7 @@ import java.security.NoSuchAlgorithmException;
  * Created by Yangyl on 2017/1/6.
  */
 
-public class ShaOneTool {
+public class PasswordHashCodeTool {
     private static String byte2hex(byte[] b) {
         StringBuilder hs = new StringBuilder();
         String stmp = "";
@@ -29,7 +29,7 @@ public class ShaOneTool {
         byte[] digesta = null;
         try {
             // 得到一个SHA-1的消息摘要
-            MessageDigest alga = MessageDigest.getInstance("SHA-1");
+            MessageDigest alga = MessageDigest.getInstance("SHA-256");
             // 添加要进行计算摘要的信息
             alga.update(info.getBytes());
             // 得到该摘要

@@ -8,6 +8,8 @@ import android.support.v4.view.PagerAdapter;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.orhanobut.logger.Logger;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -45,6 +47,4 @@ public class ForbidScrollViewpagerAdapter extends FragmentPagerAdapter {
     public Fragment getItem(int position) {
         return mList.get(position);
     }
-
-
 }

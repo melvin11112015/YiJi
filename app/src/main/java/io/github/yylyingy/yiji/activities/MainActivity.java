@@ -11,9 +11,11 @@ import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.balysv.materialripple.MaterialRippleLayout;
 import com.github.johnpersano.supertoasts.SuperToast;
+import com.orhanobut.logger.Logger;
 
 import net.lucode.hackware.magicindicator.MagicIndicator;
 import net.lucode.hackware.magicindicator.ViewPagerHelper;
@@ -27,6 +29,9 @@ import net.steamcrafted.materialiconlib.MaterialIconView;
 
 import org.greenrobot.eventbus.EventBus;
 
+import cn.bmob.v3.BmobUser;
+import cn.bmob.v3.exception.BmobException;
+import cn.bmob.v3.listener.SaveListener;
 import io.github.yylyingy.yiji.R;
 import io.github.yylyingy.yiji.YiJiApplication;
 import io.github.yylyingy.yiji.base.BaseActivity;
@@ -38,6 +43,7 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.OnClick;
+import io.github.yylyingy.yiji.javabeans.User;
 import io.github.yylyingy.yiji.main.account.AccountFragment;
 import io.github.yylyingy.yiji.main.showrecord.MainFragment;
 import io.github.yylyingy.yiji.main.zhihu.ZhihuListFragment;
@@ -226,12 +232,15 @@ public class MainActivity extends BaseActivity implements MainFragment.OnBindToo
     }
 
     @OnClick(R.id.sync)
-    protected void sync(){
-        if (mTestWeakReference.getActivity() != null){
-            YiJiToast.getInstance().showToast("非null", R.color.friend_header);
-        }else {
-            YiJiToast.getInstance().showToast("null", R.color.friend_header);
+    public void sync(){
+        User user = BmobUser.getCurrentUser(User.class);
+        if (user == null){
+            mForbidScrollViewPager.setCurrentItem(2);
+            YiJiToast.getInstance().showToast("请登录",SuperToast.Background.RED);
+            return;
         }
+
+
     }
 
     private static class TestWeakReference{

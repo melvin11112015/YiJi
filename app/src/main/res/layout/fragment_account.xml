@@ -1,33 +1,7 @@
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+<FrameLayout
+    android:id="@+id/fragmentContainer"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context="io.github.yylyingy.yiji.main.account.AccountFragment">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <LinearLayout
-            android:layout_height="200dp"
-            android:layout_width="match_parent"
-            android:orientation="vertical"
-            android:background="@color/my_blue"
-            android:layout_gravity="top"
-            >
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
-            <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/profile_image"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:src="@drawable/default_user_logo"
-                android:layout_marginTop="30dp"
-                android:layout_gravity="center"
-                android:padding="5dp"
-                app:civ_border_width="1dp"
-                app:civ_border_color="#ffffff"/>
-
-        </LinearLayout>
-
-    </LinearLayout>
-</ScrollView>
+</FrameLayout>

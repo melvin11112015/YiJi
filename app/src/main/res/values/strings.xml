@@ -12,8 +12,6 @@ MJ9Fu3Vg+v9IhdrGG7QjCx/JJsMtcPgUzQ99EQVhY2uBO29g9UW2NY6L0wIDAQAB</string>
     <string name="drawer_open">Drawer Open</string>
     <string name="drawer_close">Drawer Close</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="addRecord">Add Record</string>
 
     <string name="tag_sum_pie">Sum Pie</string>
@@ -126,5 +124,59 @@ MJ9Fu3Vg+v9IhdrGG7QjCx/JJsMtcPgUzQ99EQVhY2uBO29g9UW2NY6L0wIDAQAB</string>
     <string name="qzone">Qzone</string>
     <string name="other">Other</string>
     <string name="share_to">Share to</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="login_button">Sign in</string>
+    <string name="register_button">Sign up</string>
+
+    <string name="register_user_name">Show me a cool user name!</string>
+    <string name="register_user_email">You can regain your password by email.</string>
+    <string name="register_password">I can keep secret!</string>
+    <string name="go_register">Register!</string>
+
+    <string name="register_idle">Sign up</string>
+    <string name="register_complete">Sign up successfully</string>
+    <string name="register_error">Sign up failed, tap to retry</string>
+
+    <string name="change_account_book_name_successfully">Change name successfully</string>
+    <string name="change_account_book_name_fail">Change name fail</string>
+    <string name="change_and_update_account_book_name_successfully">
+        Change name and update to server successfully
+    </string>
+    <string name="change_and_update_account_book_name_fail">
+        Change name but update to server fail
+    </string>
+
+    <string name="register_successfully">Welcome to YiJi!\n</string>
+    <string name="register_fail">Register fail!\n</string>
+    <string name="login_successfully">Welcome back!\n</string>
+    <string name="login_fail">Login fail!\n</string>
+    <string name="user_name_exist">User name already exists</string>
+    <string name="user_email_exist">Email already exists</string>
+    <string name="user_mobile_exist">
+        This mobile has been registered!\n
+        Please use the original account.
+    </string>
+    <string name="network_disconnection">Network disconnection</string>
+
+    <string name="user_name_or_password_incorrect">User doesn\'t exist or password incorrect!</string>
+    <string name="name_or_email_inexist">The user name or email doesn\'t exist!</string>
+    <string name="password_wrong">Password is incorrect!</string>
+
+    <string name="log_out_successfully">Log out successfully!</string>
+
+    <string name="sync_dialog_title">Sync?</string>
+    <string name="sync_dialog_content">
+        You have already synchronized your settings to YiJi server.
+        Would you want to synchronize your old settings to local?
+    </string>
+
+    <string name="your_current_account_book_password_is">Your current account book password is changed to </string>
+    <string name="sync_to_server_successfully">Sync settings to server successfully!</string>
+    <string name="sync_to_server_failed">Sync settings to server failed!\n</string>
+
+    <string name="logout_button">Logout</string>
 
 </resources>

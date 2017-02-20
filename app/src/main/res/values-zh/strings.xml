@@ -13,8 +13,6 @@ MJ9Fu3Vg+v9IhdrGG7QjCx/JJsMtcPgUzQ99EQVhY2uBO29g9UW2NY6L0wIDAQAB</string>
     <string name="drawer_open">Drawer Open</string>
     <string name="drawer_close">Drawer Close</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="addRecord">记一笔</string>
 
     <string name="tag_sum_pie">总和饼图</string>
@@ -127,5 +125,54 @@ MJ9Fu3Vg+v9IhdrGG7QjCx/JJsMtcPgUzQ99EQVhY2uBO29g9UW2NY6L0wIDAQAB</string>
     <string name="qzone">QQ空间</string>
     <string name="other">其它</string>
     <string name="share_to">分享到</string>
+
+    <string name="login_button">登录</string>
+    <string name="register_button">注册</string>
+
+    <string name="register_user_name">昵称</string>
+    <string name="register_user_email">邮箱用来找回密码</string>
+    <string name="register_password">密码</string>
+    <string name="go_register">注册！</string>
+
+    <string name="register_idle">注册</string>
+    <string name="register_complete">注册成功</string>
+    <string name="register_error">注册失败，点击重试</string>
+
+    <string name="change_account_book_name_successfully">成功修改账本名字</string>
+    <string name="change_account_book_name_fail">修改账本名字失败</string>
+    <string name="change_and_update_account_book_name_successfully">
+        已修改账本名字并上传成功
+    </string>
+    <string name="change_and_update_account_book_name_fail">
+        已修改账本名字但是上传失败
+    </string>
+
+    <string name="register_successfully">欢迎来到易记！\n</string>
+    <string name="register_fail">注册失败！\n</string>
+    <string name="login_successfully">欢迎回来！\n</string>
+    <string name="login_fail">登录失败！\n</string>
+    <string name="user_name_exist">用户名已存在</string>
+    <string name="user_email_exist">邮箱已存在</string>
+    <string name="user_mobile_exist">
+        这台手机已经注册过易记账号啦！\n
+        请用原来的账号登录吧~
+    </string>
+    <string name="network_disconnection">网络连接断开</string>
+
+    <string name="user_name_or_password_incorrect">用户不存在或密码错误</string>
+    <string name="name_or_email_inexist">用户不存在</string>
+    <string name="password_wrong">密码错误！</string>
+
+    <string name="log_out_successfully">登出成功！</string>
+
+    <string name="sync_dialog_title">同步设置?</string>
+    <string name="sync_dialog_content">
+        您之前已经在易记服务器上同步了设置，您是否想要把之前的设置同步到本地呢？
+    </string>
+
+    <string name="your_current_account_book_password_is">您的账本密码已经同步为：</string>
+    <string name="sync_to_server_successfully">设置已经同步到服务器！</string>
+    <string name="sync_to_server_failed">设置无法同步到服务器！\n</string>
+    <string name="logout_button">注销</string>
 
 </resources>

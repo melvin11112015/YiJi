@@ -3,6 +3,7 @@ package io.github.yylyingy.yiji;
 import android.app.Activity;
 import android.app.Application;
 import android.content.Context;
+import android.provider.Settings;
 import android.util.Log;
 
 import com.facebook.drawee.backends.pipeline.Fresco;
@@ -42,6 +43,18 @@ public class YiJiApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+        //      Bmob init
+        BmobConfig config =new BmobConfig.Builder(this)
+                //设置appkey
+                .setApplicationId("243fb1c1acf0854f98033d44bb89129d")
+                //请求超时时间（单位为秒）：默认15s
+                .setConnectTimeout(30)
+                //文件分片上传时每片的大小（单位字节），默认512*1024
+                .setUploadBlockSize(1024*1024)
+                //文件的过期时间(单位为秒)：默认1800s
+                .setFileExpiration(2500)
+                .build();
+        Bmob.initialize(config);
         if (LeakCanary.isInAnalyzerProcess(this)){
             return;
         }
@@ -50,25 +63,14 @@ public class YiJiApplication extends Application {
             public void run() {
                 Logger.init("YiJi-Logger");
                 Fresco.initialize(getApplicationContext());
-                mGetApp = new getApp(YiJiApplication.this);
+                mGetApp = new getApp((YiJiApplication) getApplicationContext());
                 Log.d(TAG,"init");
-                refWatcher = LeakCanary.install(YiJiApplication.this);
+                refWatcher = LeakCanary.install((Application) YiJiApplication.getAppContext());
                 CrashReport.UserStrategy strategy = new CrashReport.UserStrategy(getApplicationContext());
                 strategy.setAppChannel("myChannel")
                         .setAppVersion("v0.0.2");
                 CrashReport.initCrashReport(getApplicationContext(),"a9c67cbbf9",true,strategy);
-//      Bmob init
-                BmobConfig config =new BmobConfig.Builder(YiJiApplication.this)
-                        //设置appkey
-                        .setApplicationId("243fb1c1acf0854f98033d44bb89129d")
-                        //请求超时时间（单位为秒）：默认15s
-                        .setConnectTimeout(30)
-                        //文件分片上传时每片的大小（单位字节），默认512*1024
-                        .setUploadBlockSize(1024*1024)
-                        //文件的过期时间(单位为秒)：默认1800s
-                        .setFileExpiration(2500)
-                        .build();
-                Bmob.initialize(config);
+
                 YiJiUtil.init(YiJiApplication.this);
                 try {
                     DB.getInstance(getApplicationContext());
@@ -112,6 +114,11 @@ public class YiJiApplication extends Application {
         if (sToaster == null)
             sToaster = new Toaster();
         sToaster.showToast(msg);
+    }
+
+    public static String getAndroidId() {
+        return Settings.Secure.getString(
+                getAppContext().getContentResolver(), Settings.Secure.ANDROID_ID);
     }
     private static final class getApp {
         private YiJiApplication application;
