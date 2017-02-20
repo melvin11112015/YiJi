@@ -13,6 +13,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.balysv.materialripple.MaterialRippleLayout;
+import com.github.johnpersano.supertoasts.SuperToast;
 
 import net.lucode.hackware.magicindicator.MagicIndicator;
 import net.lucode.hackware.magicindicator.ViewPagerHelper;
@@ -30,6 +31,7 @@ import io.github.yylyingy.yiji.R;
 import io.github.yylyingy.yiji.YiJiApplication;
 import io.github.yylyingy.yiji.base.BaseActivity;
 
+import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -40,6 +42,8 @@ import io.github.yylyingy.yiji.main.account.AccountFragment;
 import io.github.yylyingy.yiji.main.showrecord.MainFragment;
 import io.github.yylyingy.yiji.main.zhihu.ZhihuListFragment;
 import io.github.yylyingy.yiji.tools.MessageEvent;
+import io.github.yylyingy.yiji.tools.YiJiToast;
+import io.github.yylyingy.yiji.tools.YiJiUtil;
 import io.github.yylyingy.yiji.ui.widget.ForbidScrollViewPager;
 import io.github.yylyingy.yiji.ui.widget.adapter.ForbidScrollViewpagerAdapter;
 
@@ -59,6 +63,7 @@ public class MainActivity extends BaseActivity implements MainFragment.OnBindToo
     DrawerLayout mDrawerLayout;
     @BindView(R.id.magic_indicator)
     MagicIndicator mMagicIndicator;
+    TestWeakReference mTestWeakReference;
 
 //    ShowChartsAdapter mShowChartsAdapter;
 //    MainFragment mFragment;
@@ -67,6 +72,7 @@ public class MainActivity extends BaseActivity implements MainFragment.OnBindToo
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        mTestWeakReference = new TestWeakReference(this);
         setContentView(R.layout.activity_main);
         final String [] TABLIST = {
                 getResources().getString(R.string.homePage),
@@ -221,6 +227,21 @@ public class MainActivity extends BaseActivity implements MainFragment.OnBindToo
 
     @OnClick(R.id.sync)
     protected void sync(){
+        if (mTestWeakReference.getActivity() != null){
+            YiJiToast.getInstance().showToast("非null", R.color.friend_header);
+        }else {
+            YiJiToast.getInstance().showToast("null", R.color.friend_header);
+        }
+    }
+
+    private static class TestWeakReference{
+        WeakReference<MainActivity> mReference;
+        private TestWeakReference(MainActivity activity){
+            mReference = new WeakReference<>(activity);
+        }
+        public MainActivity getActivity(){
+            return mReference.get();
+        }
     }
 
     @Override

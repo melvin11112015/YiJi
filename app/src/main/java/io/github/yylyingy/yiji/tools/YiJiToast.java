@@ -1,6 +1,8 @@
 package io.github.yylyingy.yiji.tools;
 
 import android.graphics.Color;
+import android.support.annotation.ColorInt;
+import android.support.annotation.IdRes;
 
 import com.github.johnpersano.supertoasts.SuperToast;
 
@@ -19,7 +21,7 @@ public class YiJiToast {
     private YiJiToast() {
     }
 
-    public void showToast(int text, int color) {
+    public void showToast(int text, @ColorInt int color) {
         SuperToast.cancelAllSuperToasts();
         SuperToast.cancelAllSuperToasts();
         SuperToast superToast = new SuperToast(YiJiApplication.getAppContext());

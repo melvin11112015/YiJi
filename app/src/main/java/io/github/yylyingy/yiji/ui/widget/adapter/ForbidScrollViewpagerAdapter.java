@@ -19,14 +19,13 @@ import io.github.yylyingy.yiji.main.zhihu.ZhihuListFragment;
  * Created by Yangyl on 2017/2/17.
  */
 
-public class ForbidScrollViewpagerAdapter extends FragmentStatePagerAdapter {
+public class ForbidScrollViewpagerAdapter extends FragmentPagerAdapter {
     private List<Fragment> mList = new ArrayList<>();
     public ForbidScrollViewpagerAdapter(FragmentManager fragmentManager){
         super(fragmentManager);
         this.mList.add(new MainFragment());
         this.mList.add(ZhihuListFragment.newInstance());
         this.mList.add(new AccountFragment());
-         ;
     }
     /**
      * Return the number of views available.

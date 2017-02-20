@@ -20,6 +20,13 @@ public class AccountFragment extends BaseFragment {
         // Required empty public constructor
     }
 
+    public static AccountFragment getInstance(){
+        AccountFragment fragment = new AccountFragment();
+        Bundle bundle = new Bundle();
+        fragment.setArguments(bundle);
+        return fragment;
+    }
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

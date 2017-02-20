@@ -6,6 +6,7 @@ import android.content.Context;
 import android.util.Log;
 
 import com.facebook.drawee.backends.pipeline.Fresco;
+import com.orhanobut.logger.Logger;
 import com.squareup.leakcanary.LeakCanary;
 import com.squareup.leakcanary.RefWatcher;
 import com.tencent.bugly.crashreport.CrashReport;
@@ -47,6 +48,7 @@ public class YiJiApplication extends Application {
         ThreadPoolTool.exeTask(new Runnable() {
             @Override
             public void run() {
+                Logger.init("YiJi-Logger");
                 Fresco.initialize(getApplicationContext());
                 mGetApp = new getApp(YiJiApplication.this);
                 Log.d(TAG,"init");

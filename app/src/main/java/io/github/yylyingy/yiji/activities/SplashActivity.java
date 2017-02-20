@@ -27,7 +27,6 @@ import butterknife.Unbinder;
 
 public class SplashActivity extends BaseActivity implements PermissionListener {
     public static final String TAG = SplashActivity.class.getCanonicalName();
-    private Unbinder mUnbinder;
     private static final int REQUEST_PERMISSION_CODE = 0x123;
     private PermissionTools permissionTools;
     @Override

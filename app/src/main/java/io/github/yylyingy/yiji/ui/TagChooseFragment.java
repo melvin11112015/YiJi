@@ -18,7 +18,7 @@ import io.github.yylyingy.yiji.tools.db.DataManager;
 
 
 public class TagChooseFragment extends Fragment {
-    public static ArrayList<TagChooseFragment>tagChooseFragments = new ArrayList<>();
+    public  ArrayList<TagChooseFragment>tagChooseFragments = new ArrayList<>();
 
     public TagChooseGridViewAdapter getTagAdapter() {
         return tagAdapter;

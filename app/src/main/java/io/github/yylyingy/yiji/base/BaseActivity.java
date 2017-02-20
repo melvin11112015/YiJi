@@ -25,6 +25,7 @@ import io.github.yylyingy.yiji.tools.MessageEvent;
 
 public abstract class BaseActivity extends AppCompatActivity {
 
+    private   String TAG ;
     protected Unbinder mUnbinder = null;
     protected FragmentManager mFragmentManager;
     @Override
@@ -33,6 +34,7 @@ public abstract class BaseActivity extends AppCompatActivity {
         EventBus.getDefault().register(this);
 //        ((YiJiApplication)getApplication()).addActivity(this);
         mFragmentManager = getSupportFragmentManager();
+        TAG = this.getLocalClassName();
     }
 
     @Override
