@@ -135,6 +135,15 @@ public class AddRecordFragment extends BaseFragment {
                             "RMB",
                             editMoneyFragment.getTagId(),
                             calendar);
+                    StringBuilder source = new StringBuilder();
+                        source.append( record.getMoney());
+                    source.append(record.getCurrency());
+                    source.append(record.getTag());
+                    source.append(record.getCalendar().toString());
+                    source.append(record.getRemark());
+                    source.append(record.getUserId());
+                    source.append(record.getObjectId());
+                    record.setHashCode(source.toString());
                     DataManager.getsInstance(getActivity().getApplicationContext())
                             .saveRecord(record);
                     editMoneyFragment.setTagImage(R.color.transparent);
@@ -146,8 +155,6 @@ public class AddRecordFragment extends BaseFragment {
                 } catch (NumberFormatException e) {
                     YiJiToast.getInstance().showToast(R.string.number_format_error, SuperToast.Background.RED);
                     YoYo.with(Techniques.Shake).duration(1000).playOn(editMoneyFragment.editView);
-                    e.printStackTrace();
-                } catch (IOException e) {
                     e.printStackTrace();
                 }
             }

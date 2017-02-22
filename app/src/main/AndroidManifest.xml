@@ -39,8 +39,8 @@
         </activity>
         <activity android:name="io.github.yylyingy.yiji.activities.AddRecordActivity">
         </activity>
-        <activity android:name="top.wefor.now.ui.activity.WebActivity"/>
-        <activity android:name="top.wefor.now.ui.activity.BigImageActivity"/>
+        <activity android:name=".activities.WebActivity"/>
+        <activity android:name=".activities.BigImageActivity"/>
 <!--Leakcanary service-->
         <service
             android:name="com.squareup.leakcanary.internal.HeapAnalyzerService"

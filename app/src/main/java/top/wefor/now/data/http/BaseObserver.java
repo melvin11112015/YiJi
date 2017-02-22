@@ -4,7 +4,7 @@ import android.text.TextUtils;
 import android.util.Log;
 
 import io.github.yylyingy.yiji.YiJiApplication;
-import io.github.yylyingy.yiji.main.zhihu.BaseResult;
+import io.github.yylyingy.yiji.base.zhihubase.BaseResult;
 import rx.Observer;
 
 /**

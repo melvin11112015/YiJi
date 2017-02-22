@@ -84,24 +84,4 @@ public class AccountFragment extends BaseFragment implements IAccountLogin{
         getChildFragmentManager().beginTransaction().replace(R.id.fragmentContainer
                 ,noUserFragment,"Logout").commit();
     }
-
-    @Override
-    public void register(User user){
-        //            myUser.setUsername("372848728");
-//            myUser.setPassword("19920615yyl");
-//            myUser.setEmail("372848728@qq.com");
-//            myUser.setAndroidId(YiJiApplication.getAndroidId());
-            addSubscription(user.signUp(new SaveListener<User>() {
-                @Override
-                public void done(User s, BmobException e) {
-                    if(e==null){
-                        Toast.makeText(getActivity(),"注册成功:" +s.toString(), Toast.LENGTH_SHORT).show();
-                        Logger.d("注册成功");
-                    }else{
-                        Logger.d(e);
-                    }
-                    Logger.d(e);
-                }
-            }));
-    }
 }

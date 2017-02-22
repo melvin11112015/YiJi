@@ -1,11 +1,15 @@
 package io.github.yylyingy.yiji.javabeans;
 
+import com.facebook.common.util.HashCodeUtil;
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Comparator;
 import java.util.Date;
 
 import cn.bmob.v3.BmobObject;
+import io.github.yylyingy.yiji.tools.PasswordHashCodeTool;
 import io.github.yylyingy.yiji.tools.YiJiUtil;
 
 /**
@@ -22,6 +26,7 @@ public class YiJiRecord extends BmobObject {
     private String userId;
     private String localObjectId;
     private Boolean isUploaded = false;
+    private String  hashCode;
 
     public String toString() {
         return "CoCoinRecord(" +
@@ -168,5 +173,34 @@ public class YiJiRecord extends BmobObject {
 
     public void setIsUploaded(Boolean isUploaded) {
         this.isUploaded = isUploaded;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj){
+            return true;
+        }
+        if (obj instanceof YiJiRecord) {
+            YiJiRecord anotherYiJiRecord = (YiJiRecord) obj;
+            boolean isEquals = this.id.equals(  anotherYiJiRecord.id) ||
+                this.money.equals(anotherYiJiRecord.money)               ||
+                this.currency.equals(anotherYiJiRecord.currency)        ||
+                this.tag.equals(anotherYiJiRecord.tag)                  ||
+                this.calendar.equals(anotherYiJiRecord.calendar)        ||
+                this.remark.equals(anotherYiJiRecord.remark)            ||
+                this.userId.equals(anotherYiJiRecord.userId)            ||
+                this.localObjectId.equals(anotherYiJiRecord.localObjectId);
+//            private Boolean isUploaded = false;
+            return isEquals;
+        }
+        return false;
+    }
+
+    public String getHashCode() {
+        return hashCode;
+    }
+
+    public void setHashCode(String str) {
+        this.hashCode = PasswordHashCodeTool.encryptToSHA(str);
     }
 }

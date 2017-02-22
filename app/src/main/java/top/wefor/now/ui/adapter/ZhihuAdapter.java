@@ -19,8 +19,8 @@ import butterknife.OnClick;
 import io.github.yylyingy.yiji.R;
 import top.wefor.now.data.http.NowApi;
 import top.wefor.now.data.model.entity.Zhihu;
-import top.wefor.now.ui.activity.BigImageActivity;
-import top.wefor.now.ui.activity.WebActivity;
+import io.github.yylyingy.yiji.activities.BigImageActivity;
+import io.github.yylyingy.yiji.activities.WebActivity;
 
 /**
  * Created by ice on 15/10/26.

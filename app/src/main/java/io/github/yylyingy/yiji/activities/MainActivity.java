@@ -29,13 +29,16 @@ import net.steamcrafted.materialiconlib.MaterialIconView;
 
 import org.greenrobot.eventbus.EventBus;
 
+import cn.bmob.v3.BmobQuery;
 import cn.bmob.v3.BmobUser;
 import cn.bmob.v3.exception.BmobException;
+import cn.bmob.v3.listener.FindListener;
 import cn.bmob.v3.listener.SaveListener;
 import io.github.yylyingy.yiji.R;
 import io.github.yylyingy.yiji.YiJiApplication;
 import io.github.yylyingy.yiji.base.BaseActivity;
 
+import java.io.IOException;
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -44,16 +47,22 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.OnClick;
 import io.github.yylyingy.yiji.javabeans.User;
+import io.github.yylyingy.yiji.javabeans.YiJiRecord;
 import io.github.yylyingy.yiji.main.account.AccountFragment;
 import io.github.yylyingy.yiji.main.showrecord.MainFragment;
 import io.github.yylyingy.yiji.main.zhihu.ZhihuListFragment;
+import io.github.yylyingy.yiji.sync.ISyncView;
+import io.github.yylyingy.yiji.sync.SyncPresenter;
 import io.github.yylyingy.yiji.tools.MessageEvent;
+import io.github.yylyingy.yiji.tools.ThreadPoolTool;
 import io.github.yylyingy.yiji.tools.YiJiToast;
 import io.github.yylyingy.yiji.tools.YiJiUtil;
+import io.github.yylyingy.yiji.tools.db.DataManager;
 import io.github.yylyingy.yiji.ui.widget.ForbidScrollViewPager;
 import io.github.yylyingy.yiji.ui.widget.adapter.ForbidScrollViewpagerAdapter;
 
-public class MainActivity extends BaseActivity implements MainFragment.OnBindToolbar{
+public class MainActivity extends BaseActivity implements MainFragment.OnBindToolbar,
+        ISyncView {
     public static final String TAG = MainActivity.class.getSimpleName();
     private List<String> tabList ;//= Arrays.asList(TABLIST);
 //    @BindView(R.id.materialViewPager)
@@ -69,7 +78,7 @@ public class MainActivity extends BaseActivity implements MainFragment.OnBindToo
     DrawerLayout mDrawerLayout;
     @BindView(R.id.magic_indicator)
     MagicIndicator mMagicIndicator;
-    TestWeakReference mTestWeakReference;
+    private SyncPresenter mSyncPresenter;
 
 //    ShowChartsAdapter mShowChartsAdapter;
 //    MainFragment mFragment;
@@ -78,13 +87,14 @@ public class MainActivity extends BaseActivity implements MainFragment.OnBindToo
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mTestWeakReference = new TestWeakReference(this);
         setContentView(R.layout.activity_main);
         final String [] TABLIST = {
                 getResources().getString(R.string.homePage),
                 getResources().getString(R.string.zhihuDaily),
                 getResources().getString(R.string.me)
         };
+        mSyncPresenter = new SyncPresenter();
+        mSyncPresenter.bindView(this);
         tabList = Arrays.asList(TABLIST);
 //        mFragment =          new MainFragment();
 //        mZhihuListFragment = ZhihuListFragment.newInstance();
@@ -223,6 +233,8 @@ public class MainActivity extends BaseActivity implements MainFragment.OnBindToo
     @Override
     protected void onDestroy() {
         super.onDestroy();
+        mSyncPresenter.detachView();
+        mSyncPresenter = null;
     }
 
     @OnClick(R.id.exit)
@@ -231,27 +243,128 @@ public class MainActivity extends BaseActivity implements MainFragment.OnBindToo
         EventBus.getDefault().post(new MessageEvent("stop"));
     }
 
+//    boolean isDownloadOnePage = false;
+//    boolean isDownAllData = false;
+//    boolean isDownFailed = false;
     @OnClick(R.id.sync)
     public void sync(){
+        YiJiToast.getInstance().showToast("toast",SuperToast.Background.RED);
         User user = BmobUser.getCurrentUser(User.class);
         if (user == null){
             mForbidScrollViewPager.setCurrentItem(2);
             YiJiToast.getInstance().showToast("请登录",SuperToast.Background.RED);
             return;
         }
+        mSyncPresenter.startSync();
+//        ThreadPoolTool.exeTask(() ->{
+//            Logger.d("start download !");
+//            //Download data from cloud
+//            BmobQuery<YiJiRecord> query = new BmobQuery<>();
+//            final int dataSizeFromCloud = 6;
+////返回50条数据，如果不加上这条语句，默认返回10条数据
+//            query.setLimit(dataSizeFromCloud);
+//            int i = 0;
+//            isDownloadOnePage = false;
+//            isDownAllData = false;
+//            isDownFailed = false;
+//            while (!isDownAllData) {
+//                //download fail,exit download thread
+//                if (isDownFailed){
+//                    break;
+//                }
+//                query.setSkip(dataSizeFromCloud * (i ++));
+//                //执行查询方法
+////                query.findObjectsObservable()
+//                query.findObjects(new FindListener<YiJiRecord>() {
+//                    @Override
+//                    public void done(List<YiJiRecord> object, BmobException e) {
+//                        if (e == null) {
+//                            if (object.size() > 0) {
+//                                for (YiJiRecord jiRecord : object) {
+//                                    Logger.d(jiRecord.getObjectId());
+//                                }
+//                                if (object.size() < dataSizeFromCloud) {
+//                                    isDownAllData = true;
+//                                }
+//                            } else {
+//                                isDownAllData = true;
+//                            }
+//                            isDownloadOnePage = true;
+//                        }else {
+//                            isDownFailed = true;
+//                            Logger.d(e);
+//                        }
+//                    }
+//                });
+//                //wait for download one page.
+//                try {
+//                    while (!isDownloadOnePage && !isDownFailed){
+//                        Thread.sleep(20);
+//                    }
+//                } catch (InterruptedException e) {
+//                    e.printStackTrace();
+//                }
+//                //clear flag
+//                isDownloadOnePage = false;
+//            }
+//        });
+
+
+//        ThreadPoolTool.exeTask(() ->{
+//                for (int i = 0; i< DataManager.RECORDS.size();i ++){
+//                    final YiJiRecord record = DataManager.RECORDS.get(i);
+//                    if (record.getObjectId() == null){
+//                        record.save(new SaveListener<String>() {
+//                            @Override
+//                            public void done(String objectId, BmobException e) {
+//                                if(e==null){
+//                                    Logger.d("返回数据：" + objectId);
+//                                    record.setObjectId(objectId);
+//                                    DataManager.getsInstance(getApplicationContext())
+//                                            .updateRecordObjectId(record);
+//                                }else{
+//                                    Logger.d(e);
+//                                }
+//                            }
+//                        });
+//                    }
+//                }
+//
+//        });
+
 
 
     }
 
-    private static class TestWeakReference{
-        WeakReference<MainActivity> mReference;
-        private TestWeakReference(MainActivity activity){
-            mReference = new WeakReference<>(activity);
-        }
-        public MainActivity getActivity(){
-            return mReference.get();
-        }
+    /**
+     * Start sync data local to cloud,and download old data which local don't exist.
+     */
+    @Override
+    public void hasStartedSync() {
+        Logger.d("has startedSynced");
+
     }
+
+    /**
+     * Sync fail.
+     * Called back from another thread.
+     */
+    @Override
+    public void syncFail() {
+        Logger.d("同步失败");
+    }
+
+    /**
+     * Sync succeed.
+     * Called back from another thread.
+     */
+    @Override
+    public void syncSuccess() {
+        Logger.d("同步成功");
+
+    }
+
+
 
     @Override
     public void bindToolbar(Toolbar toolbar) {

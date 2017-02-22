@@ -9,5 +9,4 @@ import io.github.yylyingy.yiji.javabeans.User;
 public interface IAccountLogin {
     void login();
     void logout();
-    void register(User user);
 }

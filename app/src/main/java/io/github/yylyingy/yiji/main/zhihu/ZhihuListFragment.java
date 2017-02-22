@@ -6,13 +6,12 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
 import com.github.florent37.materialviewpager.MaterialViewPagerHelper;
-import com.github.johnpersano.supertoasts.SuperToast;
 
 import java.util.Calendar;
 import java.util.Date;
 
+import io.github.yylyingy.yiji.base.zhihubase.BaseListFragment;
 import io.github.yylyingy.yiji.tools.Constants;
-import io.github.yylyingy.yiji.tools.YiJiToast;
 import jp.wasabeef.recyclerview.adapters.AlphaInAnimationAdapter;
 import jp.wasabeef.recyclerview.adapters.ScaleInAnimationAdapter;
 import jp.wasabeef.recyclerview.animators.FadeInAnimator;

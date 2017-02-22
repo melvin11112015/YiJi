@@ -54,7 +54,6 @@ public class SplashActivity extends BaseActivity implements PermissionListener {
         }
     }
 
-    @OnClick(R.id.activity_splash)
     void startMainActivity(){
         startActivity(new Intent(SplashActivity.this,AddRecordActivity.class));
         finish();
@@ -88,8 +87,6 @@ public class SplashActivity extends BaseActivity implements PermissionListener {
                     }
                     startMainActivity();
                 } catch (InterruptedException e) {
-                    e.printStackTrace();
-                } catch (IOException e) {
                     e.printStackTrace();
                 }
             }

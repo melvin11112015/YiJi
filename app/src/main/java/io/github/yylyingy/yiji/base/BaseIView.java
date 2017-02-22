@@ -5,4 +5,5 @@ package io.github.yylyingy.yiji.base;
  */
 
 public interface BaseIView {
+
 }

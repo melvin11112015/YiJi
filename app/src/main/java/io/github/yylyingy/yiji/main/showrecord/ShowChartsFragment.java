@@ -91,11 +91,7 @@ public class ShowChartsFragment extends BaseFragment {
         Calendar rightRange;
 
         DataManager recordManager = null;
-        try {
-            recordManager = DataManager.getsInstance(mContext.getApplicationContext());
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        recordManager = DataManager.getsInstance(mContext.getApplicationContext());
         int start = -1;
         int end = 0;
 

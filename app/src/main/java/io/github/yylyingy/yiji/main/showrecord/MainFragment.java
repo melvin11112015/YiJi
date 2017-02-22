@@ -62,25 +62,21 @@ public class MainFragment extends BaseFragment {
     public void onAttach(Context context) {
         super.onAttach(context);
         mContext = context;
-        Logger.d("onAttach");
     }
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Logger.d("onCreate");
     }
 
     @Override
     public void onStart() {
         super.onStart();
-        Logger.d("onStart");
     }
 
     @Override
     public void onResume() {
         super.onResume();
-        Logger.d("onResume");
     }
 
     public Toolbar getToolbar(){

@@ -9,6 +9,7 @@ import java.util.List;
 
 import io.github.yylyingy.yiji.javabeans.Tag;
 import io.github.yylyingy.yiji.javabeans.YiJiRecord;
+import io.github.yylyingy.yiji.tools.ThreadPoolTool;
 
 /**
  * Created by Yangyl on 2016/12/21.
@@ -21,7 +22,7 @@ public class DataManager {
     public static List<Tag>TAGS ;
     public static List<YiJiRecord> RECORDS;
     private boolean isInit = false;
-    private DataManager(Context context) throws IOException {
+    private DataManager(Context context) {
         db = DB.getInstance(context);
         TAGS = new LinkedList<>();
         RECORDS = new LinkedList<>();
@@ -39,14 +40,14 @@ public class DataManager {
         isInit = true;
 
     }
-    public static DataManager getsInstance(Context context) throws IOException {
+    public static DataManager getsInstance(Context context)  {
         if (checkSInstanceIsInit == null){
             initInstance(context.getApplicationContext());
         }
         return sInstance;
     }
 
-    private synchronized static void initInstance(Context context) throws IOException {
+    private synchronized static void initInstance(Context context) {
         if (checkSInstanceIsInit == null){
             sInstance = new DataManager(context);
             checkSInstanceIsInit = sInstance;
@@ -97,6 +98,12 @@ public class DataManager {
     public void saveRecord(YiJiRecord record){
         RECORDS.add(record);
         db.saveRecord(record);
+    }
+
+    public void updateRecordObjectId(final YiJiRecord record){
+        ThreadPoolTool.exeTask(() -> {
+            db.updateRecordObjectId(record);
+        });
     }
 
 

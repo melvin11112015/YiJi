@@ -26,8 +26,8 @@ public class DB {
     public static final String TAG_DB_NAME_STRING = "TAG";
 
     private static final String QUERY_TAG = "SELECT * FROM TAG;";
-    private static final String QUERY_RECORD = "SELECT * FROM RECORD";
-    public static final int VERSION = 1;
+    private static final String QUERY_RECORD = "SELECT * FROM RECORD ORDER BY TIME";
+    public static final int VERSION = 2;
 
     private static volatile DB db  = null;
     private static DB checkDBIsInit = null;
@@ -37,13 +37,13 @@ public class DB {
         mDBHelper = new DBHelper(context,DB_NAME_STRING,null,VERSION);
         mSQLiteDatabase = mDBHelper.getWritableDatabase();
     }
-    public static DB getInstance(Context context) throws IOException {
+    public static DB getInstance(Context context)  {
         if (checkDBIsInit == null){
             initInstance(context.getApplicationContext());
         }
         return db;
     }
-    private synchronized static void initInstance(Context context) throws IOException {
+    private synchronized static void initInstance(Context context){
         if (checkDBIsInit == null){
             db = new DB(context);
             checkDBIsInit = db;
@@ -62,7 +62,7 @@ public class DB {
                 yiJiRecord.setCalendar(cursor.getString(cursor.getColumnIndex("TIME")));
                 yiJiRecord.setRemark(cursor.getString(cursor.getColumnIndex("REMARK")));
                 yiJiRecord.setUserId(cursor.getString(cursor.getColumnIndex("USER_ID")));
-                yiJiRecord.setLocalObjectId(cursor.getString(cursor.getColumnIndex("OBJECT_ID")));
+                yiJiRecord.setObjectId(cursor.getString(cursor.getColumnIndex("OBJECT_ID")));
                 yiJiRecord.setIsUploaded(
                         cursor.getInt(cursor.getColumnIndex("IS_UPLOADED")) == 0 ? false : true);
                 DataManager.RECORDS.add(yiJiRecord);
@@ -108,7 +108,9 @@ public class DB {
                 "\"REMARK\"," +
                 "\"USER_ID\"," +
                 "\"OBJECT_ID\"," +
-                "\"IS_UPLOADED\") VALUES (?,?,?,?,?,?,?,?)");
+                "\"IS_UPLOADED\"," +
+                "\"HASH_CODE\")"   +
+                "VALUES (?,?,?,?,?,?,?,?,?);");
         mSQLiteDatabase.execSQL(insertSql.toString(),new Object []{
                 record.getMoney(),
                 record.getCurrency(),
@@ -118,8 +120,19 @@ public class DB {
                 record.getRemark(),
                 record.getUserId(),
                 record.getObjectId(),
-                record.getIsUploaded()
+                record.getIsUploaded(),
+                record.getHashCode()
         });
+    }
+
+    public void updateRecordObjectId(final YiJiRecord record){
+        StringBuilder insertSql = new StringBuilder();
+        insertSql.append(" UPDATE RECORD SET OBJECT_ID = \"");
+        insertSql.append(record.getObjectId());
+        insertSql.append("\" where ID = ");
+        insertSql.append(record.getId());
+        insertSql.append(" ;");
+        mSQLiteDatabase.execSQL(insertSql.toString());
     }
 
 

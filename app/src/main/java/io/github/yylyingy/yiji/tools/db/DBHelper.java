@@ -20,7 +20,8 @@ public class DBHelper extends SQLiteOpenHelper {
                     "REMARK text," +
                     "USER_ID text," +
                     "OBJECT_ID text," +
-                    "IS_UPLOADED integer" +
+                    "IS_UPLOADED integer," +
+                    "HASH_CODE text" +
                     ");";
     private static final String CREATE_TAG_SQL =
             "CREATE TABLE TAG" +
@@ -80,6 +81,12 @@ public class DBHelper extends SQLiteOpenHelper {
      */
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-
+        switch (oldVersion){
+            case 1:
+                db.execSQL("ALTER TABLE RECORD ADD HASH_CODE text;");
+                break;
+            default:
+                break;
+        }
     }
 }

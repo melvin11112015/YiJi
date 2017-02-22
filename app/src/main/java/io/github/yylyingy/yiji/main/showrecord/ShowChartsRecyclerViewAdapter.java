@@ -20,7 +20,6 @@ import com.nispok.snackbar.listeners.ActionClickListener;
 
 import net.steamcrafted.materialiconlib.MaterialIconView;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.HashMap;
@@ -119,11 +118,7 @@ public class ShowChartsRecyclerViewAdapter extends RecyclerView.Adapter<ShowChar
         Sum = 0;
 
         DataManager recordManager = null;
-        try {
-            recordManager = DataManager.getsInstance(mContext.getApplicationContext());
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        recordManager = DataManager.getsInstance(mContext.getApplicationContext());
 
         allData = new ArrayList<>();
         if (start != -1)
@@ -412,12 +407,8 @@ public class ShowChartsRecyclerViewAdapter extends RecyclerView.Adapter<ShowChar
                         @Override
                         public void onValueSelected(int p, SliceValue sliceValue) {
                             // snack bar
-                            try {
-                                DataManager recordManager
-                                        = DataManager.getsInstance(mContext.getApplicationContext());
-                            } catch (IOException e) {
-                                e.printStackTrace();
-                            }
+                            DataManager recordManager
+                                    = DataManager.getsInstance(mContext.getApplicationContext());
                             String text;
                             tagId = Integer.valueOf(String.valueOf(sliceValue.getLabelAsChars()));
                             double percent = sliceValue.getValue() / Sum * 100;
@@ -518,12 +509,8 @@ public class ShowChartsRecyclerViewAdapter extends RecyclerView.Adapter<ShowChar
                                         lastHistogramSelectedPosition = columnIndex;
                                         timeIndex = columnIndex;
                                         // snack bar
-                                        try {
-                                            DataManager recordManager
-                                                    = DataManager.getsInstance(mContext.getApplicationContext());
-                                        } catch (IOException e) {
-                                            e.printStackTrace();
-                                        }
+                                        DataManager recordManager
+                                                = DataManager.getsInstance(mContext.getApplicationContext());
 
                                         String text = YiJiUtil.GetSpendString((int) value.getValue());
                                         if (tagId != -1)
