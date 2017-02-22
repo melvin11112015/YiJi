@@ -8,3 +8,7 @@
 /captures
 .externalNativeBuild
 /app/build
+/encryptdecrypt/build
+/magicindicator/build
+/MaterialDesign/build
+/materialList/build

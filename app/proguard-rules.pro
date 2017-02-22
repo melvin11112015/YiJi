@@ -34,12 +34,14 @@
 -dontwarn android.net.**
 -dontwarn org.apache.**
 -dontwarn rx.**
+-dontwarn org.greenrobot.eventbus.**
 
 -keep public class cn.bmob.v3.**{*;}
 -keep public class android.net.**{*;}
 -keep public class org.apache.**{*;}
 -keep public class rx.**{*;}
-
+-keep public class org.greenrobot.eventbus.**{*;}
+-keepclasseswithmembers public class io.github.yylyingy.yiji.javabeans.**{*;}
 
 -keep public class * extends android.app.Activity
 -keep public class * extends android.app.Application
@@ -54,6 +56,18 @@
 -keep public class com.squareup.okhttp3.**{*;}
 -keep public class com.squareup.okio.**{*;}
 -keep public class com.squareup.picasso.**{*;}
+#####################################EventBus
+-keepattributes *Annotation*
+-keepclassmembers class ** {
+    @org.greenrobot.eventbus.Subscribe <methods>;
+}
+-keep enum org.greenrobot.eventbus.ThreadMode { *; }
+
+# Only required if you use AsyncExecutor
+-keepclassmembers class * extends org.greenrobot.eventbus.util.ThrowableFailureEvent {
+    <init>(Java.lang.Throwable);
+}
+#########################################
 
 -keepclasseswithmembernames class * {
                             native <methods>;

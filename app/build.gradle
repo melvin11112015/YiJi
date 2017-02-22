@@ -11,8 +11,8 @@ android {
         applicationId "io.github.yylyingy.yiji"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 2
-        versionName "1.0.0"
+        versionCode 3
+        versionName "1.0.1"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         externalNativeBuild {
             cmake {
@@ -28,7 +28,6 @@ android {
     buildTypes {
         release {
             minifyEnabled true
-            shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
         debug {
@@ -113,7 +112,6 @@ dependencies {
     compile 'com.android.support:multidex:1.0.1'
     //    EventBus
     compile 'org.greenrobot:eventbus:3.0.0'
-    compile 'com.android.support:support-v4:24.2.1'
     testCompile 'junit:junit:4.12'
     //    leakCanary lib
     testCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5'
