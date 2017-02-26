@@ -3,6 +3,8 @@ package top.wefor.now.data.http;
 import android.text.TextUtils;
 import android.util.Log;
 
+import com.orhanobut.logger.Logger;
+
 import io.github.yylyingy.yiji.YiJiApplication;
 import io.github.yylyingy.yiji.base.zhihubase.BaseResult;
 import rx.Observer;
@@ -22,7 +24,7 @@ public abstract class BaseObserver<T extends BaseResult> implements Observer<T> 
 
     @Override
     public void onCompleted() {
-        Log.i("xyz", "onCompleted");
+        Logger.t("xyz").i("xyz", "onCompleted");
     }
 
     @Override

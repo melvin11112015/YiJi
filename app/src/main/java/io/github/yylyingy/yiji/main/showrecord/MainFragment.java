@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.balysv.materialripple.MaterialRippleLayout;
 import com.github.florent37.materialviewpager.MaterialViewPager;
 import com.github.florent37.materialviewpager.header.HeaderDesign;
 import com.orhanobut.logger.Logger;
@@ -20,6 +21,7 @@ import io.github.yylyingy.yiji.R;
 import io.github.yylyingy.yiji.base.BaseFragment;
 import io.github.yylyingy.yiji.tools.YiJiToast;
 import io.github.yylyingy.yiji.tools.YiJiUtil;
+import uk.co.senab.photoview.PhotoView;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -31,6 +33,7 @@ public class MainFragment extends BaseFragment {
     ShowChartsAdapter mShowChartsAdapter;
     OnBindToolbar mBindToolbar;
     public MainFragment(){
+        PhotoView a;
 
     }
     @Override

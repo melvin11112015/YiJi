@@ -20,10 +20,10 @@ android {
             }
         }
         ndk {
-            abiFilters 'armeabi', 'armeabi-v7a', 'x86_64', 'arm64-v8a', 'x86'
+            abiFilters 'armeabi', 'armeabi-v7a', 'x86'//, 'x86_64', 'arm64-v8a'
         }
         // Enabling multidex support.
-        multiDexEnabled true
+        multiDexEnabled false
     }
     buildTypes {
         release {
@@ -31,7 +31,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
         debug {
-            minifyEnabled true
+            minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }

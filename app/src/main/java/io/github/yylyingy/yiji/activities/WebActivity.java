@@ -251,7 +251,8 @@ public class WebActivity extends BaseSwipeBackCompatActivity implements View.OnT
     public boolean onTouch(View v, MotionEvent event) {
         WebView.HitTestResult hr = ((WebView) v).getHitTestResult();
 
-        Log.i("xyz ", "getExtra = " + hr.getExtra() + "\t\t Type=" + hr.getType());
+
+//        Log.i("xyz ", "getExtra = " + hr.getExtra() + "\t\t Type=" + hr.getType());
 
         switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:
@@ -268,7 +269,7 @@ public class WebActivity extends BaseSwipeBackCompatActivity implements View.OnT
             case MotionEvent.ACTION_UP:
                 if (direction == 2) {
                     if ((event.getRawY() - oldY > 72) && !isShowFab) {
-                        mFloatingActionButton.setVisibility(View.VISIBLE);
+//                        mFloatingActionButton.setVisibility(View.VISIBLE);
                         isShowFab = true;
                     } else if (isShowFab && oldY - event.getRawY() > 72) {
                         mFloatingActionButton.setVisibility(View.GONE);

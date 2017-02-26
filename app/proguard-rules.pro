@@ -40,7 +40,6 @@
 -keep public class android.net.**{*;}
 -keep public class org.apache.**{*;}
 -keep public class rx.**{*;}
--keep public class org.greenrobot.eventbus.**{*;}
 -keepclasseswithmembers public class io.github.yylyingy.yiji.javabeans.**{*;}
 
 -keep public class * extends android.app.Activity
@@ -56,6 +55,31 @@
 -keep public class com.squareup.okhttp3.**{*;}
 -keep public class com.squareup.okio.**{*;}
 -keep public class com.squareup.picasso.**{*;}
+-keep public class org.greenrobot.eventbus.**{*;}
+
+-keep public class com.github.florent37.**{*;}
+-keep public class com.dd.**{*;}
+-keep public class com.squareup.**{*;}
+-keep public class com.android.support.**{*;}
+-keep public class com.google.**{*;}
+-keep public class butterknife.**{*;}
+-keep public class net.steamcrafted.**{*;}
+-keep public class com.daimajia.**{*;}
+-keep public class com.balysv.**{*;}
+-keep public class com.orhanobut.**{*;}
+-keep public class com.github.lecho.**{*;}
+-keep public class com.nispok.**{*;}
+-keep public class com.rengwuxian.**{*;}
+-keep public class com.github.johnpersano.**{*;}
+-keep public class com.tencent.**{*;}
+-keep public class com.nineoldandroids.**{*;}
+-keep public class com.afollestad.**{*;}
+-keep public class de.hdodenhof.**{*;}
+-keep public class com.facebook.**{*;}
+-keep public class jp.wasabeef.**{*;}
+-keep public class uk.co.senab.photoview.**{*;}
+-keep public class com.wang.avi.**{*;}
+
 #####################################EventBus
 -keepattributes *Annotation*
 -keepclassmembers class ** {
@@ -69,6 +93,7 @@
 }
 #########################################
 
+#native methods
 -keepclasseswithmembernames class * {
                             native <methods>;
                             }

@@ -10,6 +10,8 @@ import android.support.v7.graphics.drawable.DrawerArrowDrawable;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
+import com.orhanobut.logger.Logger;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import io.github.yylyingy.yiji.R;

@@ -3,6 +3,8 @@ package io.github.yylyingy.yiji.tools.db;
 import android.content.Context;
 import android.content.SharedPreferences;
 
+import com.orhanobut.logger.Logger;
+
 import java.io.IOException;
 import java.util.LinkedList;
 import java.util.List;
@@ -22,7 +24,7 @@ public class DataManager {
     public static List<Tag>TAGS ;
     public static List<YiJiRecord> RECORDS;
     private boolean isInit = false;
-    private DataManager(Context context) {
+    private DataManager(Context context,DataInited listener) {
         db = DB.getInstance(context);
         TAGS = new LinkedList<>();
         RECORDS = new LinkedList<>();
@@ -37,9 +39,12 @@ public class DataManager {
         }
         initTAGS();
         prepareData();
+
         isInit = true;
 
     }
+
+
     public static DataManager getsInstance(Context context)  {
         if (checkSInstanceIsInit == null){
             initInstance(context.getApplicationContext());
@@ -47,9 +52,26 @@ public class DataManager {
         return sInstance;
     }
 
+    public static DataManager getsInstance(Context context,DataInited listener)  {
+        if (checkSInstanceIsInit == null){
+            initInstance(context.getApplicationContext(),listener);
+        }
+        if (listener != null){
+            listener.dataHasInited();
+        }
+        return sInstance;
+    }
+
     private synchronized static void initInstance(Context context) {
         if (checkSInstanceIsInit == null){
-            sInstance = new DataManager(context);
+            sInstance = new DataManager(context,null);
+            checkSInstanceIsInit = sInstance;
+        }
+    }
+
+    private synchronized static void initInstance(Context context,DataInited listener) {
+        if (checkSInstanceIsInit == null){
+            sInstance = new DataManager(context,listener);
             checkSInstanceIsInit = sInstance;
         }
     }
@@ -109,5 +131,9 @@ public class DataManager {
 
     public boolean isInit() {
         return isInit;
+    }
+
+    public interface DataInited{
+        void dataHasInited();
     }
 }
