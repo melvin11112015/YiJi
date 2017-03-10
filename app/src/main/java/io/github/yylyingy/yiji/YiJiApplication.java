@@ -54,7 +54,7 @@ public class YiJiApplication extends Application {
             refWatcher = LeakCanary.install((Application) YiJiApplication.getAppContext());
             CrashReport.UserStrategy strategy = new CrashReport.UserStrategy(getApplicationContext());
             strategy.setAppChannel("myChannel")
-                    .setAppVersion("v0.0.3");
+                    .setAppVersion("v1.0.3");
             CrashReport.initCrashReport(getApplicationContext(),"a9c67cbbf9",true,strategy);
             //      Bmob init
             BmobConfig config =new BmobConfig.Builder(getApplicationContext())

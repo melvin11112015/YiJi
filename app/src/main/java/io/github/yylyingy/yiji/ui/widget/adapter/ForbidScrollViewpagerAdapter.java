@@ -1,5 +1,8 @@
 package io.github.yylyingy.yiji.ui.widget.adapter;
 
+import android.os.Handler;
+import android.os.Looper;
+import android.os.Message;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -21,7 +24,7 @@ import io.github.yylyingy.yiji.main.zhihu.ZhihuListFragment;
  * Created by Yangyl on 2017/2/17.
  */
 
-public class ForbidScrollViewpagerAdapter extends FragmentPagerAdapter {
+public class ForbidScrollViewpagerAdapter extends FragmentPagerAdapter{
     private List<Fragment> mList = new ArrayList<>();
     public ForbidScrollViewpagerAdapter(FragmentManager fragmentManager){
         super(fragmentManager);
@@ -46,5 +49,9 @@ public class ForbidScrollViewpagerAdapter extends FragmentPagerAdapter {
     @Override
     public Fragment getItem(int position) {
         return mList.get(position);
+    }
+
+    public void notifyDataChanged(){
+        ((MainFragment)mList.get(0)).dataSet();
     }
 }

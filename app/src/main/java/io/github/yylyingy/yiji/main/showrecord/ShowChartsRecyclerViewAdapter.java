@@ -117,12 +117,15 @@ public class ShowChartsRecyclerViewAdapter extends RecyclerView.Adapter<ShowChar
         fragmentPosition = position;
         Sum = 0;
 
-        DataManager recordManager = null;
-        recordManager = DataManager.getsInstance(mContext.getApplicationContext());
+//        DataManager recordManager = null;
+//        recordManager = DataManager.getsInstance(mContext.getApplicationContext());
 
         allData = new ArrayList<>();
-        if (start != -1)
-            for (int i = start; i >= end; i--) allData.add(recordManager.RECORDS.get(i));
+        if (start != -1){
+            for (int i = start; i >= end; i--){
+                allData.add(DataManager.RECORDS.get(i));
+            }
+        }
 
         IS_EMPTY = allData.isEmpty();
 
@@ -151,10 +154,10 @@ public class ShowChartsRecyclerViewAdapter extends RecyclerView.Adapter<ShowChar
             originalTargets = new float[columnNumber];
             for (int i = 0; i < columnNumber; i++) originalTargets[i] = 0;
 
-            int size = recordManager.TAGS.size();
+            int size = DataManager.TAGS.size();
             for (int j = 2; j < size; j++) {
-                TagExpanse.put(recordManager.TAGS.get(j).getId(), Double.valueOf(0));
-                Expanse.put(recordManager.TAGS.get(j).getId(), new ArrayList<YiJiRecord>());
+                TagExpanse.put(DataManager.TAGS.get(j).getId(), Double.valueOf(0));
+                Expanse.put(DataManager.TAGS.get(j).getId(), new ArrayList<YiJiRecord>());
             }
 
             size = allData.size();
@@ -947,6 +950,16 @@ public class ShowChartsRecyclerViewAdapter extends RecyclerView.Adapter<ShowChar
                         getString(R.string.last_year_date_string) + postfix;
             default:
                 return "";
+        }
+    }
+
+    public void dataSet(int start,int end){
+        if (start != -1){
+            allData.clear();
+            for (int i = start; i >= end; i--){
+                allData.add(DataManager.RECORDS.get(i));
+            }
+            notifyDataSetChanged();
         }
     }
 }

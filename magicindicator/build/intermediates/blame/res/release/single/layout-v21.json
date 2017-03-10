@@ -1,18 +1,18 @@
 [
     {
         "merged": "D:\\Android\\WorkSpaseForAS\\YiJi\\magicindicator\\build\\intermediates\\res\\merged\\release\\layout-v21\\notification_template_custom_big.xml",
-        "source": "D:\\Android\\WorkSpaseForAS\\YiJi\\magicindicator\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.1\\res\\layout-v21\\notification_template_custom_big.xml"
+        "source": "C:\\Users\\Yangyl\\.android\\build-cache\\c69cc9502702cd2dd6919fc7603f4fc45244d7a6\\output\\res\\layout-v21\\notification_template_custom_big.xml"
     },
     {
         "merged": "D:\\Android\\WorkSpaseForAS\\YiJi\\magicindicator\\build\\intermediates\\res\\merged\\release\\layout-v21\\notification_action.xml",
-        "source": "D:\\Android\\WorkSpaseForAS\\YiJi\\magicindicator\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.1\\res\\layout-v21\\notification_action.xml"
+        "source": "C:\\Users\\Yangyl\\.android\\build-cache\\c69cc9502702cd2dd6919fc7603f4fc45244d7a6\\output\\res\\layout-v21\\notification_action.xml"
     },
     {
         "merged": "D:\\Android\\WorkSpaseForAS\\YiJi\\magicindicator\\build\\intermediates\\res\\merged\\release\\layout-v21\\notification_template_icon_group.xml",
-        "source": "D:\\Android\\WorkSpaseForAS\\YiJi\\magicindicator\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.1\\res\\layout-v21\\notification_template_icon_group.xml"
+        "source": "C:\\Users\\Yangyl\\.android\\build-cache\\c69cc9502702cd2dd6919fc7603f4fc45244d7a6\\output\\res\\layout-v21\\notification_template_icon_group.xml"
     },
     {
         "merged": "D:\\Android\\WorkSpaseForAS\\YiJi\\magicindicator\\build\\intermediates\\res\\merged\\release\\layout-v21\\notification_action_tombstone.xml",
-        "source": "D:\\Android\\WorkSpaseForAS\\YiJi\\magicindicator\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.1\\res\\layout-v21\\notification_action_tombstone.xml"
+        "source": "C:\\Users\\Yangyl\\.android\\build-cache\\c69cc9502702cd2dd6919fc7603f4fc45244d7a6\\output\\res\\layout-v21\\notification_action_tombstone.xml"
     }
 ]

@@ -14,6 +14,7 @@ import android.view.ViewGroup;
 import com.github.florent37.materialviewpager.MaterialViewPagerHelper;
 import com.github.florent37.materialviewpager.adapter.RecyclerViewMaterialAdapter;
 import com.github.johnpersano.supertoasts.SuperToast;
+import com.orhanobut.logger.Logger;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -90,16 +91,14 @@ public class ShowChartsFragment extends BaseFragment {
         Calendar leftRange;
         Calendar rightRange;
 
-        DataManager recordManager = null;
-        recordManager = DataManager.getsInstance(mContext.getApplicationContext());
         int start = -1;
         int end = 0;
 
         switch (position) {
             case TODAY:
                 leftRange = YiJiUtil.GetTodayLeftRange(now);
-                for (int i = recordManager.RECORDS.size() - 1; i >= 0; i--) {
-                    if (recordManager.RECORDS.get(i).getCalendar().before(leftRange)) {
+                for (int i = DataManager.RECORDS.size() - 1; i >= 0; i--) {
+                    if (DataManager.RECORDS.get(i).getCalendar().before(leftRange)) {
                         end = i + 1;
                         break;
                     }
@@ -111,11 +110,11 @@ public class ShowChartsFragment extends BaseFragment {
             case YESTERDAY:
                 leftRange = YiJiUtil.GetYesterdayLeftRange(now);
                 rightRange = YiJiUtil.GetYesterdayRightRange(now);
-                for (int i = recordManager.RECORDS.size() - 1; i >= 0; i--) {
-                    if (recordManager.RECORDS.get(i).getCalendar().before(leftRange)) {
+                for (int i = DataManager.RECORDS.size() - 1; i >= 0; i--) {
+                    if (DataManager.RECORDS.get(i).getCalendar().before(leftRange)) {
                         end = i + 1;
                         break;
-                    } else if (!recordManager.RECORDS.get(i).getCalendar().after(rightRange)) {
+                    } else if (!DataManager.RECORDS.get(i).getCalendar().after(rightRange)) {
                         if (start == -1) {
                             start = i;
                         }
@@ -124,8 +123,8 @@ public class ShowChartsFragment extends BaseFragment {
                 break;
             case THIS_WEEK:
                 leftRange = YiJiUtil.GetThisWeekLeftRange(now);
-                for (int i = recordManager.RECORDS.size() - 1; i >= 0; i--) {
-                    if (recordManager.RECORDS.get(i).getCalendar().before(leftRange)) {
+                for (int i = DataManager.RECORDS.size() - 1; i >= 0; i--) {
+                    if (DataManager.RECORDS.get(i).getCalendar().before(leftRange)) {
                         end = i + 1;
                         break;
                     }
@@ -137,11 +136,11 @@ public class ShowChartsFragment extends BaseFragment {
             case LAST_WEEK:
                 leftRange = YiJiUtil.GetLastWeekLeftRange(now);
                 rightRange = YiJiUtil.GetLastWeekRightRange(now);
-                for (int i = recordManager.RECORDS.size() - 1; i >= 0; i--) {
-                    if (recordManager.RECORDS.get(i).getCalendar().before(leftRange)) {
+                for (int i = DataManager.RECORDS.size() - 1; i >= 0; i--) {
+                    if (DataManager.RECORDS.get(i).getCalendar().before(leftRange)) {
                         end = i + 1;
                         break;
-                    } else if (recordManager.RECORDS.get(i).getCalendar().before(rightRange)) {
+                    } else if (DataManager.RECORDS.get(i).getCalendar().before(rightRange)) {
                         if (start == -1) {
                             start = i;
                         }
@@ -150,8 +149,8 @@ public class ShowChartsFragment extends BaseFragment {
                 break;
             case THIS_MONTH:
                 leftRange = YiJiUtil.GetThisMonthLeftRange(now);
-                for (int i = recordManager.RECORDS.size() - 1; i >= 0; i--) {
-                    if (recordManager.RECORDS.get(i).getCalendar().before(leftRange)) {
+                for (int i = DataManager.RECORDS.size() - 1; i >= 0; i--) {
+                    if (DataManager.RECORDS.get(i).getCalendar().before(leftRange)) {
                         end = i + 1;
                         break;
                     }
@@ -163,11 +162,11 @@ public class ShowChartsFragment extends BaseFragment {
             case LAST_MONTH:
                 leftRange = YiJiUtil.GetLastMonthLeftRange(now);
                 rightRange = YiJiUtil.GetLastMonthRightRange(now);
-                for (int i = recordManager.RECORDS.size() - 1; i >= 0; i--) {
-                    if (recordManager.RECORDS.get(i).getCalendar().before(leftRange)) {
+                for (int i = DataManager.RECORDS.size() - 1; i >= 0; i--) {
+                    if (DataManager.RECORDS.get(i).getCalendar().before(leftRange)) {
                         end = i + 1;
                         break;
-                    } else if (recordManager.RECORDS.get(i).getCalendar().before(rightRange)) {
+                    } else if (DataManager.RECORDS.get(i).getCalendar().before(rightRange)) {
                         if (start == -1) {
                             start = i;
                         }
@@ -176,8 +175,8 @@ public class ShowChartsFragment extends BaseFragment {
                 break;
             case THIS_YEAR:
                 leftRange = YiJiUtil.GetThisYearLeftRange(now);
-                for (int i = recordManager.RECORDS.size() - 1; i >= 0; i--) {
-                    if (recordManager.RECORDS.get(i).getCalendar().before(leftRange)) {
+                for (int i = DataManager.RECORDS.size() - 1; i >= 0; i--) {
+                    if (DataManager.RECORDS.get(i).getCalendar().before(leftRange)) {
                         end = i + 1;
                         break;
                     }
@@ -189,11 +188,11 @@ public class ShowChartsFragment extends BaseFragment {
             case LAST_YEAR:
                 leftRange = YiJiUtil.GetLastYearLeftRange(now);
                 rightRange = YiJiUtil.GetLastYearRightRange(now);
-                for (int i = recordManager.RECORDS.size() - 1; i >= 0; i--) {
-                    if (recordManager.RECORDS.get(i).getCalendar().before(leftRange)) {
+                for (int i = DataManager.RECORDS.size() - 1; i >= 0; i--) {
+                    if (DataManager.RECORDS.get(i).getCalendar().before(leftRange)) {
                         end = i + 1;
                         break;
-                    } else if (recordManager.RECORDS.get(i).getCalendar().before(rightRange)) {
+                    } else if (DataManager.RECORDS.get(i).getCalendar().before(rightRange)) {
                         if (start == -1) {
                             start = i;
                         }
@@ -206,7 +205,7 @@ public class ShowChartsFragment extends BaseFragment {
 
         mAdapter = new RecyclerViewMaterialAdapter(adapter);
         mRecyclerView.setAdapter(mAdapter);
-        Log.d("TodayViewFragment","text");
+        Log.d("TodayViewFragment", "text");
         MaterialViewPagerHelper.registerRecyclerView(getActivity(), mRecyclerView, null);
     }
 

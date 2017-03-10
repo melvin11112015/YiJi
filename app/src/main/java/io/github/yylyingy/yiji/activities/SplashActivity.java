@@ -32,11 +32,12 @@ public class SplashActivity extends BaseActivity implements PermissionListener
     public static final String TAG = SplashActivity.class.getCanonicalName();
     private static final int REQUEST_PERMISSION_CODE = 0x123;
     private PermissionTools permissionTools;
+    private boolean isOnResume;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
-
+        isOnResume = false;
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M){
             permissionTools = PermissionTools.with(this);
             permissionTools.setPermissionsListener(this);
@@ -48,6 +49,12 @@ public class SplashActivity extends BaseActivity implements PermissionListener
         }else {
             ThreadPoolTool.exeTask(SplashActivity.this::startMain);
         }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        isOnResume = true;
     }
 
     @TargetApi(23)
@@ -84,39 +91,12 @@ public class SplashActivity extends BaseActivity implements PermissionListener
     @Override
     public void onGranted() {
         startMain();
-//        Toast.makeText(this,"权限被允许",Toast.LENGTH_SHORT).show();
-//        ThreadPoolTool.exeTask(new Runnable() {
-//            @Override
-//            public void run() {
-//                try {
-//                    Thread.sleep(2000);
-//                    while (!DataManager.getsInstance(getApplicationContext()).isInit()){
-//                        Thread.sleep(100);
-//                    }
-//                    startMainActivity();
-//                } catch (InterruptedException e) {
-//                    e.printStackTrace();
-//                }
-//            }
-//        });
+
     }
 
     public void startMain(){
         DataManager.getsInstance(getApplicationContext(),this);
-//        ThreadPoolTool.exeTask(new Runnable() {
-//            @Override
-//            public void run() {
-//                try {
-//                    Thread.sleep(2000);
-//                    while (!DataManager.getsInstance(getApplicationContext()).isInit()){
-//                        Thread.sleep(100);
-//                    }
-//                    startMainActivity();
-//                } catch (InterruptedException e) {
-//                    e.printStackTrace();
-//                }
-//            }
-//        });
+
     }
 
     /**
@@ -139,16 +119,17 @@ public class SplashActivity extends BaseActivity implements PermissionListener
 
     @Override
     public void dataHasInited() {
-                ThreadPoolTool.exeTask(new Runnable() {
-            @Override
-            public void run() {
+                ThreadPoolTool.exeTask(() -> {
                 try {
-                    Thread.sleep(2000);
+                    while (!isOnResume){
+                        Thread.yield();
+                    }
+                    Thread.sleep(3000);
                     startMainActivity();
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
             }
-        });
+        );
     }
 }

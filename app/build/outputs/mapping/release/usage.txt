@@ -53,8 +53,11 @@ android.support.annotation.VisibleForTesting
 android.support.annotation.WorkerThread
 android.support.annotation.XmlRes
 android.support.compat.BuildConfig
+android.support.compat.R
 android.support.coreui.BuildConfig
+android.support.coreui.R
 android.support.coreutils.BuildConfig
+android.support.coreutils.R
 android.support.design.BuildConfig
 android.support.design.R:
     9:9:public R()
@@ -388,6 +391,7 @@ android.support.design.widget.ViewUtilsLollipop:
     38:39:static void setBoundsViewOutlineProvider(android.view.View)
     43:55:static void setStateListAnimatorFromAttrs(android.view.View,android.util.AttributeSet,int,int)
 android.support.fragment.BuildConfig
+android.support.fragment.R
 android.support.graphics.drawable.AndroidResources:
     static final int styleable_VectorDrawable_alpha
     static final int styleable_VectorDrawable_autoMirrored
@@ -439,6 +443,7 @@ android.support.graphics.drawable.PathParser:
     63:73:public static android.graphics.Path createPathFromPathData(java.lang.String)
 android.support.graphics.drawable.PathParser$PathDataNode:
     336:340:public void interpolatePathDataNode(android.support.graphics.drawable.PathParser$PathDataNode,android.support.graphics.drawable.PathParser$PathDataNode,float)
+android.support.graphics.drawable.R
 android.support.graphics.drawable.TypedArrayUtils:
     private static final java.lang.String NAMESPACE
     21:21:TypedArrayUtils()
@@ -469,7 +474,9 @@ android.support.graphics.drawable.VectorDrawableCompat$VPath:
 android.support.graphics.drawable.VectorDrawableCompat$VectorDrawableCompatState:
     int[] mCachedThemeAttrs
 android.support.graphics.drawable.animated.BuildConfig
+android.support.graphics.drawable.animated.R
 android.support.mediacompat.BuildConfig
+android.support.mediacompat.R
 android.support.multidex.BuildConfig
 android.support.multidex.MultiDex:
     static final java.lang.String TAG
@@ -499,6 +506,7 @@ android.support.multidex.MultiDexExtractor:
     private static final int BUFFER_SIZE
     private static final long NO_VALUE
     46:46:MultiDexExtractor()
+android.support.multidex.R
 android.support.multidex.ZipUtil:
     private static final int ENDHDR
     private static final int ENDSIG
@@ -590,6 +598,7 @@ android.support.transition.VisibilityPort
 android.support.transition.VisibilityPort$VisibilityInfo
 android.support.transition.WindowIdPort
 android.support.v13.BuildConfig
+android.support.v13.R
 android.support.v13.app.ActivityCompat
 android.support.v13.app.FragmentCompat
 android.support.v13.app.FragmentCompat$BaseFragmentCompatImpl
@@ -648,6 +657,7 @@ android.support.v13.view.inputmethod.InputContentInfoCompat$BaseInputContentInfo
 android.support.v13.view.inputmethod.InputContentInfoCompat$InputContentInfoCompatImpl
 android.support.v13.view.inputmethod.InputContentInfoCompatApi25
 android.support.v4.BuildConfig
+android.support.v4.R
 android.support.v4.accessibilityservice.AccessibilityServiceInfoCompat
 android.support.v4.accessibilityservice.AccessibilityServiceInfoCompat$AccessibilityServiceInfoIcsImpl
 android.support.v4.accessibilityservice.AccessibilityServiceInfoCompat$AccessibilityServiceInfoJellyBeanImpl
@@ -5400,6 +5410,7 @@ com.github.ksoichiro.android.observablescrollview.ObservableWebView:
     51:52:public ObservableWebView(android.content.Context,android.util.AttributeSet)
     55:56:public ObservableWebView(android.content.Context,android.util.AttributeSet,int)
     202:203:public void scrollVerticallyTo(int)
+com.github.ksoichiro.android.observablescrollview.R
 com.github.ksoichiro.android.observablescrollview.ScrollUtils
 com.github.ksoichiro.android.observablescrollview.ScrollUtils$1
 com.github.ksoichiro.android.observablescrollview.Scrollable
@@ -5656,7 +5667,7 @@ io.github.yylyingy.yiji.R$mipmap
 io.github.yylyingy.yiji.R$string
 io.github.yylyingy.yiji.R$style
 io.github.yylyingy.yiji.R$styleable:
-    9801:9801:public R$styleable()
+    9804:9804:public R$styleable()
 io.github.yylyingy.yiji.YiJiApplication$$Lambda$1:
     private static java.lang.Runnable get$Lambda(io.github.yylyingy.yiji.YiJiApplication)
 io.github.yylyingy.yiji.activities.AddRecordActivity_ViewBinding:
@@ -5666,6 +5677,8 @@ io.github.yylyingy.yiji.activities.BigImageActivity:
     public static final java.lang.String TRANSIT_PIC
 io.github.yylyingy.yiji.activities.BigImageActivity$$Lambda$1:
     private static uk.co.senab.photoview.PhotoViewAttacher$OnViewTapListener get$Lambda(io.github.yylyingy.yiji.activities.BigImageActivity)
+io.github.yylyingy.yiji.activities.MainActivity$$Lambda$1:
+    private static com.afollestad.materialdialogs.MaterialDialog$SingleButtonCallback get$Lambda(io.github.yylyingy.yiji.activities.MainActivity)
 io.github.yylyingy.yiji.activities.MainActivity_Test:
     78:92:public static java.lang.String Encrypt(java.lang.String,java.lang.String)
     96:105:public static java.lang.String bytes2Hex(byte[])
@@ -5675,9 +5688,12 @@ io.github.yylyingy.yiji.activities.MainActivity_ViewBinding:
     27:28:public MainActivity_ViewBinding(io.github.yylyingy.yiji.activities.MainActivity)
 io.github.yylyingy.yiji.activities.SplashActivity:
     private static final int REQUEST_PERMISSION_CODE
-    55:61:private void tryRequestPermission()
+    62:68:private void tryRequestPermission()
 io.github.yylyingy.yiji.activities.SplashActivity$$Lambda$1:
     private static java.lang.Runnable get$Lambda(io.github.yylyingy.yiji.activities.SplashActivity)
+io.github.yylyingy.yiji.activities.SplashActivity$$Lambda$2:
+    private static java.lang.Runnable get$Lambda(io.github.yylyingy.yiji.activities.SplashActivity)
+io.github.yylyingy.yiji.activities.SplashActivity$1
 io.github.yylyingy.yiji.activities.WebActivity:
     public static final java.lang.String EXTRA_URL
     public static final java.lang.String EXTRA_TITLE
@@ -5694,7 +5710,7 @@ io.github.yylyingy.yiji.addrecord.AddRecordFragment:
     private static final java.lang.String ARG_PARAM2
     81:86:public static io.github.yylyingy.yiji.addrecord.AddRecordFragment newInstance(java.lang.String,java.lang.String)
 io.github.yylyingy.yiji.base.BaseActivity:
-    61:65:protected void addSubscription(rx.Subscription)
+    67:71:protected void addSubscription(rx.Subscription)
 io.github.yylyingy.yiji.base.BaseIPresenter
 io.github.yylyingy.yiji.base.BaseIView
 io.github.yylyingy.yiji.base.BasePresenter
@@ -5711,9 +5727,11 @@ io.github.yylyingy.yiji.main.account.AccountFragment:
     37:40:public static io.github.yylyingy.yiji.main.account.AccountFragment getInstance()
 io.github.yylyingy.yiji.main.showrecord.MainFragment:
     io.github.yylyingy.yiji.main.showrecord.MainFragment$OnBindToolbar mBindToolbar
-    86:86:public android.support.v7.widget.Toolbar getToolbar()
+    89:89:public android.support.v7.widget.Toolbar getToolbar()
 io.github.yylyingy.yiji.main.showrecord.RecordCheckDialogRecyclerViewAdapter:
     35:40:public RecordCheckDialogRecyclerViewAdapter(android.content.Context,java.util.List)
+io.github.yylyingy.yiji.main.showrecord.ShowChartsAdapter:
+    private static final int DATA_SET_CHANGED
 io.github.yylyingy.yiji.main.showrecord.ShowChartsFragment:
     static final int TODAY
     static final int YESTERDAY
@@ -5735,8 +5753,13 @@ io.github.yylyingy.yiji.main.showrecord.ShowChartsRecyclerViewAdapter:
     static final int LAST_MONTH
     static final int THIS_YEAR
     static final int LAST_YEAR
+    957:964:public void dataSet(int,int)
 io.github.yylyingy.yiji.main.showrecord.ShowChartsRecyclerViewAdapter$OnItemClickListener
 io.github.yylyingy.yiji.sync.ISyncPresenter
+io.github.yylyingy.yiji.sync.SyncPresenter:
+    public static final int SYNC_FAIL
+    public static final int SYNC_SUCCESS
+    public static final int HAS_STARTED_SYNC
 io.github.yylyingy.yiji.tools.App:
     private static io.github.yylyingy.yiji.tools.Toaster sToaster
     15:18:public static io.github.yylyingy.yiji.tools.App getInstance()
@@ -5805,8 +5828,6 @@ io.github.yylyingy.yiji.tools.db.DB:
 io.github.yylyingy.yiji.tools.db.DBHelper:
     private static final java.lang.String CREATE_RECORD_SQL
     private static final java.lang.String CREATE_TAG_SQL
-io.github.yylyingy.yiji.tools.db.DataManager:
-    133:133:public boolean isInit()
 io.github.yylyingy.yiji.tools.db.DataManager$$Lambda$1:
     private static java.lang.Runnable get$Lambda(io.github.yylyingy.yiji.tools.db.DataManager,io.github.yylyingy.yiji.javabeans.YiJiRecord)
 io.github.yylyingy.yiji.tools.permissions.PermissionRequestListener
@@ -5934,6 +5955,7 @@ io.realm.HandlerController:
     622:624:java.lang.ref.WeakReference addToAsyncRealmObject(io.realm.RealmObject,io.realm.RealmQuery)
     628:629:void removeFromAsyncRealmObject(java.lang.ref.WeakReference)
     632:633:void addToEmptyAsyncRealmObject(java.lang.ref.WeakReference,io.realm.RealmQuery)
+io.realm.R
 io.realm.Realm:
     public static final java.lang.String DEFAULT_REALM_NAME
     private static io.realm.RealmConfiguration defaultConfiguration
@@ -7118,6 +7140,7 @@ io.realm.rx.RxObservableFactory:
     public abstract rx.Observable from(io.realm.Realm,io.realm.RealmQuery)
     public abstract rx.Observable from(io.realm.DynamicRealm,io.realm.RealmQuery)
 lecho.lib.hellocharts.BuildConfig
+lecho.lib.hellocharts.R
 lecho.lib.hellocharts.animation.ChartDataAnimator:
     public static final long DEFAULT_ANIMATION_DURATION
     public abstract void cancelAnimation()

@@ -15,7 +15,7 @@ ADDED from D:\Android\WorkSpaseForAS\YiJi\app\src\main\AndroidManifest.xml:2:1-5
 		INJECTED from D:\Android\WorkSpaseForAS\YiJi\app\src\main\AndroidManifest.xml
 uses-permission#android.permission.INTERNET
 ADDED from D:\Android\WorkSpaseForAS\YiJi\app\src\main\AndroidManifest.xml:6:5-66
-MERGED from [com.daimajia.slider:library:1.1.5] D:\Android\WorkSpaseForAS\YiJi\app\build\intermediates\exploded-aar\com.daimajia.slider\library\1.1.5\AndroidManifest.xml:11:5-67
+MERGED from [com.daimajia.slider:library:1.1.5] C:\Users\Yangyl\.android\build-cache\750ae6b86450ba721b5d170c89913ad16da9c980\output\AndroidManifest.xml:11:5-67
 	android:name
 		ADDED from D:\Android\WorkSpaseForAS\YiJi\app\src\main\AndroidManifest.xml:6:22-64
 uses-permission#android.permission.ACCESS_NETWORK_STATE
@@ -32,13 +32,13 @@ ADDED from D:\Android\WorkSpaseForAS\YiJi\app\src\main\AndroidManifest.xml:12:5-
 		ADDED from D:\Android\WorkSpaseForAS\YiJi\app\src\main\AndroidManifest.xml:12:22-65
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
 ADDED from D:\Android\WorkSpaseForAS\YiJi\app\src\main\AndroidManifest.xml:14:5-80
-MERGED from [com.daimajia.slider:library:1.1.5] D:\Android\WorkSpaseForAS\YiJi\app\build\intermediates\exploded-aar\com.daimajia.slider\library\1.1.5\AndroidManifest.xml:12:5-81
-MERGED from [com.squareup.leakcanary:leakcanary-android:1.5] D:\Android\WorkSpaseForAS\YiJi\app\build\intermediates\exploded-aar\com.squareup.leakcanary\leakcanary-android\1.5\AndroidManifest.xml:26:5-81
+MERGED from [com.daimajia.slider:library:1.1.5] C:\Users\Yangyl\.android\build-cache\750ae6b86450ba721b5d170c89913ad16da9c980\output\AndroidManifest.xml:12:5-81
+MERGED from [com.squareup.leakcanary:leakcanary-android:1.5] C:\Users\Yangyl\.android\build-cache\e7b8d9d5214cd180ff78d11f4a9370fe0a6e173f\output\AndroidManifest.xml:26:5-81
 	android:name
 		ADDED from D:\Android\WorkSpaseForAS\YiJi\app\src\main\AndroidManifest.xml:14:22-78
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
 ADDED from D:\Android\WorkSpaseForAS\YiJi\app\src\main\AndroidManifest.xml:15:5-79
-MERGED from [com.squareup.leakcanary:leakcanary-android:1.5] D:\Android\WorkSpaseForAS\YiJi\app\build\intermediates\exploded-aar\com.squareup.leakcanary\leakcanary-android\1.5\AndroidManifest.xml:25:5-80
+MERGED from [com.squareup.leakcanary:leakcanary-android:1.5] C:\Users\Yangyl\.android\build-cache\e7b8d9d5214cd180ff78d11f4a9370fe0a6e173f\output\AndroidManifest.xml:25:5-80
 	android:name
 		ADDED from D:\Android\WorkSpaseForAS\YiJi\app\src\main\AndroidManifest.xml:15:22-77
 uses-permission#android.permission.READ_PHONE_STATE
@@ -51,31 +51,31 @@ ADDED from D:\Android\WorkSpaseForAS\YiJi\app\src\main\AndroidManifest.xml:18:5-
 		ADDED from D:\Android\WorkSpaseForAS\YiJi\app\src\main\AndroidManifest.xml:18:22-65
 application
 ADDED from D:\Android\WorkSpaseForAS\YiJi\app\src\main\AndroidManifest.xml:20:5-54:19
-MERGED from [com.jpardogo.materialtabstrip:library:1.1.0] D:\Android\WorkSpaseForAS\YiJi\app\build\intermediates\exploded-aar\com.jpardogo.materialtabstrip\library\1.1.0\AndroidManifest.xml:9:5-20
-MERGED from [com.github.dmytrodanylyk.circular-progress-button:library:1.1.3] D:\Android\WorkSpaseForAS\YiJi\app\build\intermediates\exploded-aar\com.github.dmytrodanylyk.circular-progress-button\library\1.1.3\AndroidManifest.xml:12:5-20
-MERGED from [com.android.support:design:25.1.1] D:\Android\WorkSpaseForAS\YiJi\app\build\intermediates\exploded-aar\com.android.support\design\25.1.1\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:transition:25.1.1] D:\Android\WorkSpaseForAS\YiJi\app\build\intermediates\exploded-aar\com.android.support\transition\25.1.1\AndroidManifest.xml:22:5-20
-MERGED from [YiJi:encryptdecrypt:unspecified] D:\Android\WorkSpaseForAS\YiJi\app\build\intermediates\exploded-aar\YiJi\encryptdecrypt\unspecified\AndroidManifest.xml:11:5-15:19
-MERGED from [YiJi:materialList:unspecified] D:\Android\WorkSpaseForAS\YiJi\app\build\intermediates\exploded-aar\YiJi\materialList\unspecified\AndroidManifest.xml:11:5-14:19
-MERGED from [com.android.support:cardview-v7:25.1.1] D:\Android\WorkSpaseForAS\YiJi\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\25.1.1\AndroidManifest.xml:22:5-20
-MERGED from [net.steamcrafted:materialiconlib:1.1.2] D:\Android\WorkSpaseForAS\YiJi\app\build\intermediates\exploded-aar\net.steamcrafted\materialiconlib\1.1.2\AndroidManifest.xml:11:5-12:19
-MERGED from [com.balysv:material-ripple:1.0.2] D:\Android\WorkSpaseForAS\YiJi\app\build\intermediates\exploded-aar\com.balysv\material-ripple\1.0.2\AndroidManifest.xml:12:5-20
-MERGED from [com.nispok:snackbar:2.11.0] D:\Android\WorkSpaseForAS\YiJi\app\build\intermediates\exploded-aar\com.nispok\snackbar\2.11.0\AndroidManifest.xml:10:5-20
-MERGED from [com.github.johnpersano:supertoasts:1.3.4] D:\Android\WorkSpaseForAS\YiJi\app\build\intermediates\exploded-aar\com.github.johnpersano\supertoasts\1.3.4\AndroidManifest.xml:5:5-19
-MERGED from [com.afollestad.material-dialogs:core:0.9.3.0] D:\Android\WorkSpaseForAS\YiJi\app\build\intermediates\exploded-aar\com.afollestad.material-dialogs\core\0.9.3.0\AndroidManifest.xml:13:5-20
-MERGED from [com.android.support:support-v13:25.1.1] D:\Android\WorkSpaseForAS\YiJi\app\build\intermediates\exploded-aar\com.android.support\support-v13\25.1.1\AndroidManifest.xml:25:5-20
-MERGED from [de.hdodenhof:circleimageview:2.0.0] D:\Android\WorkSpaseForAS\YiJi\app\build\intermediates\exploded-aar\de.hdodenhof\circleimageview\2.0.0\AndroidManifest.xml:9:5-20
-MERGED from [com.wang.avi:library:1.0.1] D:\Android\WorkSpaseForAS\YiJi\app\build\intermediates\exploded-aar\com.wang.avi\library\1.0.1\AndroidManifest.xml:11:5-14:19
-MERGED from [com.android.support:appcompat-v7:25.1.1] D:\Android\WorkSpaseForAS\YiJi\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\25.1.1\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-v4:25.1.1] D:\Android\WorkSpaseForAS\YiJi\app\build\intermediates\exploded-aar\com.android.support\support-v4\25.1.1\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-fragment:25.1.1] D:\Android\WorkSpaseForAS\YiJi\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.1.1\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-media-compat:25.1.1] D:\Android\WorkSpaseForAS\YiJi\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.1.1\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-core-ui:25.1.1] D:\Android\WorkSpaseForAS\YiJi\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.1.1\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-core-utils:25.1.1] D:\Android\WorkSpaseForAS\YiJi\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.1.1\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:animated-vector-drawable:25.1.1] D:\Android\WorkSpaseForAS\YiJi\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\25.1.1\AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-vector-drawable:25.1.1] D:\Android\WorkSpaseForAS\YiJi\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\25.1.1\AndroidManifest.xml:23:5-20
-MERGED from [com.android.support:support-compat:25.1.1] D:\Android\WorkSpaseForAS\YiJi\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.1.1\AndroidManifest.xml:25:5-20
-MERGED from [com.squareup.leakcanary:leakcanary-android:1.5] D:\Android\WorkSpaseForAS\YiJi\app\build\intermediates\exploded-aar\com.squareup.leakcanary\leakcanary-android\1.5\AndroidManifest.xml:28:5-57:19
+MERGED from [com.jpardogo.materialtabstrip:library:1.1.0] C:\Users\Yangyl\.android\build-cache\68b11eca4543a9abe4829295b18140b0c0f54db5\output\AndroidManifest.xml:9:5-20
+MERGED from [com.github.dmytrodanylyk.circular-progress-button:library:1.1.3] C:\Users\Yangyl\.android\build-cache\c2e07a46b398da1ea319cc3eb3fee77ee061bbac\output\AndroidManifest.xml:12:5-20
+MERGED from [com.android.support:design:25.1.1] C:\Users\Yangyl\.android\build-cache\d9857b13ca431c1f19aa7eee04bc9f7fee49afd4\output\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:transition:25.1.1] C:\Users\Yangyl\.android\build-cache\23d250869217ccc5397d7c58551926a56a27d391\output\AndroidManifest.xml:22:5-20
+MERGED from [YiJi:encryptdecrypt:unspecified] D:\Android\WorkSpaseForAS\YiJi\encryptdecrypt\build\intermediates\bundles\default\AndroidManifest.xml:11:5-15:19
+MERGED from [YiJi:materialList:unspecified] D:\Android\WorkSpaseForAS\YiJi\materialList\build\intermediates\bundles\default\AndroidManifest.xml:11:5-14:19
+MERGED from [com.android.support:cardview-v7:25.1.1] C:\Users\Yangyl\.android\build-cache\b8ff9ee442d3b433f155575a24dd64f2a6967fb0\output\AndroidManifest.xml:22:5-20
+MERGED from [net.steamcrafted:materialiconlib:1.1.2] C:\Users\Yangyl\.android\build-cache\54f9a927601f1286c82b355155493b8c04d29e7d\output\AndroidManifest.xml:11:5-12:19
+MERGED from [com.balysv:material-ripple:1.0.2] C:\Users\Yangyl\.android\build-cache\81301ee7e19344c4fc86af3d314077236c1f4265\output\AndroidManifest.xml:12:5-20
+MERGED from [com.nispok:snackbar:2.11.0] C:\Users\Yangyl\.android\build-cache\072fcd7a19497ae56d857628a45252b8d5eb4148\output\AndroidManifest.xml:10:5-20
+MERGED from [com.github.johnpersano:supertoasts:1.3.4] C:\Users\Yangyl\.android\build-cache\25180decfd127f201d0e50f11c682bd18da442a1\output\AndroidManifest.xml:5:5-19
+MERGED from [com.afollestad.material-dialogs:core:0.9.3.0] C:\Users\Yangyl\.android\build-cache\67bc8aba62c97a91f8f1a8d61cce7ad7319cc1a6\output\AndroidManifest.xml:13:5-20
+MERGED from [com.android.support:support-v13:25.1.1] C:\Users\Yangyl\.android\build-cache\6c2b44dc248ea5b9cbd26a78a65c2a40581c989b\output\AndroidManifest.xml:25:5-20
+MERGED from [de.hdodenhof:circleimageview:2.0.0] C:\Users\Yangyl\.android\build-cache\6e63275a4d5f743d0bf9521ae117200e3cabad97\output\AndroidManifest.xml:9:5-20
+MERGED from [com.wang.avi:library:1.0.1] C:\Users\Yangyl\.android\build-cache\5d35daabd5b2c9a8b7e0c8bfeb841ec0688be50b\output\AndroidManifest.xml:11:5-14:19
+MERGED from [com.android.support:appcompat-v7:25.1.1] C:\Users\Yangyl\.android\build-cache\c69cc9502702cd2dd6919fc7603f4fc45244d7a6\output\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-v4:25.1.1] C:\Users\Yangyl\.android\build-cache\6374b2eab3ef9833fc6efa8ba769dc18f78530ea\output\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-fragment:25.1.1] C:\Users\Yangyl\.android\build-cache\ded825f9e14bb3319540b257ee231df4723542ca\output\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-media-compat:25.1.1] C:\Users\Yangyl\.android\build-cache\ccddcbde7658f971d9c4f50bfcde6b3ea910e682\output\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-ui:25.1.1] C:\Users\Yangyl\.android\build-cache\28da73f253e1e829b7d99efd117aa316a2c8c39e\output\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-utils:25.1.1] C:\Users\Yangyl\.android\build-cache\de3728b4bf9b2ad9535c26f91b4022d52beb627e\output\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.1.1] C:\Users\Yangyl\.android\build-cache\61c59c73b733b7294b4a4542bf4fae4e83d83fa1\output\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-vector-drawable:25.1.1] C:\Users\Yangyl\.android\build-cache\7af582fea9f73e7d273848f69a0e1f14ddb3b9ca\output\AndroidManifest.xml:23:5-20
+MERGED from [com.android.support:support-compat:25.1.1] C:\Users\Yangyl\.android\build-cache\00c1f5ff4807fe17fbe83d225b066183547abcf5\output\AndroidManifest.xml:25:5-20
+MERGED from [com.squareup.leakcanary:leakcanary-android:1.5] C:\Users\Yangyl\.android\build-cache\e7b8d9d5214cd180ff78d11f4a9370fe0a6e173f\output\AndroidManifest.xml:28:5-57:19
 	android:label
 		ADDED from D:\Android\WorkSpaseForAS\YiJi\app\src\main\AndroidManifest.xml:24:9-41
 	android:supportsRtl
@@ -124,7 +124,7 @@ ADDED from D:\Android\WorkSpaseForAS\YiJi\app\src\main\AndroidManifest.xml:43:9-
 		ADDED from D:\Android\WorkSpaseForAS\YiJi\app\src\main\AndroidManifest.xml:43:19-62
 service#com.squareup.leakcanary.internal.HeapAnalyzerService
 ADDED from D:\Android\WorkSpaseForAS\YiJi\app\src\main\AndroidManifest.xml:45:9-48:45
-MERGED from [com.squareup.leakcanary:leakcanary-android:1.5] D:\Android\WorkSpaseForAS\YiJi\app\build\intermediates\exploded-aar\com.squareup.leakcanary\leakcanary-android\1.5\AndroidManifest.xml:29:9-32:45
+MERGED from [com.squareup.leakcanary:leakcanary-android:1.5] C:\Users\Yangyl\.android\build-cache\e7b8d9d5214cd180ff78d11f4a9370fe0a6e173f\output\AndroidManifest.xml:29:9-32:45
 	android:enabled
 		ADDED from D:\Android\WorkSpaseForAS\YiJi\app\src\main\AndroidManifest.xml:47:13-36
 	android:process
@@ -133,61 +133,61 @@ MERGED from [com.squareup.leakcanary:leakcanary-android:1.5] D:\Android\WorkSpas
 		ADDED from D:\Android\WorkSpaseForAS\YiJi\app\src\main\AndroidManifest.xml:46:13-80
 service#com.squareup.leakcanary.DisplayLeakService
 ADDED from D:\Android\WorkSpaseForAS\YiJi\app\src\main\AndroidManifest.xml:49:9-51:39
-MERGED from [com.squareup.leakcanary:leakcanary-android:1.5] D:\Android\WorkSpaseForAS\YiJi\app\build\intermediates\exploded-aar\com.squareup.leakcanary\leakcanary-android\1.5\AndroidManifest.xml:33:9-35:39
+MERGED from [com.squareup.leakcanary:leakcanary-android:1.5] C:\Users\Yangyl\.android\build-cache\e7b8d9d5214cd180ff78d11f4a9370fe0a6e173f\output\AndroidManifest.xml:33:9-35:39
 	android:enabled
 		ADDED from D:\Android\WorkSpaseForAS\YiJi\app\src\main\AndroidManifest.xml:51:13-36
 	android:name
 		ADDED from D:\Android\WorkSpaseForAS\YiJi\app\src\main\AndroidManifest.xml:50:13-70
 uses-sdk
 INJECTED from D:\Android\WorkSpaseForAS\YiJi\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-MERGED from [com.android.support:multidex:1.0.1] D:\Android\WorkSpaseForAS\YiJi\app\build\intermediates\exploded-aar\com.android.support\multidex\1.0.1\AndroidManifest.xml:18:5-42
-MERGED from [io.realm:realm-android-library:0.88.2] D:\Android\WorkSpaseForAS\YiJi\app\build\intermediates\exploded-aar\io.realm\realm-android-library\0.88.2\AndroidManifest.xml:5:5-7:41
-MERGED from [com.github.florent37:materialviewpager:1.1.2] D:\Android\WorkSpaseForAS\YiJi\app\build\intermediates\exploded-aar\com.github.florent37\materialviewpager\1.1.2\AndroidManifest.xml:7:5-9:41
-MERGED from [com.jpardogo.materialtabstrip:library:1.1.0] D:\Android\WorkSpaseForAS\YiJi\app\build\intermediates\exploded-aar\com.jpardogo.materialtabstrip\library\1.1.0\AndroidManifest.xml:5:5-7:41
-MERGED from [com.github.ksoichiro:android-observablescrollview:1.5.2] D:\Android\WorkSpaseForAS\YiJi\app\build\intermediates\exploded-aar\com.github.ksoichiro\android-observablescrollview\1.5.2\AndroidManifest.xml:21:5-43
-MERGED from [com.github.dmytrodanylyk.circular-progress-button:library:1.1.3] D:\Android\WorkSpaseForAS\YiJi\app\build\intermediates\exploded-aar\com.github.dmytrodanylyk.circular-progress-button\library\1.1.3\AndroidManifest.xml:8:5-10:41
-MERGED from [com.android.support:design:25.1.1] D:\Android\WorkSpaseForAS\YiJi\app\build\intermediates\exploded-aar\com.android.support\design\25.1.1\AndroidManifest.xml:21:5-23:62
-MERGED from [com.android.support:transition:25.1.1] D:\Android\WorkSpaseForAS\YiJi\app\build\intermediates\exploded-aar\com.android.support\transition\25.1.1\AndroidManifest.xml:20:5-44
-MERGED from [YiJi:encryptdecrypt:unspecified] D:\Android\WorkSpaseForAS\YiJi\app\build\intermediates\exploded-aar\YiJi\encryptdecrypt\unspecified\AndroidManifest.xml:7:5-9:41
-MERGED from [YiJi:materialList:unspecified] D:\Android\WorkSpaseForAS\YiJi\app\build\intermediates\exploded-aar\YiJi\materialList\unspecified\AndroidManifest.xml:7:5-9:41
-MERGED from [com.android.support:cardview-v7:25.1.1] D:\Android\WorkSpaseForAS\YiJi\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\25.1.1\AndroidManifest.xml:20:5-43
-MERGED from [YiJi:magicindicator:unspecified] D:\Android\WorkSpaseForAS\YiJi\app\build\intermediates\exploded-aar\YiJi\magicindicator\unspecified\AndroidManifest.xml:8:5-10:41
-MERGED from [com.jakewharton:butterknife:8.5.1] D:\Android\WorkSpaseForAS\YiJi\app\build\intermediates\exploded-aar\com.jakewharton\butterknife\8.5.1\AndroidManifest.xml:5:5-43
-MERGED from [net.steamcrafted:materialiconlib:1.1.2] D:\Android\WorkSpaseForAS\YiJi\app\build\intermediates\exploded-aar\net.steamcrafted\materialiconlib\1.1.2\AndroidManifest.xml:7:5-9:41
-MERGED from [com.daimajia.slider:library:1.1.5] D:\Android\WorkSpaseForAS\YiJi\app\build\intermediates\exploded-aar\com.daimajia.slider\library\1.1.5\AndroidManifest.xml:7:5-9:41
-MERGED from [com.balysv:material-ripple:1.0.2] D:\Android\WorkSpaseForAS\YiJi\app\build\intermediates\exploded-aar\com.balysv\material-ripple\1.0.2\AndroidManifest.xml:8:5-10:41
-MERGED from [com.orhanobut:logger:1.15] D:\Android\WorkSpaseForAS\YiJi\app\build\intermediates\exploded-aar\com.orhanobut\logger\1.15\AndroidManifest.xml:6:5-43
-MERGED from [com.github.lecho:hellocharts-library:1.5.8] D:\Android\WorkSpaseForAS\YiJi\app\build\intermediates\exploded-aar\com.github.lecho\hellocharts-library\1.5.8\AndroidManifest.xml:7:5-9:41
-MERGED from [com.nispok:snackbar:2.11.0] D:\Android\WorkSpaseForAS\YiJi\app\build\intermediates\exploded-aar\com.nispok\snackbar\2.11.0\AndroidManifest.xml:6:5-8:41
-MERGED from [com.rengwuxian.materialedittext:library:2.1.4] D:\Android\WorkSpaseForAS\YiJi\app\build\intermediates\exploded-aar\com.rengwuxian.materialedittext\library\2.1.4\AndroidManifest.xml:6:5-8:41
-MERGED from [com.github.johnpersano:supertoasts:1.3.4] D:\Android\WorkSpaseForAS\YiJi\app\build\intermediates\exploded-aar\com.github.johnpersano\supertoasts\1.3.4\AndroidManifest.xml:3:5-72
-MERGED from [com.daimajia.easing:library:1.0.1] D:\Android\WorkSpaseForAS\YiJi\app\build\intermediates\exploded-aar\com.daimajia.easing\library\1.0.1\AndroidManifest.xml:8:5-10:41
-MERGED from [com.daimajia.androidanimations:library:1.1.3] D:\Android\WorkSpaseForAS\YiJi\app\build\intermediates\exploded-aar\com.daimajia.androidanimations\library\1.1.3\AndroidManifest.xml:8:5-10:41
-MERGED from [com.afollestad.material-dialogs:core:0.9.3.0] D:\Android\WorkSpaseForAS\YiJi\app\build\intermediates\exploded-aar\com.afollestad.material-dialogs\core\0.9.3.0\AndroidManifest.xml:8:5-11:75
-MERGED from [com.android.support:support-v13:25.1.1] D:\Android\WorkSpaseForAS\YiJi\app\build\intermediates\exploded-aar\com.android.support\support-v13\25.1.1\AndroidManifest.xml:21:5-23:55
-MERGED from [me.zhanghai.android.materialprogressbar:library:1.3.0] D:\Android\WorkSpaseForAS\YiJi\app\build\intermediates\exploded-aar\me.zhanghai.android.materialprogressbar\library\1.3.0\AndroidManifest.xml:12:5-14:41
-MERGED from [de.hdodenhof:circleimageview:2.0.0] D:\Android\WorkSpaseForAS\YiJi\app\build\intermediates\exploded-aar\de.hdodenhof\circleimageview\2.0.0\AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:fresco:1.1.0] D:\Android\WorkSpaseForAS\YiJi\app\build\intermediates\exploded-aar\com.facebook.fresco\fresco\1.1.0\AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:drawee:1.1.0] D:\Android\WorkSpaseForAS\YiJi\app\build\intermediates\exploded-aar\com.facebook.fresco\drawee\1.1.0\AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:imagepipeline:1.1.0] D:\Android\WorkSpaseForAS\YiJi\app\build\intermediates\exploded-aar\com.facebook.fresco\imagepipeline\1.1.0\AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:imagepipeline-base:1.1.0] D:\Android\WorkSpaseForAS\YiJi\app\build\intermediates\exploded-aar\com.facebook.fresco\imagepipeline-base\1.1.0\AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:fbcore:1.1.0] D:\Android\WorkSpaseForAS\YiJi\app\build\intermediates\exploded-aar\com.facebook.fresco\fbcore\1.1.0\AndroidManifest.xml:5:5-7:41
-MERGED from [jp.wasabeef:recyclerview-animators:2.1.0] D:\Android\WorkSpaseForAS\YiJi\app\build\intermediates\exploded-aar\jp.wasabeef\recyclerview-animators\2.1.0\AndroidManifest.xml:8:5-10:41
-MERGED from [com.android.support:recyclerview-v7:25.1.1] D:\Android\WorkSpaseForAS\YiJi\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\25.1.1\AndroidManifest.xml:20:5-43
-MERGED from [com.commit451:PhotoView:1.2.4] D:\Android\WorkSpaseForAS\YiJi\app\build\intermediates\exploded-aar\com.commit451\PhotoView\1.2.4\AndroidManifest.xml:8:5-10:41
-MERGED from [com.wang.avi:library:1.0.1] D:\Android\WorkSpaseForAS\YiJi\app\build\intermediates\exploded-aar\com.wang.avi\library\1.0.1\AndroidManifest.xml:7:5-9:41
-MERGED from [com.android.support:appcompat-v7:25.1.1] D:\Android\WorkSpaseForAS\YiJi\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\25.1.1\AndroidManifest.xml:21:5-23:78
-MERGED from [com.android.support:support-v4:25.1.1] D:\Android\WorkSpaseForAS\YiJi\app\build\intermediates\exploded-aar\com.android.support\support-v4\25.1.1\AndroidManifest.xml:21:5-23:54
-MERGED from [com.android.support:support-fragment:25.1.1] D:\Android\WorkSpaseForAS\YiJi\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.1.1\AndroidManifest.xml:21:5-23:60
-MERGED from [com.android.support:support-media-compat:25.1.1] D:\Android\WorkSpaseForAS\YiJi\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.1.1\AndroidManifest.xml:21:5-23:63
-MERGED from [com.android.support:support-core-ui:25.1.1] D:\Android\WorkSpaseForAS\YiJi\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.1.1\AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-core-utils:25.1.1] D:\Android\WorkSpaseForAS\YiJi\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.1.1\AndroidManifest.xml:21:5-23:61
-MERGED from [com.android.support:animated-vector-drawable:25.1.1] D:\Android\WorkSpaseForAS\YiJi\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\25.1.1\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:25.1.1] D:\Android\WorkSpaseForAS\YiJi\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\25.1.1\AndroidManifest.xml:21:5-43
-MERGED from [com.android.support:support-compat:25.1.1] D:\Android\WorkSpaseForAS\YiJi\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.1.1\AndroidManifest.xml:21:5-23:58
-MERGED from [com.squareup.leakcanary:leakcanary-android:1.5] D:\Android\WorkSpaseForAS\YiJi\app\build\intermediates\exploded-aar\com.squareup.leakcanary\leakcanary-android\1.5\AndroidManifest.xml:20:5-22:41
+MERGED from [io.realm:realm-android-library:0.88.2] C:\Users\Yangyl\.android\build-cache\564db77fb0e635a5a6689d9720cf3cb25856fbae\output\AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.florent37:materialviewpager:1.1.2] C:\Users\Yangyl\.android\build-cache\412e55004b5dcd51b344d5948588fbfd1d1cd822\output\AndroidManifest.xml:7:5-9:41
+MERGED from [com.jpardogo.materialtabstrip:library:1.1.0] C:\Users\Yangyl\.android\build-cache\68b11eca4543a9abe4829295b18140b0c0f54db5\output\AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.ksoichiro:android-observablescrollview:1.5.2] C:\Users\Yangyl\.android\build-cache\85a8c72e7eca3c821b697212f8e6973e0d58824f\output\AndroidManifest.xml:21:5-43
+MERGED from [com.github.dmytrodanylyk.circular-progress-button:library:1.1.3] C:\Users\Yangyl\.android\build-cache\c2e07a46b398da1ea319cc3eb3fee77ee061bbac\output\AndroidManifest.xml:8:5-10:41
+MERGED from [com.android.support:design:25.1.1] C:\Users\Yangyl\.android\build-cache\d9857b13ca431c1f19aa7eee04bc9f7fee49afd4\output\AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:transition:25.1.1] C:\Users\Yangyl\.android\build-cache\23d250869217ccc5397d7c58551926a56a27d391\output\AndroidManifest.xml:20:5-44
+MERGED from [YiJi:encryptdecrypt:unspecified] D:\Android\WorkSpaseForAS\YiJi\encryptdecrypt\build\intermediates\bundles\default\AndroidManifest.xml:7:5-9:41
+MERGED from [YiJi:materialList:unspecified] D:\Android\WorkSpaseForAS\YiJi\materialList\build\intermediates\bundles\default\AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:cardview-v7:25.1.1] C:\Users\Yangyl\.android\build-cache\b8ff9ee442d3b433f155575a24dd64f2a6967fb0\output\AndroidManifest.xml:20:5-43
+MERGED from [YiJi:magicindicator:unspecified] D:\Android\WorkSpaseForAS\YiJi\magicindicator\build\intermediates\bundles\default\AndroidManifest.xml:8:5-10:41
+MERGED from [net.steamcrafted:materialiconlib:1.1.2] C:\Users\Yangyl\.android\build-cache\54f9a927601f1286c82b355155493b8c04d29e7d\output\AndroidManifest.xml:7:5-9:41
+MERGED from [com.daimajia.slider:library:1.1.5] C:\Users\Yangyl\.android\build-cache\750ae6b86450ba721b5d170c89913ad16da9c980\output\AndroidManifest.xml:7:5-9:41
+MERGED from [com.balysv:material-ripple:1.0.2] C:\Users\Yangyl\.android\build-cache\81301ee7e19344c4fc86af3d314077236c1f4265\output\AndroidManifest.xml:8:5-10:41
+MERGED from [com.orhanobut:logger:1.15] C:\Users\Yangyl\.android\build-cache\154c50f55f1b4da7f8c7c8186f4abc8716e89e45\output\AndroidManifest.xml:6:5-43
+MERGED from [com.github.lecho:hellocharts-library:1.5.8] C:\Users\Yangyl\.android\build-cache\3b705c137ed5b5673e999f7e9d6d8c8cd37825e1\output\AndroidManifest.xml:7:5-9:41
+MERGED from [com.nispok:snackbar:2.11.0] C:\Users\Yangyl\.android\build-cache\072fcd7a19497ae56d857628a45252b8d5eb4148\output\AndroidManifest.xml:6:5-8:41
+MERGED from [com.rengwuxian.materialedittext:library:2.1.4] C:\Users\Yangyl\.android\build-cache\267b97cdab1c894a4416e1e74e24caf976f27b62\output\AndroidManifest.xml:6:5-8:41
+MERGED from [com.github.johnpersano:supertoasts:1.3.4] C:\Users\Yangyl\.android\build-cache\25180decfd127f201d0e50f11c682bd18da442a1\output\AndroidManifest.xml:3:5-72
+MERGED from [com.daimajia.easing:library:1.0.1] C:\Users\Yangyl\.android\build-cache\cb4cc519c5c532e565ceec24e9b90ee1d5819584\output\AndroidManifest.xml:8:5-10:41
+MERGED from [com.daimajia.androidanimations:library:1.1.3] C:\Users\Yangyl\.android\build-cache\a60f97ba6c42b993f60aeb48fe5926ca502627a6\output\AndroidManifest.xml:8:5-10:41
+MERGED from [com.afollestad.material-dialogs:core:0.9.3.0] C:\Users\Yangyl\.android\build-cache\67bc8aba62c97a91f8f1a8d61cce7ad7319cc1a6\output\AndroidManifest.xml:8:5-11:75
+MERGED from [com.android.support:support-v13:25.1.1] C:\Users\Yangyl\.android\build-cache\6c2b44dc248ea5b9cbd26a78a65c2a40581c989b\output\AndroidManifest.xml:21:5-23:55
+MERGED from [me.zhanghai.android.materialprogressbar:library:1.3.0] C:\Users\Yangyl\.android\build-cache\277d4664ccedf295929ab2bd3f18c911169fa56f\output\AndroidManifest.xml:12:5-14:41
+MERGED from [de.hdodenhof:circleimageview:2.0.0] C:\Users\Yangyl\.android\build-cache\6e63275a4d5f743d0bf9521ae117200e3cabad97\output\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:fresco:1.1.0] C:\Users\Yangyl\.android\build-cache\488c9aeffdd7a2eaecf6c2a8c08126fb17854285\output\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:drawee:1.1.0] C:\Users\Yangyl\.android\build-cache\1bd499c436ecd4a76edd8c088889aefe1bc79914\output\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline:1.1.0] C:\Users\Yangyl\.android\build-cache\ff6e9ea520d9ee56a580a1521dfeb504a661f950\output\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-base:1.1.0] C:\Users\Yangyl\.android\build-cache\0dba0fe9f4a1aafb080d0c4660654a8fcb0f3075\output\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:fbcore:1.1.0] C:\Users\Yangyl\.android\build-cache\255baf78f4cfa4c0f53aaae09ca56c95ec538e90\output\AndroidManifest.xml:5:5-7:41
+MERGED from [jp.wasabeef:recyclerview-animators:2.1.0] C:\Users\Yangyl\.android\build-cache\e6909cdcfe959846653aa535ff991fb32973a7d6\output\AndroidManifest.xml:8:5-10:41
+MERGED from [com.android.support:recyclerview-v7:25.1.1] C:\Users\Yangyl\.android\build-cache\3582748cb736a358c2086bb955628f76f4c8751f\output\AndroidManifest.xml:20:5-43
+MERGED from [com.commit451:PhotoView:1.2.4] C:\Users\Yangyl\.android\build-cache\e7d53caac897d4558f5285aea51de0a0699ff4d3\output\AndroidManifest.xml:8:5-10:41
+MERGED from [com.wang.avi:library:1.0.1] C:\Users\Yangyl\.android\build-cache\5d35daabd5b2c9a8b7e0c8bfeb841ec0688be50b\output\AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:appcompat-v7:25.1.1] C:\Users\Yangyl\.android\build-cache\c69cc9502702cd2dd6919fc7603f4fc45244d7a6\output\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:support-v4:25.1.1] C:\Users\Yangyl\.android\build-cache\6374b2eab3ef9833fc6efa8ba769dc18f78530ea\output\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-fragment:25.1.1] C:\Users\Yangyl\.android\build-cache\ded825f9e14bb3319540b257ee231df4723542ca\output\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-media-compat:25.1.1] C:\Users\Yangyl\.android\build-cache\ccddcbde7658f971d9c4f50bfcde6b3ea910e682\output\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-ui:25.1.1] C:\Users\Yangyl\.android\build-cache\28da73f253e1e829b7d99efd117aa316a2c8c39e\output\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:25.1.1] C:\Users\Yangyl\.android\build-cache\de3728b4bf9b2ad9535c26f91b4022d52beb627e\output\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:animated-vector-drawable:25.1.1] C:\Users\Yangyl\.android\build-cache\61c59c73b733b7294b4a4542bf4fae4e83d83fa1\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:25.1.1] C:\Users\Yangyl\.android\build-cache\7af582fea9f73e7d273848f69a0e1f14ddb3b9ca\output\AndroidManifest.xml:21:5-43
+MERGED from [com.android.support:multidex:1.0.1] C:\Users\Yangyl\.android\build-cache\cd59eabddc2f4ddf1b5d093c27950ec3be06d677\output\AndroidManifest.xml:18:5-42
+MERGED from [com.jakewharton:butterknife:8.5.1] C:\Users\Yangyl\.android\build-cache\baefbe52b8bc49538d0712042184208f66bf2d8c\output\AndroidManifest.xml:5:5-43
+MERGED from [com.android.support:support-compat:25.1.1] C:\Users\Yangyl\.android\build-cache\00c1f5ff4807fe17fbe83d225b066183547abcf5\output\AndroidManifest.xml:21:5-23:58
+MERGED from [com.squareup.leakcanary:leakcanary-android:1.5] C:\Users\Yangyl\.android\build-cache\e7b8d9d5214cd180ff78d11f4a9370fe0a6e173f\output\AndroidManifest.xml:20:5-22:41
 	tools:overrideLibrary
-		ADDED from [com.android.support:design:25.1.1] D:\Android\WorkSpaseForAS\YiJi\app\build\intermediates\exploded-aar\com.android.support\design\25.1.1\AndroidManifest.xml:23:9-59
+		ADDED from [com.android.support:design:25.1.1] C:\Users\Yangyl\.android\build-cache\d9857b13ca431c1f19aa7eee04bc9f7fee49afd4\output\AndroidManifest.xml:23:9-59
 	android:targetSdkVersion
 		INJECTED from D:\Android\WorkSpaseForAS\YiJi\app\src\main\AndroidManifest.xml
 		INJECTED from D:\Android\WorkSpaseForAS\YiJi\app\src\main\AndroidManifest.xml
@@ -195,30 +195,30 @@ MERGED from [com.squareup.leakcanary:leakcanary-android:1.5] D:\Android\WorkSpas
 		INJECTED from D:\Android\WorkSpaseForAS\YiJi\app\src\main\AndroidManifest.xml
 		INJECTED from D:\Android\WorkSpaseForAS\YiJi\app\src\main\AndroidManifest.xml
 activity#com.squareup.leakcanary.internal.DisplayLeakActivity
-ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] D:\Android\WorkSpaseForAS\YiJi\app\build\intermediates\exploded-aar\com.squareup.leakcanary\leakcanary-android\1.5\AndroidManifest.xml:37:9-49:20
+ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] C:\Users\Yangyl\.android\build-cache\e7b8d9d5214cd180ff78d11f4a9370fe0a6e173f\output\AndroidManifest.xml:37:9-49:20
 	android:enabled
-		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] D:\Android\WorkSpaseForAS\YiJi\app\build\intermediates\exploded-aar\com.squareup.leakcanary\leakcanary-android\1.5\AndroidManifest.xml:39:13-36
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] C:\Users\Yangyl\.android\build-cache\e7b8d9d5214cd180ff78d11f4a9370fe0a6e173f\output\AndroidManifest.xml:39:13-36
 	android:label
-		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] D:\Android\WorkSpaseForAS\YiJi\app\build\intermediates\exploded-aar\com.squareup.leakcanary\leakcanary-android\1.5\AndroidManifest.xml:41:13-71
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] C:\Users\Yangyl\.android\build-cache\e7b8d9d5214cd180ff78d11f4a9370fe0a6e173f\output\AndroidManifest.xml:41:13-71
 	android:icon
-		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] D:\Android\WorkSpaseForAS\YiJi\app\build\intermediates\exploded-aar\com.squareup.leakcanary\leakcanary-android\1.5\AndroidManifest.xml:40:13-54
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] C:\Users\Yangyl\.android\build-cache\e7b8d9d5214cd180ff78d11f4a9370fe0a6e173f\output\AndroidManifest.xml:40:13-54
 	android:theme
-		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] D:\Android\WorkSpaseForAS\YiJi\app\build\intermediates\exploded-aar\com.squareup.leakcanary\leakcanary-android\1.5\AndroidManifest.xml:43:13-63
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] C:\Users\Yangyl\.android\build-cache\e7b8d9d5214cd180ff78d11f4a9370fe0a6e173f\output\AndroidManifest.xml:43:13-63
 	android:taskAffinity
-		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] D:\Android\WorkSpaseForAS\YiJi\app\build\intermediates\exploded-aar\com.squareup.leakcanary\leakcanary-android\1.5\AndroidManifest.xml:42:13-59
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] C:\Users\Yangyl\.android\build-cache\e7b8d9d5214cd180ff78d11f4a9370fe0a6e173f\output\AndroidManifest.xml:42:13-59
 	android:name
-		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] D:\Android\WorkSpaseForAS\YiJi\app\build\intermediates\exploded-aar\com.squareup.leakcanary\leakcanary-android\1.5\AndroidManifest.xml:38:13-80
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] C:\Users\Yangyl\.android\build-cache\e7b8d9d5214cd180ff78d11f4a9370fe0a6e173f\output\AndroidManifest.xml:38:13-80
 activity#com.squareup.leakcanary.internal.RequestStoragePermissionActivity
-ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] D:\Android\WorkSpaseForAS\YiJi\app\build\intermediates\exploded-aar\com.squareup.leakcanary\leakcanary-android\1.5\AndroidManifest.xml:50:9-56:68
+ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] C:\Users\Yangyl\.android\build-cache\e7b8d9d5214cd180ff78d11f4a9370fe0a6e173f\output\AndroidManifest.xml:50:9-56:68
 	android:enabled
-		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] D:\Android\WorkSpaseForAS\YiJi\app\build\intermediates\exploded-aar\com.squareup.leakcanary\leakcanary-android\1.5\AndroidManifest.xml:52:13-36
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] C:\Users\Yangyl\.android\build-cache\e7b8d9d5214cd180ff78d11f4a9370fe0a6e173f\output\AndroidManifest.xml:52:13-36
 	android:label
-		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] D:\Android\WorkSpaseForAS\YiJi\app\build\intermediates\exploded-aar\com.squareup.leakcanary\leakcanary-android\1.5\AndroidManifest.xml:54:13-82
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] C:\Users\Yangyl\.android\build-cache\e7b8d9d5214cd180ff78d11f4a9370fe0a6e173f\output\AndroidManifest.xml:54:13-82
 	android:icon
-		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] D:\Android\WorkSpaseForAS\YiJi\app\build\intermediates\exploded-aar\com.squareup.leakcanary\leakcanary-android\1.5\AndroidManifest.xml:53:13-54
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] C:\Users\Yangyl\.android\build-cache\e7b8d9d5214cd180ff78d11f4a9370fe0a6e173f\output\AndroidManifest.xml:53:13-54
 	android:theme
-		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] D:\Android\WorkSpaseForAS\YiJi\app\build\intermediates\exploded-aar\com.squareup.leakcanary\leakcanary-android\1.5\AndroidManifest.xml:56:13-65
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] C:\Users\Yangyl\.android\build-cache\e7b8d9d5214cd180ff78d11f4a9370fe0a6e173f\output\AndroidManifest.xml:56:13-65
 	android:taskAffinity
-		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] D:\Android\WorkSpaseForAS\YiJi\app\build\intermediates\exploded-aar\com.squareup.leakcanary\leakcanary-android\1.5\AndroidManifest.xml:55:13-59
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] C:\Users\Yangyl\.android\build-cache\e7b8d9d5214cd180ff78d11f4a9370fe0a6e173f\output\AndroidManifest.xml:55:13-59
 	android:name
-		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] D:\Android\WorkSpaseForAS\YiJi\app\build\intermediates\exploded-aar\com.squareup.leakcanary\leakcanary-android\1.5\AndroidManifest.xml:51:13-93
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.5] C:\Users\Yangyl\.android\build-cache\e7b8d9d5214cd180ff78d11f4a9370fe0a6e173f\output\AndroidManifest.xml:51:13-93

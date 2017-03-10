@@ -179,4 +179,8 @@ MJ9Fu3Vg+v9IhdrGG7QjCx/JJsMtcPgUzQ99EQVhY2uBO29g9UW2NY6L0wIDAQAB</string>
 
     <string name="logout_button">Logout</string>
 
+    <string name="sync_querying_title">Sync</string>
+    <string name="sync_querying_content">Sync information now. Please wait.</string>
+    <string name="cancel">Cancel</string>
+
 </resources>

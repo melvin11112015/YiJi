@@ -6,6 +6,8 @@ import android.content.SharedPreferences;
 import com.orhanobut.logger.Logger;
 
 import java.io.IOException;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -23,7 +25,6 @@ public class DataManager {
     private static DataManager checkSInstanceIsInit = null;
     public static List<Tag>TAGS ;
     public static List<YiJiRecord> RECORDS;
-    private boolean isInit = false;
     private DataManager(Context context,DataInited listener) {
         db = DB.getInstance(context);
         TAGS = new LinkedList<>();
@@ -40,7 +41,6 @@ public class DataManager {
         initTAGS();
         prepareData();
 
-        isInit = true;
 
     }
 
@@ -128,10 +128,22 @@ public class DataManager {
         });
     }
 
-
-    public boolean isInit() {
-        return isInit;
+    public static void sortRecords(){
+        Collections.sort(RECORDS, new Comparator<YiJiRecord>() {
+            @Override
+            public int compare(YiJiRecord lhs, YiJiRecord rhs) {
+                if (lhs.getCalendar().before(rhs.getCalendar())) {
+                    return -1;
+                } else if (lhs.getCalendar().after(rhs.getCalendar())) {
+                    return 1;
+                } else {
+                    return 0;
+                }
+            }
+        });
     }
+
+
 
     public interface DataInited{
         void dataHasInited();

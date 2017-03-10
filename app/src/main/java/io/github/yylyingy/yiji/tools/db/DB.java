@@ -71,6 +71,7 @@ public class DB {
             }
         }finally {
             cursor.close();
+            DataManager.sortRecords();
         }
     }
     public void initTags(){

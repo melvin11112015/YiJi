@@ -10,4 +10,5 @@ public interface ISyncPresenter extends BaseIPresenter{
     void bindView(ISyncView baseIPresenter);
     void detachView();
     void startSync();
+    void stopSync();
 }

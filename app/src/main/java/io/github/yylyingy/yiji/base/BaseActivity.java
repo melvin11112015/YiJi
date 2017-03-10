@@ -53,6 +53,12 @@ public abstract class BaseActivity extends AppCompatActivity {
         Logger.d("Activity onResume");
     }
 
+    @Override
+    protected void onPause() {
+        super.onPause();
+        SuperToast.cancelAllSuperToasts();
+    }
+
     /**
      * 解决Subscription内存泄露问题
      * @param s

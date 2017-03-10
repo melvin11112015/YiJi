@@ -156,8 +156,9 @@ public class SyncModel implements Runnable{
                                             if (jiRecord.getObjectId().equals(DataManager.RECORDS.get(j).getObjectId())){
                                                 break;
                                             }
+                                            //All of RECORDS doesn't equals to yiRecord from cloud
                                             if ((j == (DataManager.RECORDS.size() - 1))
-                                                    && jiRecord.getObjectId().equals(DataManager.RECORDS.get(j).getObjectId())){
+                                                    && !jiRecord.getObjectId().equals(DataManager.RECORDS.get(j).getObjectId())){
                                                 DataManager.getsInstance(YiJiApplication.getAppContext()).saveRecord(jiRecord);
                                             }
                                         }

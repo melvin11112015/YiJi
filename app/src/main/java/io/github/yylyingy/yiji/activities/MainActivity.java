@@ -2,7 +2,9 @@ package io.github.yylyingy.yiji.activities;
 
 import android.content.Context;
 import android.graphics.Color;
+import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
+import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -13,6 +15,8 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.afollestad.materialdialogs.DialogAction;
+import com.afollestad.materialdialogs.MaterialDialog;
 import com.balysv.materialripple.MaterialRippleLayout;
 import com.github.johnpersano.supertoasts.SuperToast;
 import com.orhanobut.logger.Logger;
@@ -79,6 +83,7 @@ public class MainActivity extends BaseActivity implements MainFragment.OnBindToo
     @BindView(R.id.magic_indicator)
     MagicIndicator mMagicIndicator;
     private SyncPresenter mSyncPresenter;
+    private MaterialDialog syncQueryDialog;
 
 //    ShowChartsAdapter mShowChartsAdapter;
 //    MainFragment mFragment;
@@ -94,7 +99,6 @@ public class MainActivity extends BaseActivity implements MainFragment.OnBindToo
                 getResources().getString(R.string.me)
         };
         mSyncPresenter = new SyncPresenter();
-        mSyncPresenter.bindView(this);
         tabList = Arrays.asList(TABLIST);
 //        mFragment =          new MainFragment();
 //        mZhihuListFragment = ZhihuListFragment.newInstance();
@@ -226,8 +230,15 @@ public class MainActivity extends BaseActivity implements MainFragment.OnBindToo
     }
 
     @Override
+    protected void onPause() {
+        mSyncPresenter.detachView();
+        super.onPause();
+    }
+
+    @Override
     protected void onResume() {
         super.onResume();
+        mSyncPresenter.bindView(this);
     }
 
     @Override
@@ -248,7 +259,7 @@ public class MainActivity extends BaseActivity implements MainFragment.OnBindToo
 //    boolean isDownFailed = false;
     @OnClick(R.id.sync)
     public void sync(){
-        YiJiToast.getInstance().showToast("toast",SuperToast.Background.RED);
+        mDrawerLayout.closeDrawer(GravityCompat.START);
         User user = BmobUser.getCurrentUser(User.class);
         if (user == null){
             mForbidScrollViewPager.setCurrentItem(2);
@@ -256,6 +267,17 @@ public class MainActivity extends BaseActivity implements MainFragment.OnBindToo
             return;
         }
         mSyncPresenter.startSync();
+        syncQueryDialog = new MaterialDialog.Builder(this)
+                .title(R.string.sync_querying_title)
+                .content(R.string.sync_querying_content)
+                .negativeText(R.string.cancel)
+                .progress(true, 0)
+                .onAny((@NonNull MaterialDialog dialog, @NonNull DialogAction which) ->{
+                    if (which == DialogAction.NEGATIVE) {
+                        mSyncPresenter.stopSync();
+                    }
+                })
+                .show();
 //        ThreadPoolTool.exeTask(() ->{
 //            Logger.d("start download !");
 //            //Download data from cloud
@@ -352,6 +374,7 @@ public class MainActivity extends BaseActivity implements MainFragment.OnBindToo
     @Override
     public void syncFail() {
         Logger.d("同步失败");
+        syncQueryDialog.dismiss();
     }
 
     /**
@@ -361,7 +384,8 @@ public class MainActivity extends BaseActivity implements MainFragment.OnBindToo
     @Override
     public void syncSuccess() {
         Logger.d("同步成功");
-
+        mForbidScrollViewpagerAdapter.notifyDataChanged();
+        syncQueryDialog.dismiss();
     }
 
 
@@ -388,4 +412,5 @@ public class MainActivity extends BaseActivity implements MainFragment.OnBindToo
         mDrawerLayout.addDrawerListener(actionBarDrawerToggle);
         actionBarDrawerToggle.syncState();
     }
+
 }
