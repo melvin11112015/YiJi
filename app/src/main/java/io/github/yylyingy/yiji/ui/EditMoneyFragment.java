@@ -94,6 +94,16 @@ public class EditMoneyFragment extends Fragment {
         return mView;
     }
 
+    @Override
+    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        setTagImage(R.color.transparent);
+        setTagName("");
+        setTagId(-1);
+        setNumberText("");
+        setHelpText(" ");
+    }
+
     public interface OnTagItemSelectedListener {
         void onTagItemPicked(int position);
     }

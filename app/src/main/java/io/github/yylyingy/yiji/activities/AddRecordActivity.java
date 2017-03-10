@@ -2,6 +2,7 @@ package io.github.yylyingy.yiji.activities;
 
 import android.content.Intent;
 import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
@@ -22,6 +23,7 @@ import io.github.yylyingy.yiji.ui.TagChooseFragment;
 
 public class AddRecordActivity extends BaseActivity implements TagChooseFragment.OnTagItemSelectedListener {
 
+    private static final String FRAGMENT_TAG = "1";
     @BindView(R.id.toolbar)
     protected Toolbar mToolbar;
     AddRecordFragment   mRecordFragment;
@@ -43,11 +45,14 @@ public class AddRecordActivity extends BaseActivity implements TagChooseFragment
         DrawerArrowDrawable arrowDrawable = new DrawerArrowDrawable(this);
         arrowDrawable.setColor(getResources().getColor(R.color.colorWhite));
         mToolbar.setNavigationIcon(arrowDrawable);
-        mRecordFragment = new AddRecordFragment();
-        mFragmentManager.beginTransaction()
-                .replace(R.id.container,mRecordFragment)
-                .show(mRecordFragment)
-                .commit();
+        mRecordFragment = (AddRecordFragment) mFragmentManager.findFragmentByTag(FRAGMENT_TAG);
+        if (mRecordFragment == null) {
+            mRecordFragment = new AddRecordFragment();
+            FragmentTransaction transaction = mFragmentManager.beginTransaction();
+            transaction.replace(R.id.container, mRecordFragment, FRAGMENT_TAG)
+                    .show(mRecordFragment)
+                    .commit();
+        }
     }
 
     @Override
@@ -55,11 +60,6 @@ public class AddRecordActivity extends BaseActivity implements TagChooseFragment
         startActivity(new Intent(AddRecordActivity.this,MainActivity.class));
         return super.onOptionsItemSelected(item);
     }
-
-//    @Override
-//    protected void initButterKnife() {
-//        mUnbinder = ButterKnife.bind(this);
-//    }
 
     @Override
     public void onTagItemPicked(int position) {

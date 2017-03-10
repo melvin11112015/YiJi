@@ -64,12 +64,12 @@
         "source": "C:\\Users\\Yangyl\\.android\\build-cache\\c69cc9502702cd2dd6919fc7603f4fc45244d7a6\\output\\res\\drawable-xhdpi-v4\\abc_ic_menu_share_mtrl_alpha.png"
     },
     {
-        "merged": "D:\\Android\\WorkSpaseForAS\\YiJi\\magicindicator\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\notify_panel_notification_icon_bg.png",
-        "source": "C:\\Users\\Yangyl\\.android\\build-cache\\c69cc9502702cd2dd6919fc7603f4fc45244d7a6\\output\\res\\drawable-xhdpi-v4\\notify_panel_notification_icon_bg.png"
-    },
-    {
         "merged": "D:\\Android\\WorkSpaseForAS\\YiJi\\magicindicator\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\abc_list_selector_disabled_holo_dark.9.png",
         "source": "C:\\Users\\Yangyl\\.android\\build-cache\\c69cc9502702cd2dd6919fc7603f4fc45244d7a6\\output\\res\\drawable-xhdpi-v4\\abc_list_selector_disabled_holo_dark.9.png"
+    },
+    {
+        "merged": "D:\\Android\\WorkSpaseForAS\\YiJi\\magicindicator\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\notify_panel_notification_icon_bg.png",
+        "source": "C:\\Users\\Yangyl\\.android\\build-cache\\c69cc9502702cd2dd6919fc7603f4fc45244d7a6\\output\\res\\drawable-xhdpi-v4\\notify_panel_notification_icon_bg.png"
     },
     {
         "merged": "D:\\Android\\WorkSpaseForAS\\YiJi\\magicindicator\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\abc_ic_menu_paste_mtrl_am_alpha.png",
