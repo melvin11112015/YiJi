@@ -4,9 +4,9 @@
 易记，您的贴身记账小助手
 
 #下载
-[APK](https://github.com/yylyingy/YiJi/blob/master/app-release.apk) 
+[APK](https://github.com/melvin11112017/YiJi/blob/master/app-release.apk) 
 
 #概况
-![YiJi](https://github.com/yylyingy/YiJi/blob/master/PNG/sketch_map.png) 
+![YiJi](https://github.com/melvin11112017/YiJi/blob/master/PNG/sketch_map.png) 
 
  
