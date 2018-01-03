@@ -1,18 +1,18 @@
 [
     {
-        "merged": "D:\\Android\\WorkSpaseForAS\\YiJi\\magicindicator\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout-v21\\notification_template_icon_group.xml",
-        "source": "C:\\Users\\Yangyl\\.android\\build-cache\\c69cc9502702cd2dd6919fc7603f4fc45244d7a6\\output\\res\\layout-v21\\notification_template_icon_group.xml"
+        "merged": "C:\\Users\\xy\\AndroidStudioProjects\\YiJi\\magicindicator\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout-v21\\notification_action.xml",
+        "source": "C:\\Users\\xy\\.android\\build-cache\\c57bc142171d76b071c9be3372bae36b54c8634a\\output\\res\\layout-v21\\notification_action.xml"
     },
     {
-        "merged": "D:\\Android\\WorkSpaseForAS\\YiJi\\magicindicator\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout-v21\\notification_template_custom_big.xml",
-        "source": "C:\\Users\\Yangyl\\.android\\build-cache\\c69cc9502702cd2dd6919fc7603f4fc45244d7a6\\output\\res\\layout-v21\\notification_template_custom_big.xml"
+        "merged": "C:\\Users\\xy\\AndroidStudioProjects\\YiJi\\magicindicator\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout-v21\\notification_action_tombstone.xml",
+        "source": "C:\\Users\\xy\\.android\\build-cache\\c57bc142171d76b071c9be3372bae36b54c8634a\\output\\res\\layout-v21\\notification_action_tombstone.xml"
     },
     {
-        "merged": "D:\\Android\\WorkSpaseForAS\\YiJi\\magicindicator\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout-v21\\notification_action.xml",
-        "source": "C:\\Users\\Yangyl\\.android\\build-cache\\c69cc9502702cd2dd6919fc7603f4fc45244d7a6\\output\\res\\layout-v21\\notification_action.xml"
+        "merged": "C:\\Users\\xy\\AndroidStudioProjects\\YiJi\\magicindicator\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout-v21\\notification_template_custom_big.xml",
+        "source": "C:\\Users\\xy\\.android\\build-cache\\c57bc142171d76b071c9be3372bae36b54c8634a\\output\\res\\layout-v21\\notification_template_custom_big.xml"
     },
     {
-        "merged": "D:\\Android\\WorkSpaseForAS\\YiJi\\magicindicator\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout-v21\\notification_action_tombstone.xml",
-        "source": "C:\\Users\\Yangyl\\.android\\build-cache\\c69cc9502702cd2dd6919fc7603f4fc45244d7a6\\output\\res\\layout-v21\\notification_action_tombstone.xml"
+        "merged": "C:\\Users\\xy\\AndroidStudioProjects\\YiJi\\magicindicator\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout-v21\\notification_template_icon_group.xml",
+        "source": "C:\\Users\\xy\\.android\\build-cache\\c57bc142171d76b071c9be3372bae36b54c8634a\\output\\res\\layout-v21\\notification_template_icon_group.xml"
     }
 ]

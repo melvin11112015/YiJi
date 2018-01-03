@@ -9,7 +9,6 @@ import android.view.Window;
 import android.view.animation.Animation;
 import android.view.animation.Animation.AnimationListener;
 import android.view.animation.AnimationUtils;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.gc.materialdesign.R;
@@ -72,30 +71,30 @@ public class Dialog extends android.app.Dialog{
 				return false;
 			}
 		});
-		
-	    this.titleTextView = (TextView) findViewById(R.id.title);
-	    setTitle(title);
-	    
-	    this.messageTextView = (TextView) findViewById(R.id.message);
-	    setMessage(message);
-	    
-	    this.buttonAccept = (ButtonFlat) findViewById(R.id.button_accept);
-	    buttonAccept.setOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				dismiss();
+
+        this.titleTextView = findViewById(R.id.title);
+        setTitle(title);
+
+        this.messageTextView = findViewById(R.id.message);
+        setMessage(message);
+
+        this.buttonAccept = findViewById(R.id.button_accept);
+        buttonAccept.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dismiss();
 				if(onAcceptButtonClickListener != null)
 			    	onAcceptButtonClickListener.onClick(v);
 			}
 		});
 	    
 	    if(buttonCancelText != null){
-		    this.buttonCancel = (ButtonFlat) findViewById(R.id.button_cancel);
-		    this.buttonCancel.setVisibility(View.VISIBLE);
-		    this.buttonCancel.setText(buttonCancelText);
-	    	buttonCancel.setOnClickListener(new View.OnClickListener() {
-	    		
-				@Override
+            this.buttonCancel = findViewById(R.id.button_cancel);
+            this.buttonCancel.setVisibility(View.VISIBLE);
+            this.buttonCancel.setText(buttonCancelText);
+            buttonCancel.setOnClickListener(new View.OnClickListener() {
+
+                @Override
 				public void onClick(View v) {
 					dismiss();	
 					if(onCancelButtonClickListener != null)

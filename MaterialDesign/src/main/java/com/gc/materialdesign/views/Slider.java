@@ -1,6 +1,5 @@
 package com.gc.materialdesign.views;
 
-import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -14,7 +13,6 @@ import android.graphics.drawable.LayerDrawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.MotionEvent;
 import android.view.View;
@@ -40,15 +38,6 @@ public class Slider extends CustomView {
     private boolean placedBall          = false;
     private boolean press               = false;
     private boolean showNumberIndicator = false;
-
-    public boolean isDisableParentInterruptTouch() {
-        return isDisableParentInterruptTouch;
-    }
-
-    public void setDisableParentInterruptTouch(boolean disableParentInterruptTouch) {
-        isDisableParentInterruptTouch = disableParentInterruptTouch;
-    }
-
     private boolean isDisableParentInterruptTouch = false;
     private int     value               = 0;
 
@@ -57,6 +46,14 @@ public class Slider extends CustomView {
         if (!isInEditMode()) {
             setAttributes(attrs);
         }
+    }
+
+    public boolean isDisableParentInterruptTouch() {
+        return isDisableParentInterruptTouch;
+    }
+
+    public void setDisableParentInterruptTouch(boolean disableParentInterruptTouch) {
+        isDisableParentInterruptTouch = disableParentInterruptTouch;
     }
 
     public int getMax() {
@@ -206,7 +203,7 @@ public class Slider extends CustomView {
     protected int makePressColor() {
         int r = (this.backgroundColor >> 16) & 0xFF;
         int g = (this.backgroundColor >> 8) & 0xFF;
-        int b = (this.backgroundColor >> 0) & 0xFF;
+        int b = (this.backgroundColor) & 0xFF;
         r = (r - 30 < 0) ? 0 : r - 30;
         g = (g - 30 < 0) ? 0 : g - 30;
         b = (b - 30 < 0) ? 0 : b - 30;
@@ -446,7 +443,7 @@ public class Slider extends CustomView {
             setContentView(R.layout.number_indicator_spinner);
             setCanceledOnTouchOutside(false);
 
-            RelativeLayout content = (RelativeLayout) this
+            RelativeLayout content = this
                     .findViewById(R.id.number_indicator_spinner_content);
             indicator = new Indicator(this.getContext());
             content.addView(indicator);

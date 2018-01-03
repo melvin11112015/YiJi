@@ -1,8 +1,5 @@
 package com.gc.materialdesign.views;
 
-import com.gc.materialdesign.R;
-import com.gc.materialdesign.utils.Utils;
-
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
@@ -11,6 +8,9 @@ import android.graphics.Typeface;
 import android.util.AttributeSet;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import com.gc.materialdesign.R;
+import com.gc.materialdesign.utils.Utils;
 
 public class ButtonFlat extends Button {
 	
@@ -33,7 +33,7 @@ public class ButtonFlat extends Button {
 	@Override
 	protected void setAttributes(AttributeSet attrs) {
 		// Set text button
-		String text = null;
+		String text;
 		int textResource = attrs.getAttributeResourceValue(ANDROIDXML,"text",-1);
 		if(textResource != -1){
 			text = getResources().getString(textResource);
@@ -95,10 +95,6 @@ public class ButtonFlat extends Button {
 		return Color.parseColor("#88DDDDDD");	
 	}
 	
-	public void setText(String text){
-		textButton.setText(text.toUpperCase());
-	}
-	
 	// Set color of background
 	public void setBackgroundColor(int color){
 		backgroundColor = color;
@@ -111,9 +107,13 @@ public class ButtonFlat extends Button {
 	public TextView getTextView() {
 		return textButton;
 	}
-	
+
 	public String getText(){
         	return textButton.getText().toString();
  	}
+
+	public void setText(String text) {
+		textButton.setText(text.toUpperCase());
+	}
 
 }

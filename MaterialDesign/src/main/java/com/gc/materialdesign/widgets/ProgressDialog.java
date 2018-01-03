@@ -9,11 +9,9 @@ import android.view.Window;
 import android.view.animation.Animation;
 import android.view.animation.Animation.AnimationListener;
 import android.view.animation.AnimationUtils;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.gc.materialdesign.R;
-import com.gc.materialdesign.views.ButtonFlat;
 import com.gc.materialdesign.views.ProgressBarCircularIndeterminate;
 
 public class ProgressDialog extends android.app.Dialog{
@@ -60,18 +58,18 @@ public class ProgressDialog extends android.app.Dialog{
 				return false;
 			}
 		});
-		
-	    this.titleTextView = (TextView) findViewById(R.id.title);
-	    setTitle(title);
-	    if(progressColor != -1){
-	    	ProgressBarCircularIndeterminate progressBarCircularIndeterminate = (ProgressBarCircularIndeterminate) findViewById(R.id.progressBarCircularIndetermininate);
-	    	progressBarCircularIndeterminate.setBackgroundColor(progressColor);
-	    }
-	    
-	    
-	}
-	
-	@Override
+
+        this.titleTextView = findViewById(R.id.title);
+        setTitle(title);
+        if (progressColor != -1) {
+            ProgressBarCircularIndeterminate progressBarCircularIndeterminate = findViewById(R.id.progressBarCircularIndetermininate);
+            progressBarCircularIndeterminate.setBackgroundColor(progressColor);
+        }
+
+
+    }
+
+    @Override
 	public void show() {
 		// TODO 自动生成的方法存根
 		super.show();

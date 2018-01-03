@@ -1,8 +1,5 @@
 package com.gc.materialdesign.views;
 
-import com.gc.materialdesign.R;
-import com.gc.materialdesign.utils.Utils;
-
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
@@ -10,8 +7,9 @@ import android.graphics.drawable.GradientDrawable;
 import android.graphics.drawable.LayerDrawable;
 import android.util.AttributeSet;
 import android.view.View;
-import android.widget.RelativeLayout;
-import android.widget.RelativeLayout.LayoutParams;
+
+import com.gc.materialdesign.R;
+import com.gc.materialdesign.utils.Utils;
 
 public class ProgressBarDeterminate extends CustomView {
 	
@@ -23,23 +21,24 @@ public class ProgressBarDeterminate extends CustomView {
 	int backgroundColor = Color.parseColor("#1E88E5");
 	
 	View progressView;
+    int pendindProgress = -1;
 
-	public ProgressBarDeterminate(Context context, AttributeSet attrs) {
-		super(context, attrs);
-		if (!isInEditMode()){
-			setAttributes(attrs);
+    public ProgressBarDeterminate(Context context, AttributeSet attrs) {
+        super(context, attrs);
+        if (!isInEditMode()) {
+            setAttributes(attrs);
 		}
 	}
 	
 	// Set atributtes of XML to View
 		protected void setAttributes(AttributeSet attrs){
-			
+
 			progressView = new View(getContext());
 			LayoutParams params = new LayoutParams(1,1);
 			progressView.setLayoutParams(params);
 			progressView.setBackgroundResource(R.drawable.background_progress);
 			addView(progressView);
-			
+
 			//Set background Color
 			// Color by resource
 			int bacgroundColor = attrs.getAttributeResourceValue(ANDROIDXML,"background",-1);
@@ -53,13 +52,13 @@ public class ProgressBarDeterminate extends CustomView {
 				else
 					setBackgroundColor(Color.parseColor("#1E88E5"));
 			}
-			
+
 			min = attrs.getAttributeIntValue(MATERIALDESIGNXML,"min", 0);
 			max = attrs.getAttributeIntValue(MATERIALDESIGNXML,"max", 100);
 			progress = attrs.getAttributeIntValue(MATERIALDESIGNXML,"progress", min);
-			
-			setMinimumHeight(Utils.dpToPx(3, getResources()));
-			post(new Runnable() {
+
+            setMinimumHeight(Utils.dpToPx(3, getResources()));
+            post(new Runnable() {
 
 				@Override
 				public void run() {
@@ -72,23 +71,23 @@ public class ProgressBarDeterminate extends CustomView {
 
 
 		}
-	
-	/**
-	 * Make a dark color to ripple effect
-	 * @return
-	 */
+
+    // SETTERS
+
+    /**
+     * Make a dark color to ripple effect
+     * @return
+     */
 	protected int makePressColor(){
 		int r = (this.backgroundColor >> 16) & 0xFF;
 		int g = (this.backgroundColor >> 8) & 0xFF;
-		int b = (this.backgroundColor >> 0) & 0xFF;
-		return Color.argb(128,r, g, b);		
-	}
-	
-	// SETTERS
-	
-	@Override
-	protected void onDraw(Canvas canvas) {
-		super.onDraw(canvas);
+        int b = (this.backgroundColor) & 0xFF;
+        return Color.argb(128, r, g, b);
+    }
+
+    @Override
+    protected void onDraw(Canvas canvas) {
+        super.onDraw(canvas);
 		if(!isInEditMode()){
 			if(pendindProgress!=-1)
 				setProgress(pendindProgress);
@@ -102,12 +101,15 @@ public class ProgressBarDeterminate extends CustomView {
 	public void setMin(int min){
 		this.min = min;
 	}
-	
-	int pendindProgress = -1;
-	public void setProgress(int progress){
-		if(getWidth() == 0){
-			pendindProgress = progress;
-		}else{
+
+    public int getProgress() {
+        return progress;
+    }
+
+    public void setProgress(int progress) {
+        if (getWidth() == 0) {
+            pendindProgress = progress;
+        }else{
 			this.progress = progress;
 			if(progress > max)
 				progress = max;
@@ -122,10 +124,6 @@ public class ProgressBarDeterminate extends CustomView {
 			progressView.setLayoutParams(params);
 			pendindProgress = -1;
 		}
-	}
-	
-	public int getProgress(){
-		return progress;
 	}
 	
 	// Set color of background

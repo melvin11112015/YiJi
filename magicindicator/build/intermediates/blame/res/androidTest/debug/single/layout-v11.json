@@ -1,26 +1,26 @@
 [
     {
-        "merged": "D:\\Android\\WorkSpaseForAS\\YiJi\\magicindicator\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout-v11\\notification_media_cancel_action.xml",
-        "source": "C:\\Users\\Yangyl\\.android\\build-cache\\c69cc9502702cd2dd6919fc7603f4fc45244d7a6\\output\\res\\layout-v11\\notification_media_cancel_action.xml"
+        "merged": "C:\\Users\\xy\\AndroidStudioProjects\\YiJi\\magicindicator\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout-v11\\notification_template_big_media_custom.xml",
+        "source": "C:\\Users\\xy\\.android\\build-cache\\c57bc142171d76b071c9be3372bae36b54c8634a\\output\\res\\layout-v11\\notification_template_big_media_custom.xml"
     },
     {
-        "merged": "D:\\Android\\WorkSpaseForAS\\YiJi\\magicindicator\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout-v11\\notification_template_big_media_narrow_custom.xml",
-        "source": "C:\\Users\\Yangyl\\.android\\build-cache\\c69cc9502702cd2dd6919fc7603f4fc45244d7a6\\output\\res\\layout-v11\\notification_template_big_media_narrow_custom.xml"
+        "merged": "C:\\Users\\xy\\AndroidStudioProjects\\YiJi\\magicindicator\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout-v11\\notification_template_big_media_narrow_custom.xml",
+        "source": "C:\\Users\\xy\\.android\\build-cache\\c57bc142171d76b071c9be3372bae36b54c8634a\\output\\res\\layout-v11\\notification_template_big_media_narrow_custom.xml"
     },
     {
-        "merged": "D:\\Android\\WorkSpaseForAS\\YiJi\\magicindicator\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout-v11\\notification_template_big_media_custom.xml",
-        "source": "C:\\Users\\Yangyl\\.android\\build-cache\\c69cc9502702cd2dd6919fc7603f4fc45244d7a6\\output\\res\\layout-v11\\notification_template_big_media_custom.xml"
+        "merged": "C:\\Users\\xy\\AndroidStudioProjects\\YiJi\\magicindicator\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout-v11\\notification_template_big_media.xml",
+        "source": "C:\\Users\\xy\\.android\\build-cache\\c57bc142171d76b071c9be3372bae36b54c8634a\\output\\res\\layout-v11\\notification_template_big_media.xml"
     },
     {
-        "merged": "D:\\Android\\WorkSpaseForAS\\YiJi\\magicindicator\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout-v11\\notification_template_big_media_narrow.xml",
-        "source": "C:\\Users\\Yangyl\\.android\\build-cache\\c69cc9502702cd2dd6919fc7603f4fc45244d7a6\\output\\res\\layout-v11\\notification_template_big_media_narrow.xml"
+        "merged": "C:\\Users\\xy\\AndroidStudioProjects\\YiJi\\magicindicator\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout-v11\\notification_media_cancel_action.xml",
+        "source": "C:\\Users\\xy\\.android\\build-cache\\c57bc142171d76b071c9be3372bae36b54c8634a\\output\\res\\layout-v11\\notification_media_cancel_action.xml"
     },
     {
-        "merged": "D:\\Android\\WorkSpaseForAS\\YiJi\\magicindicator\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout-v11\\notification_media_action.xml",
-        "source": "C:\\Users\\Yangyl\\.android\\build-cache\\c69cc9502702cd2dd6919fc7603f4fc45244d7a6\\output\\res\\layout-v11\\notification_media_action.xml"
+        "merged": "C:\\Users\\xy\\AndroidStudioProjects\\YiJi\\magicindicator\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout-v11\\notification_template_big_media_narrow.xml",
+        "source": "C:\\Users\\xy\\.android\\build-cache\\c57bc142171d76b071c9be3372bae36b54c8634a\\output\\res\\layout-v11\\notification_template_big_media_narrow.xml"
     },
     {
-        "merged": "D:\\Android\\WorkSpaseForAS\\YiJi\\magicindicator\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout-v11\\notification_template_big_media.xml",
-        "source": "C:\\Users\\Yangyl\\.android\\build-cache\\c69cc9502702cd2dd6919fc7603f4fc45244d7a6\\output\\res\\layout-v11\\notification_template_big_media.xml"
+        "merged": "C:\\Users\\xy\\AndroidStudioProjects\\YiJi\\magicindicator\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout-v11\\notification_media_action.xml",
+        "source": "C:\\Users\\xy\\.android\\build-cache\\c57bc142171d76b071c9be3372bae36b54c8634a\\output\\res\\layout-v11\\notification_media_action.xml"
     }
 ]

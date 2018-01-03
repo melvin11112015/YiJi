@@ -14,8 +14,6 @@
         <item name="actionBarStyle">@style/Theme.AppCompat.NoActionBar</item>
         <item name="android:navigationBarColor" tools:targetApi="21">@color/toolbarColor</item>
     </style>
-    <style name="BaseAppTheme.Activity" parent="BaseAppTheme">
-    </style>
 
     <style name="MaterialToolbar" parent="@style/ThemeOverlay.AppCompat.ActionBar">
         <item name="android:fitsSystemWindows">true</item>

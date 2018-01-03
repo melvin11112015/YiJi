@@ -4,7 +4,7 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.support.annotation.NonNull;
 
-import io.github.yylyingy.yiji.tools.Constants;
+import io.github.mlstudio.yiji.tools.Constants;
 
 public class PreferencesHelper {
 
@@ -66,12 +66,12 @@ public class PreferencesHelper {
         mPreferences.edit().putString(Constants.COVER_IMAGE, imageUrl).apply();
     }
 
-    public void setNgImages(String images){
-        mPreferences.edit().putString(Constants.NG_IMAGES, images).apply();
-    }
-
     public String getNgImages(){
         return mPreferences.getString(Constants.NG_IMAGES, "");
+    }
+
+    public void setNgImages(String images) {
+        mPreferences.edit().putString(Constants.NG_IMAGES, images).apply();
     }
 
 }

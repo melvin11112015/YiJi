@@ -5,7 +5,7 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.util.DisplayMetrics;
 
-import io.github.yylyingy.yiji.YiJiApplication;
+import io.github.mlstudio.yiji.YiJiApplication;
 
 
 /**
@@ -28,10 +28,7 @@ public class NowAppUtils {
         ConnectivityManager connManager = (ConnectivityManager) YiJiApplication.getAppContext()
                 .getApplicationContext().getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo networkInfo = connManager.getNetworkInfo(ConnectivityManager.TYPE_WIFI);
-        if (networkInfo.isConnected())
-            return true;
-        else
-            return false;
+        return networkInfo.isConnected();
     }
 
     public static boolean isNetworkConnected(Context context) {

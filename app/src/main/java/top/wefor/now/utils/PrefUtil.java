@@ -4,8 +4,8 @@ import android.content.SharedPreferences;
 
 import java.util.Date;
 
-import io.github.yylyingy.yiji.YiJiApplication;
-import io.github.yylyingy.yiji.tools.Constants;
+import io.github.mlstudio.yiji.YiJiApplication;
+import io.github.mlstudio.yiji.tools.Constants;
 
 /**
  * Created on 16/6/21 16:32.

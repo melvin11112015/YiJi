@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="io.github.yylyingy.yiji">
+    package="io.github.mlstudio.yiji">
 
     <!-- 允许联网 -->
     <uses-permission android:name="android.permission.INTERNET"/>
@@ -18,14 +18,14 @@
     <uses-permission android:name="android.permission.READ_LOGS"/>
 
     <application
-        android:name="io.github.yylyingy.yiji.YiJiApplication"
+        android:name="io.github.mlstudio.yiji.YiJiApplication"
         android:allowBackup="true"
         android:icon="@mipmap/icon"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name="io.github.yylyingy.yiji.activities.SplashActivity"
+            android:name="io.github.mlstudio.yiji.activities.SplashActivity"
             android:theme="@style/SplashActivityTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -34,10 +34,10 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="io.github.yylyingy.yiji.activities.MainActivity"
+            android:name="io.github.mlstudio.yiji.activities.MainActivity"
             android:theme="@style/AppTheme">
         </activity>
-        <activity android:name="io.github.yylyingy.yiji.activities.AddRecordActivity">
+        <activity android:name="io.github.mlstudio.yiji.activities.AddRecordActivity">
         </activity>
         <activity android:name=".activities.WebActivity"/>
         <activity android:name=".activities.BigImageActivity"/>

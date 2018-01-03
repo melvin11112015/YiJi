@@ -1,47 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
               xmlns:app="http://schemas.android.com/apk/res-auto"
-              android:orientation="vertical"
               android:layout_width="250dp"
               android:layout_height="match_parent"
               android:layout_gravity="start"
-              android:background="@color/colorWhite">
+    android:background="@color/colorWhite"
+    android:orientation="vertical">
 
     <LinearLayout
-        android:layout_alignParentBottom="true"
         android:id="@+id/line"
-        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:baselineAligned="false"
+        android:orientation="horizontal">
 
         <com.balysv.materialripple.MaterialRippleLayout
             android:id="@+id/sync"
-            android:layout_weight="1"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_marginTop="5dp"
+            android:layout_weight="1"
             app:mrl_rippleAlpha="0.2"
             app:mrl_rippleColor="@color/my_blue"
             app:mrl_rippleHover="true"
             app:mrl_rippleOverlay="false">
 
             <LinearLayout
-                android:layout_height="match_parent"
                 android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:orientation="horizontal"
                 >
 
                 <net.steamcrafted.materialiconlib.MaterialIconView
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    app:materialIcon="sync"
-                    app:materialIconColor="@color/toolbarColor"
-                    app:materialIconSize="24dp"
-                    android:scaleType="center"
-                    android:id="@+id/custom_icon1"
                     android:layout_gravity="center_vertical"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
+                    android:scaleType="center"
+                    app:materialIcon="sync"
+                    app:materialIconColor="@color/toolbarColor"
+                    app:materialIconSize="24dp"
                     />
 
                 <TextView
@@ -56,36 +56,34 @@
 
         <com.balysv.materialripple.MaterialRippleLayout
             android:id="@+id/exit"
-            android:layout_weight="1"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_marginTop="5dp"
+            android:layout_weight="1"
             app:mrl_rippleAlpha="0.2"
             app:mrl_rippleColor="@color/my_blue"
             app:mrl_rippleHover="true"
             app:mrl_rippleOverlay="false">
 
             <LinearLayout
-                android:layout_height="match_parent"
                 android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:orientation="horizontal"
                 >
 
                 <net.steamcrafted.materialiconlib.MaterialIconView
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    app:materialIcon="exit_to_app"
-                    app:materialIconColor="@color/toolbarColor"
-                    app:materialIconSize="24dp"
-                    android:scaleType="center"
-                    android:id="@+id/custom_icon"
                     android:layout_gravity="center_vertical"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
+                    android:scaleType="center"
+                    app:materialIcon="exit_to_app"
+                    app:materialIconColor="@color/toolbarColor"
+                    app:materialIconSize="24dp"
                     />
 
                 <TextView
-                    android:id="@+id/quit"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_gravity="center_vertical"
@@ -98,14 +96,14 @@
     </LinearLayout>
 
     <ScrollView
-        android:layout_above="@id/line"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_above="@id/line">
 
         <LinearLayout
-            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
 
         </LinearLayout>

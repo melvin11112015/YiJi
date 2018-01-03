@@ -4,7 +4,7 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
-import io.github.yylyingy.yiji.base.zhihubase.BaseResult;
+import io.github.mlstudio.yiji.base.zhihubase.BaseResult;
 import top.wefor.now.data.model.entity.Zhihu;
 
 /**

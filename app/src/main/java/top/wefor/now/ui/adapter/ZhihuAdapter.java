@@ -16,11 +16,11 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-import io.github.yylyingy.yiji.R;
+import io.github.mlstudio.yiji.R;
+import io.github.mlstudio.yiji.activities.BigImageActivity;
+import io.github.mlstudio.yiji.activities.WebActivity;
 import top.wefor.now.data.http.NowApi;
 import top.wefor.now.data.model.entity.Zhihu;
-import io.github.yylyingy.yiji.activities.BigImageActivity;
-import io.github.yylyingy.yiji.activities.WebActivity;
 
 /**
  * Created by ice on 15/10/26.
@@ -35,7 +35,7 @@ public class ZhihuAdapter extends BaseListAdapter<Zhihu> {
 
     @Override
     public CardViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = null;
+        View view;
 
         switch (viewType) {
             case TYPE_HEADER: {

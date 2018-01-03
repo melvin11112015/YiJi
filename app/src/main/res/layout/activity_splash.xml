@@ -1,44 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_splash"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <LinearLayout
-        android:layout_marginBottom="40dp"
-        android:layout_alignParentBottom="true"
         android:layout_width="match_parent"
-        android:orientation="horizontal"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="40dp"
+        android:orientation="horizontal">
         <ImageView
+            android:id="@+id/image_view"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="80dp"
             android:layout_marginRight="20dp"
-            android:id="@+id/image_view"
-            android:src="@drawable/laucher"
-            android:layout_width="60dp"
-            android:layout_height="60dp"/>
+            android:contentDescription="TODO"
+            android:src="@drawable/laucher" />
         <LinearLayout
-            android:layout_gravity="center_vertical"
-            android:orientation="vertical"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical">
             <TextView
-                android:id="@+id/sample_text"
-                android:layout_gravity="center_horizontal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="50sp"
-                android:textColor="@color/black_button"
-                android:text="易记" />
-            <TextView
                 android:layout_gravity="center_horizontal"
-                android:textSize="10sp"
-                android:text="个人记账工具"
+                android:text="易记"
+                android:textColor="@color/black"
+                android:textSize="50sp" />
+            <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="个人记账工具"
+                android:textSize="10sp" />
 
         </LinearLayout>
 

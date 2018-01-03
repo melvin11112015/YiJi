@@ -22,6 +22,8 @@ public class LayoutRipple extends CustomView {
 	Integer rippleColor;
 	Float xRippleOrigin;
 	Float yRippleOrigin;
+	float x = -1, y = -1;
+	float radius = -1;
 
 	public LayoutRipple(Context context, AttributeSet attrs) {
 		super(context, attrs);
@@ -59,10 +61,12 @@ public class LayoutRipple extends CustomView {
 			else
 				setRippleColor(makePressColor());
 		}
-		
+
 		rippleSpeed = attrs.getAttributeFloatValue(MATERIALDESIGNXML,
 				"rippleSpeed", 20f);
 	}
+
+	// ### RIPPLE EFFECT ###
 
 	// Set color of background
 	public void setBackgroundColor(int color) {
@@ -75,11 +79,6 @@ public class LayoutRipple extends CustomView {
 	public void setRippleSpeed(int rippleSpeed) {
 		this.rippleSpeed = rippleSpeed;
 	}
-
-	// ### RIPPLE EFFECT ###
-
-	float x = -1, y = -1;
-	float radius = -1;
 
 	@Override
 	public boolean onTouchEvent(MotionEvent event) {
@@ -121,6 +120,7 @@ public class LayoutRipple extends CustomView {
 	@Override
 	protected void onFocusChanged(boolean gainFocus, int direction,
 			Rect previouslyFocusedRect) {
+		super.onFocusChanged(gainFocus, direction, previouslyFocusedRect);
 		if (!gainFocus) {
 			x = -1;
 			y = -1;
@@ -176,7 +176,7 @@ public class LayoutRipple extends CustomView {
 	protected int makePressColor() {
 		int r = (this.backgroundColor >> 16) & 0xFF;
 		int g = (this.backgroundColor >> 8) & 0xFF;
-		int b = (this.backgroundColor >> 0) & 0xFF;
+		int b = (this.backgroundColor) & 0xFF;
 		r = (r - 30 < 0) ? 0 : r - 30;
 		g = (g - 30 < 0) ? 0 : g - 30;
 		b = (b - 30 < 0) ? 0 : b - 30;

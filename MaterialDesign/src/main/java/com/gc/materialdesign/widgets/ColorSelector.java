@@ -1,23 +1,21 @@
 package com.gc.materialdesign.widgets;
 
-import com.gc.materialdesign.R;
-import com.gc.materialdesign.views.Slider;
-import com.gc.materialdesign.views.Slider.OnValueChangedListener;
-
 import android.content.Context;
 import android.content.DialogInterface;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
-import android.view.Window;
 import android.view.View.OnTouchListener;
+import android.view.Window;
 import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 import android.view.animation.Animation.AnimationListener;
-import android.widget.LinearLayout;
+import android.view.animation.AnimationUtils;
 import android.widget.LinearLayout.LayoutParams;
-import android.widget.RelativeLayout;
+
+import com.gc.materialdesign.R;
+import com.gc.materialdesign.views.Slider;
+import com.gc.materialdesign.views.Slider.OnValueChangedListener;
 
 public class ColorSelector extends android.app.Dialog implements OnValueChangedListener{
 	
@@ -83,19 +81,19 @@ public class ColorSelector extends android.app.Dialog implements OnValueChangedL
 	    
 	    
 	    // Configure Sliders
-	    red = (Slider) findViewById(R.id.red);
-	    green = (Slider) findViewById(R.id.green);
-	    blue = (Slider) findViewById(R.id.blue);
-	    
-	    int r = (this.color >> 16) & 0xFF;
-		int g = (this.color >> 8) & 0xFF;
-		int b = (this.color >> 0) & 0xFF;
-		
-		red.setValue(r);
-		green.setValue(g);
-		blue.setValue(b);
-		
-		red.setOnValueChangedListener(this);
+        red = findViewById(R.id.red);
+        green = findViewById(R.id.green);
+        blue = findViewById(R.id.blue);
+
+        int r = (this.color >> 16) & 0xFF;
+        int g = (this.color >> 8) & 0xFF;
+        int b = (this.color) & 0xFF;
+
+        red.setValue(r);
+        green.setValue(g);
+        blue.setValue(b);
+
+        red.setOnValueChangedListener(this);
 		green.setOnValueChangedListener(this);
 		blue.setOnValueChangedListener(this);
 	}
@@ -113,41 +111,40 @@ public class ColorSelector extends android.app.Dialog implements OnValueChangedL
 		colorView.setBackgroundColor(color);
 	}
 	
-	
-	// Event that execute when color selector is closed
-	public interface OnColorSelectedListener{
-		void onColorSelected(int color);
-	}
-		
 	@Override
 	public void dismiss() {
 		Animation anim = AnimationUtils.loadAnimation(context, R.anim.dialog_main_hide_amination);
-		
+
 		anim.setAnimationListener(new AnimationListener() {
-			
-			@Override
-			public void onAnimationStart(Animation animation) {
-			}
-			
-			@Override
-			public void onAnimationRepeat(Animation animation) {
-			}
-			
-			@Override
-			public void onAnimationEnd(Animation animation) {
-				view.post(new Runnable() {
-					@Override
+
+            @Override
+            public void onAnimationStart(Animation animation) {
+            }
+
+            @Override
+            public void onAnimationRepeat(Animation animation) {
+            }
+
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                view.post(new Runnable() {
+                    @Override
 					public void run() {
 						ColorSelector.super.dismiss();
 			        }
 			    });
 			}
 		});
-		
-		Animation backAnim = AnimationUtils.loadAnimation(context, R.anim.dialog_root_hide_amin);
-		
-		view.startAnimation(anim);
-		backView.startAnimation(backAnim);
-	}
+
+        Animation backAnim = AnimationUtils.loadAnimation(context, R.anim.dialog_root_hide_amin);
+
+        view.startAnimation(anim);
+        backView.startAnimation(backAnim);
+    }
+
+    // Event that execute when color selector is closed
+    public interface OnColorSelectedListener {
+        void onColorSelected(int color);
+    }
 
 }

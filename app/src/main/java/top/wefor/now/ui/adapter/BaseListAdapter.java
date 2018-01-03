@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 
 import java.util.List;
 
-import io.github.yylyingy.yiji.R;
+import io.github.mlstudio.yiji.R;
 
 
 /**
@@ -16,13 +16,11 @@ import io.github.yylyingy.yiji.R;
  */
 public abstract class BaseListAdapter<T> extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
-    protected List<T> mList;
-
-    protected Context context;
-    private Integer bigViewResId, smallViewResId;
-
     protected static final int TYPE_HEADER = 0;
     protected static final int TYPE_CELL = 1;
+    protected List<T> mList;
+    protected Context context;
+    private Integer bigViewResId, smallViewResId;
 
     public BaseListAdapter(Context context, List<T> mList) {
         this.mList = mList;
@@ -63,7 +61,7 @@ public abstract class BaseListAdapter<T> extends RecyclerView.Adapter<RecyclerVi
 
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = null;
+        View view;
 
         switch (viewType) {
             case TYPE_HEADER: {

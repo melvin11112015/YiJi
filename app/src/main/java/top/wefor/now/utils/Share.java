@@ -10,7 +10,7 @@ import com.tencent.mm.sdk.modelmsg.WXWebpageObject;
 import com.tencent.mm.sdk.openapi.IWXAPI;
 import com.tencent.mm.sdk.openapi.WXAPIFactory;
 
-import io.github.yylyingy.yiji.tools.Constants;
+import io.github.mlstudio.yiji.tools.Constants;
 
 
 /**

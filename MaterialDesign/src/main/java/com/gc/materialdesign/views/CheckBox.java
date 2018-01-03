@@ -1,8 +1,5 @@
 package com.gc.materialdesign.views;
 
-import com.gc.materialdesign.R;
-import com.gc.materialdesign.utils.Utils;
-
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -12,11 +9,15 @@ import android.graphics.Paint;
 import android.graphics.Rect;
 import android.graphics.drawable.GradientDrawable;
 import android.graphics.drawable.LayerDrawable;
+import android.os.Build;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import com.gc.materialdesign.R;
+import com.gc.materialdesign.utils.Utils;
 
 public class CheckBox extends CustomView {
 
@@ -28,6 +29,8 @@ public class CheckBox extends CustomView {
 	boolean check = false;
 
 	OnCheckListener onCheckListener;
+	// Indicate step in check animation
+	int step = 0;
 
 	public CheckBox(Context context, AttributeSet attrs) {
 		super(context, attrs);
@@ -73,8 +76,10 @@ public class CheckBox extends CustomView {
 			});
 
 		checkView = new Check(getContext());
-        checkView.setId(View.generateViewId());
-		RelativeLayout.LayoutParams params = new LayoutParams(Utils.dpToPx(20,
+		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
+			checkView.setId(View.generateViewId());
+		}
+		LayoutParams params = new LayoutParams(Utils.dpToPx(20,
 				getResources()), Utils.dpToPx(20, getResources()));
 		params.addRule(RelativeLayout.CENTER_IN_PARENT, RelativeLayout.TRUE);
 		checkView.setLayoutParams(params);
@@ -91,14 +96,16 @@ public class CheckBox extends CustomView {
         }
 
         if(text != null) {
-            params.removeRule(RelativeLayout.CENTER_IN_PARENT);
-            params.addRule(RelativeLayout.CENTER_VERTICAL, RelativeLayout.TRUE);
-                    TextView textView = new TextView(getContext());
-            RelativeLayout.LayoutParams textViewLayoutParams = new LayoutParams(LayoutParams.WRAP_CONTENT,
-                    LayoutParams.WRAP_CONTENT);
-            textViewLayoutParams.addRule(RelativeLayout.RIGHT_OF, checkView.getId());
-            textViewLayoutParams.addRule(RelativeLayout.CENTER_VERTICAL, RelativeLayout.TRUE);
-            textViewLayoutParams.setMargins(10, 0, 0, 0);
+			if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
+				params.removeRule(RelativeLayout.CENTER_IN_PARENT);
+			}
+			params.addRule(RelativeLayout.CENTER_VERTICAL, RelativeLayout.TRUE);
+			TextView textView = new TextView(getContext());
+			LayoutParams textViewLayoutParams = new LayoutParams(LayoutParams.WRAP_CONTENT,
+					LayoutParams.WRAP_CONTENT);
+			textViewLayoutParams.addRule(RelativeLayout.RIGHT_OF, checkView.getId());
+			textViewLayoutParams.addRule(RelativeLayout.CENTER_VERTICAL, RelativeLayout.TRUE);
+			textViewLayoutParams.setMargins(10, 0, 0, 0);
             textView.setLayoutParams(textViewLayoutParams);
             textView.setText(text);
 
@@ -111,7 +118,6 @@ public class CheckBox extends CustomView {
 		checkView.invalidate();
 		super.invalidate();
 	}
-
 
 	@Override
 	public boolean onTouchEvent(MotionEvent event) {
@@ -171,7 +177,7 @@ public class CheckBox extends CustomView {
 	protected int makePressColor() {
 		int r = (this.backgroundColor >> 16) & 0xFF;
 		int g = (this.backgroundColor >> 8) & 0xFF;
-		int b = (this.backgroundColor >> 0) & 0xFF;
+		int b = (this.backgroundColor) & 0xFF;
 		r = (r - 30 < 0) ? 0 : r - 30;
 		g = (g - 30 < 0) ? 0 : g - 30;
 		b = (b - 30 < 0) ? 0 : b - 30;
@@ -204,8 +210,13 @@ public class CheckBox extends CustomView {
 		return check;
 	}
 
-	// Indicate step in check animation
-	int step = 0;
+	public void setOncheckListener(OnCheckListener onCheckListener) {
+		this.onCheckListener = onCheckListener;
+	}
+
+	public interface OnCheckListener {
+		void onCheck(CheckBox view, boolean check);
+	}
 
 	// View that contains checkbox
 	class Check extends View {
@@ -256,14 +267,6 @@ public class CheckBox extends CustomView {
 
 		}
 
-	}
-
-	public void setOncheckListener(OnCheckListener onCheckListener) {
-		this.onCheckListener = onCheckListener;
-	}
-
-	public interface OnCheckListener {
-		void onCheck(CheckBox view, boolean check);
 	}
 
 }

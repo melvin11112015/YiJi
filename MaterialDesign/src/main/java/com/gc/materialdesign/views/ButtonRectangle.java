@@ -1,8 +1,5 @@
 package com.gc.materialdesign.views;
 
-import com.gc.materialdesign.R;
-import com.gc.materialdesign.utils.Utils;
-
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
@@ -13,17 +10,36 @@ import android.util.AttributeSet;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.gc.materialdesign.R;
+import com.gc.materialdesign.utils.Utils;
+
 public class ButtonRectangle extends Button {
 	
 	TextView textButton;
 	
 	int paddingTop,paddingBottom, paddingLeft, paddingRight;
+	Integer height;
+	Integer width;
 	
 	
 	public ButtonRectangle(Context context, AttributeSet attrs) {
 		super(context, attrs);
 		setDefaultProperties();
 	}
+
+//	/**
+//	 * Center text in button
+//	 */
+//	boolean txtCenter = false;
+//	private void centrarTexto(){
+//		if((textButton.getWidth()+paddingLeft+paddingRight)>Utils.dpToPx(80, getResources()))
+//			setMinimumWidth(textButton.getWidth()+paddingLeft+paddingRight);
+//		setMinimumHeight(textButton.getHeight()+paddingBottom+paddingTop);
+//		textButton.setX(getWidth()/2-textButton.getWidth()/2 - paddingTop + paddingBottom);
+//		textButton.setY(getHeight()/2-textButton.getHeight()/2 - paddingLeft + paddingRight);
+//		txtCenter = true;
+//	}
+	
 	@Override
 	protected void setDefaultProperties(){
 //		paddingBottom = Utils.dpToPx(16, getResources());
@@ -35,11 +51,10 @@ public class ButtonRectangle extends Button {
 		super.background = R.drawable.background_button_rectangle;
 		super.setDefaultProperties();
 	}
-	
-	
+
 	// Set atributtes of XML to View
 	protected void setAttributes(AttributeSet attrs){
-		
+
 		//Set background Color
 		// Color by resource
 		int bacgroundColor = attrs.getAttributeResourceValue(ANDROIDXML,"background",-1);
@@ -52,7 +67,7 @@ public class ButtonRectangle extends Button {
 			if (background != -1)
 				setBackgroundColor(background);
 		}
-		
+
 		// Set Padding
 		String value = attrs.getAttributeValue(ANDROIDXML,"padding");
 //		if(value != null){
@@ -71,10 +86,10 @@ public class ButtonRectangle extends Button {
 //			value = attrs.getAttributeValue(ANDROIDXML,"paddingBottom");
 //			paddingBottom = (value == null) ? paddingBottom : (int) Float.parseFloat(value.replace("dip", ""));
 //		}
-		
-		
+
+
 		// Set text button
-		String text = null;
+		String text;
 		int textResource = attrs.getAttributeResourceValue(ANDROIDXML,"text",-1);
 		if(textResource != -1){
 			text = getResources().getString(textResource);
@@ -89,7 +104,7 @@ public class ButtonRectangle extends Button {
 			LayoutParams params = new LayoutParams(LayoutParams.WRAP_CONTENT,LayoutParams.WRAP_CONTENT);
 			params.addRule(RelativeLayout.CENTER_IN_PARENT, RelativeLayout.TRUE);
 			params.setMargins(Utils.dpToPx(5, getResources()), Utils.dpToPx(5, getResources()), Utils.dpToPx(5, getResources()), Utils.dpToPx(5, getResources()));
-			textButton.setLayoutParams(params);			
+			textButton.setLayoutParams(params);
 			addView(textButton);
 //					FrameLayout.LayoutParams params = (LayoutParams) textView.getLayoutParams();
 //					params.width = getWidth();
@@ -112,28 +127,13 @@ public class ButtonRectangle extends Button {
 	        values.recycle();
 	        if(textSize != -1)
 	        	textButton.setTextSize(textSize);
-			
+
 		}
-		
+
 		rippleSpeed = attrs.getAttributeFloatValue(MATERIALDESIGNXML,
 				"rippleSpeed", Utils.dpToPx(6, getResources()));
 	}
-	
-//	/**
-//	 * Center text in button
-//	 */
-//	boolean txtCenter = false;
-//	private void centrarTexto(){
-//		if((textButton.getWidth()+paddingLeft+paddingRight)>Utils.dpToPx(80, getResources()))
-//			setMinimumWidth(textButton.getWidth()+paddingLeft+paddingRight);
-//		setMinimumHeight(textButton.getHeight()+paddingBottom+paddingTop);
-//		textButton.setX(getWidth()/2-textButton.getWidth()/2 - paddingTop + paddingBottom);
-//		textButton.setY(getHeight()/2-textButton.getHeight()/2 - paddingLeft + paddingRight);
-//		txtCenter = true;
-//	}
-	
-	Integer height;
-	Integer width;
+
 	@Override
 	protected void onDraw(Canvas canvas) {
 //		if(!txtCenter)

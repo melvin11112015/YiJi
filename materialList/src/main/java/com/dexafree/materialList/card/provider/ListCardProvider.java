@@ -2,8 +2,6 @@ package com.dexafree.materialList.card.provider;
 
 import android.database.DataSetObserver;
 import android.support.annotation.NonNull;
-import android.support.v7.widget.RecyclerView;
-import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
@@ -26,6 +24,15 @@ public class ListCardProvider extends CardProvider<ListCardProvider> {
     }
 
     /**
+     * Get the adapter of the list.
+     *
+     * @return the adapter.
+     */
+    public ListAdapter getAdapter() {
+        return mAdapter;
+    }
+
+    /**
      * Set the adapter of the list.
      *
      * @param adapter
@@ -36,15 +43,6 @@ public class ListCardProvider extends CardProvider<ListCardProvider> {
         mAdapter = adapter;
         notifyDataSetChanged();
         return this;
-    }
-
-    /**
-     * Get the adapter of the list.
-     *
-     * @return the adapter.
-     */
-    public ListAdapter getAdapter() {
-        return mAdapter;
     }
 
     /**
@@ -72,7 +70,7 @@ public class ListCardProvider extends CardProvider<ListCardProvider> {
     public void render(@NonNull final View view, @NonNull final Card card) {
         super.render(view, card);
         if (getAdapter() != null) {
-            final ListView listView = (ListView) view.findViewById(R.id.listView);
+            final ListView listView = view.findViewById(R.id.listView);
             listView.setScrollbarFadingEnabled(true);
             listView.setOnTouchListener(new View.OnTouchListener() {
                 @Override

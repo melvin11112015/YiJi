@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="io.github.yylyingy.yiji.activities.MainActivity">
+    tools:context="io.github.mlstudio.yiji.activities.MainActivity">
 
 
     <android.support.v4.widget.DrawerLayout
@@ -23,18 +20,19 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
             <net.lucode.hackware.magicindicator.MagicIndicator
-                android:layout_marginBottom="5dp"
                 android:id="@+id/magic_indicator"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
                 android:layout_alignParentBottom="true"
-                android:layout_width="match_parent"
-                android:layout_height="40dp" />
-            <io.github.yylyingy.yiji.ui.widget.ForbidScrollViewPager
-                android:id="@+id/forbidScrollViewpager"
-                android:layout_above="@id/magic_indicator"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_marginBottom="5dp" />
 
-            </io.github.yylyingy.yiji.ui.widget.ForbidScrollViewPager>
+            <io.github.mlstudio.yiji.ui.widget.ForbidScrollViewPager
+                android:id="@+id/forbidScrollViewpager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@id/magic_indicator">
+
+            </io.github.mlstudio.yiji.ui.widget.ForbidScrollViewPager>
             <!--<FrameLayout-->
                 <!--android:id="@+id/fragmentContainer"-->
                 <!--android:layout_above="@id/magic_indicator"-->

@@ -3,11 +3,17 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/MaterialDesign/MaterialDesign.iml" filepath="$PROJECT_DIR$/MaterialDesign/MaterialDesign.iml" />
+      <module fileurl="file://C:\Users\xy\AndroidStudioProjects\YiJi\MaterialDesign\MaterialDesign.iml" filepath="C:\Users\xy\AndroidStudioProjects\YiJi\MaterialDesign\MaterialDesign.iml" />
       <module fileurl="file://$PROJECT_DIR$/YiJi.iml" filepath="$PROJECT_DIR$/YiJi.iml" />
+      <module fileurl="file://C:\Users\xy\AndroidStudioProjects\YiJi\YiJi.iml" filepath="C:\Users\xy\AndroidStudioProjects\YiJi\YiJi.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://C:\Users\xy\AndroidStudioProjects\YiJi\app\app.iml" filepath="C:\Users\xy\AndroidStudioProjects\YiJi\app\app.iml" />
       <module fileurl="file://$PROJECT_DIR$/encryptdecrypt/encryptdecrypt.iml" filepath="$PROJECT_DIR$/encryptdecrypt/encryptdecrypt.iml" />
+      <module fileurl="file://C:\Users\xy\AndroidStudioProjects\YiJi\encryptdecrypt\encryptdecrypt.iml" filepath="C:\Users\xy\AndroidStudioProjects\YiJi\encryptdecrypt\encryptdecrypt.iml" />
       <module fileurl="file://$PROJECT_DIR$/magicindicator/magicindicator.iml" filepath="$PROJECT_DIR$/magicindicator/magicindicator.iml" />
+      <module fileurl="file://C:\Users\xy\AndroidStudioProjects\YiJi\magicindicator\magicindicator.iml" filepath="C:\Users\xy\AndroidStudioProjects\YiJi\magicindicator\magicindicator.iml" />
       <module fileurl="file://$PROJECT_DIR$/materialList/materialList.iml" filepath="$PROJECT_DIR$/materialList/materialList.iml" />
+      <module fileurl="file://C:\Users\xy\AndroidStudioProjects\YiJi\materialList\materialList.iml" filepath="C:\Users\xy\AndroidStudioProjects\YiJi\materialList\materialList.iml" />
     </modules>
   </component>
 </project>

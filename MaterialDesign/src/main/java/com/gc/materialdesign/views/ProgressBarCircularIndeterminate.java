@@ -1,7 +1,5 @@
 package com.gc.materialdesign.views;
 
-import com.gc.materialdesign.utils.Utils;
-
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
@@ -12,26 +10,34 @@ import android.graphics.PorterDuffXfermode;
 import android.graphics.RectF;
 import android.util.AttributeSet;
 
+import com.gc.materialdesign.utils.Utils;
+
 public class ProgressBarCircularIndeterminate extends CustomView {
 	
 	
 	final static String ANDROIDXML = "http://schemas.android.com/apk/res/android";
 	
 	int backgroundColor = Color.parseColor("#1E88E5");
-	
-
+	float radius1 = 0;
+	float radius2 = 0;
+	int cont = 0;
+	boolean firstAnimationOver = false;
+	int arcD = 1;
+	int arcO = 0;
+	float rotateAngle = 0;
+	int limite = 0;
 	public ProgressBarCircularIndeterminate(Context context, AttributeSet attrs) {
 		super(context, attrs);
 		setAttributes(attrs);
-		
+
 	}
 	
 	// Set atributtes of XML to View
 		protected void setAttributes(AttributeSet attrs){
-			
+
 			setMinimumHeight(Utils.dpToPx(32, getResources()));
 			setMinimumWidth(Utils.dpToPx(32, getResources()));
-			
+
 			//Set background Color
 			// Color by resource
 			int bacgroundColor = attrs.getAttributeResourceValue(ANDROIDXML,"background",-1);
@@ -45,12 +51,12 @@ public class ProgressBarCircularIndeterminate extends CustomView {
 				else
 					setBackgroundColor(Color.parseColor("#1E88E5"));
 			}
-			
+
 			setMinimumHeight(Utils.dpToPx(3, getResources()));
-			
-						
+
+
 		}
-	
+
 	/**
 	 * Make a dark color to ripple effect
 	 * @return
@@ -58,14 +64,13 @@ public class ProgressBarCircularIndeterminate extends CustomView {
 	protected int makePressColor(){
 		int r = (this.backgroundColor >> 16) & 0xFF;
 		int g = (this.backgroundColor >> 8) & 0xFF;
-		int b = (this.backgroundColor >> 0) & 0xFF;
+		int b = (this.backgroundColor) & 0xFF;
 //		r = (r+90 > 245) ? 245 : r+90;
 //		g = (g+90 > 245) ? 245 : g+90;
 //		b = (b+90 > 245) ? 245 : b+90;
-		return Color.argb(128,r, g, b);		
+		return Color.argb(128, r, g, b);
 	}
-	
-	
+
 	@Override
 	protected void onDraw(Canvas canvas) {
 		super.onDraw(canvas);
@@ -74,13 +79,9 @@ public class ProgressBarCircularIndeterminate extends CustomView {
 		if(cont > 0)
 			drawSecondAnimation(canvas);
 		invalidate();
-		
+
 	}
-	
-	float radius1 = 0;
-	float radius2 = 0;
-	int cont = 0;
-	boolean firstAnimationOver = false;
+
 	/**
 	 * Draw first animation of view
 	 * @param canvas
@@ -116,11 +117,7 @@ public class ProgressBarCircularIndeterminate extends CustomView {
 		    	firstAnimationOver = true;
 		}
 	}
-	
-	int arcD = 1;
-	int arcO = 0;
-	float rotateAngle = 0;
-	int limite = 0;
+
 	/**
 	 * Draw second animation of view
 	 * @param canvas

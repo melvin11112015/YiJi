@@ -1,23 +1,14 @@
 package com.gc.materialdesign.views;
 
-import com.gc.materialdesign.R;
-import com.gc.materialdesign.utils.Utils;
-import com.nineoldandroids.animation.ObjectAnimator;
-import com.nineoldandroids.view.ViewHelper;
-
-import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.Bitmap;
+import android.graphics.Bitmap.Config;
 import android.graphics.Canvas;
-import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.PorterDuff.Mode;
 import android.graphics.PorterDuffXfermode;
 import android.graphics.Rect;
-import android.graphics.Bitmap.Config;
 import android.graphics.drawable.Drawable;
-import android.graphics.drawable.GradientDrawable;
-import android.graphics.drawable.LayerDrawable;
 import android.util.AttributeSet;
 import android.view.animation.BounceInterpolator;
 import android.widget.ImageView;
@@ -25,21 +16,23 @@ import android.widget.ImageView.ScaleType;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.gc.materialdesign.R;
+import com.gc.materialdesign.utils.Utils;
+import com.nineoldandroids.animation.ObjectAnimator;
+import com.nineoldandroids.view.ViewHelper;
+
 
 public class ButtonFloat extends Button{
-	
+
+	public boolean isShow = false;
 	int sizeIcon = 24;
 	int sizeRadius = 28;
-	
-	
 	ImageView icon; // Icon of float button
 	Drawable drawableIcon;
-	
-	public boolean isShow = false;
-	
 	float showPosition;
 	float hidePosition;
-	
+	Integer height;
+	Integer width;
 	
 	
 	public ButtonFloat(Context context, AttributeSet attrs) {
@@ -57,10 +50,10 @@ public class ButtonFloat extends Button{
 		LayoutParams params = new LayoutParams(Utils.dpToPx(sizeIcon, getResources()),Utils.dpToPx(sizeIcon, getResources()));
 		params.addRule(RelativeLayout.CENTER_IN_PARENT, RelativeLayout.TRUE);
 		icon.setLayoutParams(params);
-		addView(icon);		
-		
+		addView(icon);
+
 	}
-	
+
 	protected void setDefaultProperties(){
 		rippleSpeed = Utils.dpToPx(2, getResources());
 		rippleSize = Utils.dpToPx(5, getResources());
@@ -69,8 +62,7 @@ public class ButtonFloat extends Button{
 		super.background = R.drawable.background_button_float;
 //		super.setDefaultProperties();
 	}
-	
-	
+
 	// Set atributtes of XML to View
 	protected void setAttributes(AttributeSet attrs){
 		//Set background Color
@@ -84,7 +76,7 @@ public class ButtonFloat extends Button{
 			if (background != -1)
 				setBackgroundColor(background);
 		}
-		
+
 		// Set Ripple Color
 		// Color by resource
 		int rippleColor = attrs.getAttributeResourceValue(MATERIALDESIGNXML,
@@ -105,7 +97,7 @@ public class ButtonFloat extends Button{
 			drawableIcon = getResources().getDrawable(iconResource);
 		final boolean animate = attrs.getAttributeBooleanValue(MATERIALDESIGNXML,"animate", false);
 			post(new Runnable() {
-				
+
 				@Override
 				public void run() {
 					showPosition = ViewHelper.getY(ButtonFloat.this) - Utils.dpToPx(24, getResources());
@@ -116,11 +108,9 @@ public class ButtonFloat extends Button{
 					}
 				}
 			});
-					
+
 	}
-		
-	Integer height;
-	Integer width;
+
 	@Override
 	protected void onDraw(Canvas canvas) {
 		super.onDraw(canvas);

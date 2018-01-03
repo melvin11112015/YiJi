@@ -5,8 +5,8 @@ import android.util.Log;
 
 import com.orhanobut.logger.Logger;
 
-import io.github.yylyingy.yiji.YiJiApplication;
-import io.github.yylyingy.yiji.base.zhihubase.BaseResult;
+import io.github.mlstudio.yiji.YiJiApplication;
+import io.github.mlstudio.yiji.base.zhihubase.BaseResult;
 import rx.Observer;
 
 /**

@@ -11,40 +11,21 @@
     <color name="toolbarColor">#19A993</color>
 
     <!-- A light Holo shade of blue -->
-    <color name="holo_blue_light">#ff33b5e5</color>
     <!-- A light Holo shade of gray -->
-    <color name="holo_gray_light">#33999999</color>
     <!-- A light Holo shade of green -->
-    <color name="holo_green_light">#ff99cc00</color>
     <!-- A light Holo shade of red -->
-    <color name="holo_red_light">#ffff4444</color>
     <!-- A dark Holo shade of blue -->
-    <color name="holo_blue_dark">#ff0099cc</color>
     <!-- A dark Holo shade of green -->
-    <color name="holo_green_dark">#ff669900</color>
     <!-- A dark Holo shade of red -->
-    <color name="holo_red_dark">#ffcc0000</color>
     <!-- A Holo shade of purple -->
-    <color name="holo_purple">#ffaa66cc</color>
     <!-- A light Holo shade of orange -->
-    <color name="holo_orange_light">#ffffbb33</color>
     <!-- A dark Holo shade of orange -->
-    <color name="holo_orange_dark">#ffff8800</color>
     <!-- A really bright Holo shade of blue -->
-    <color name="holo_blue_bright">#ff00ddff</color>
     <!-- A really bright Holo shade of gray -->
-    <color name="holo_gray_bright">#33CCCCCC</color>
 
     <color name="transparent">#00000000</color>
 
-    <color name="colorYellow">#af9118</color>
-    <color name="colorBlue">#186dec</color>
-
     <color name="my_blue">#2196F3</color>
-
-    <color name="button_flat">#1E88E5</color>
-
-    <color name="color_test">#ffaaaaaa</color>
 
     <color name="drawer_text">#212121</color>
 
@@ -81,15 +62,9 @@
     <color name="lunch_header">#F44336</color>
     <color name="midnight_snack_header">#795548</color>
 
-    <color name="snack_bar">#03A9F4</color>
-
     <color name="primary_text">#212121</color>
     <!--ripple color-->
-    <color name="alpha_zcool">#55ffd100</color>
-    <color name="alpha_ng">#5000</color>
-    <color name="alpha_moment">#5521bba6</color>
     <color name="alpha_zhihu">#550077d9</color>
-    <color name="alpha_purple">#55673AB7</color>
 
     <color name="login_button">#2196F3</color>
     <color name="login_button_press">#51adf6</color>

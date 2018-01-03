@@ -22,7 +22,7 @@ import android.graphics.drawable.ColorDrawable;
 import android.view.LayoutInflater;
 import android.view.View;
 
-import io.github.yylyingy.yiji.R;
+import io.github.mlstudio.yiji.R;
 
 
 /**
