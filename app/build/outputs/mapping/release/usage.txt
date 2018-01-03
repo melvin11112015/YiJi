@@ -5285,41 +5285,41 @@ com.dexafree.materialList.card.CardProvider:
     private com.dexafree.materialList.card.Card$Builder mBuilder
     private int mDividerColor
     private int mLayoutId
-    81:83:void setContext(android.content.Context)
-    91:92:void setBuilder(com.dexafree.materialList.card.Card$Builder)
-    95:97:protected void onCreated()
-    114:114:public com.dexafree.materialList.card.Card$Builder endConfig()
-    121:122:protected void notifyDataSetChanged()
-    141:142:public com.dexafree.materialList.card.CardProvider setLayout(int)
-    152:152:public int getLayout()
-    174:176:public com.dexafree.materialList.card.CardProvider setBackgroundColor(int)
-    188:188:public com.dexafree.materialList.card.CardProvider setBackgroundResourceColor(int)
-    208:208:public com.dexafree.materialList.card.CardProvider setTitle(int)
-    219:221:public com.dexafree.materialList.card.CardProvider setTitle(java.lang.String)
-    234:236:public com.dexafree.materialList.card.CardProvider setTitleGravity(int)
-    255:255:public com.dexafree.materialList.card.CardProvider setSubtitle(int)
-    267:269:public com.dexafree.materialList.card.CardProvider setSubtitle(java.lang.String)
-    281:283:public com.dexafree.materialList.card.CardProvider setSubtitleGravity(int)
-    303:303:public com.dexafree.materialList.card.CardProvider setDescription(int)
-    315:317:public com.dexafree.materialList.card.CardProvider setDescription(java.lang.String)
-    329:331:public com.dexafree.materialList.card.CardProvider setDescriptionGravity(int)
-    341:341:public int getDividerColor()
-    352:352:public com.dexafree.materialList.card.CardProvider setDividerResourceColor(int)
-    364:366:public com.dexafree.materialList.card.CardProvider setDividerColor(int)
-    386:387:public com.dexafree.materialList.card.CardProvider setDrawable(int)
-    402:404:public com.dexafree.materialList.card.CardProvider setDrawable(android.graphics.drawable.Drawable)
-    416:418:public com.dexafree.materialList.card.CardProvider setDrawable(java.lang.String)
-    459:461:public com.dexafree.materialList.card.CardProvider setTitleColor(int)
-    472:472:public com.dexafree.materialList.card.CardProvider setTitleResourceColor(int)
-    502:502:public com.dexafree.materialList.card.CardProvider setSubtitleResourceColor(int)
-    514:516:public com.dexafree.materialList.card.CardProvider setSubtitleColor(int)
-    547:549:public com.dexafree.materialList.card.CardProvider setDescriptionColor(int)
-    560:560:public com.dexafree.materialList.card.CardProvider setDescriptionResourceColor(int)
-    572:573:public com.dexafree.materialList.card.CardProvider setDrawableConfiguration(com.dexafree.materialList.card.CardProvider$OnImageConfigListener)
-    603:605:public com.dexafree.materialList.card.CardProvider setDividerVisible(boolean)
-    626:628:public com.dexafree.materialList.card.CardProvider setFullWidthDivider(boolean)
-    640:641:public com.dexafree.materialList.card.CardProvider addAction(int,com.dexafree.materialList.card.Action)
-    651:651:public com.dexafree.materialList.card.Action getAction(int)
+    75:76:void setBuilder(com.dexafree.materialList.card.Card$Builder)
+    79:81:protected void onCreated()
+    98:100:void setContext(android.content.Context)
+    108:108:public com.dexafree.materialList.card.Card$Builder endConfig()
+    115:116:protected void notifyDataSetChanged()
+    139:139:public int getLayout()
+    145:146:public com.dexafree.materialList.card.CardProvider setLayout(int)
+    168:170:public com.dexafree.materialList.card.CardProvider setBackgroundColor(int)
+    182:182:public com.dexafree.materialList.card.CardProvider setBackgroundResourceColor(int)
+    202:202:public com.dexafree.materialList.card.CardProvider setTitle(int)
+    213:215:public com.dexafree.materialList.card.CardProvider setTitle(java.lang.String)
+    235:235:public com.dexafree.materialList.card.CardProvider setSubtitle(int)
+    247:249:public com.dexafree.materialList.card.CardProvider setSubtitle(java.lang.String)
+    269:269:public com.dexafree.materialList.card.CardProvider setDescription(int)
+    281:283:public com.dexafree.materialList.card.CardProvider setDescription(java.lang.String)
+    293:293:public int getDividerColor()
+    305:307:public com.dexafree.materialList.card.CardProvider setDividerColor(int)
+    318:318:public com.dexafree.materialList.card.CardProvider setDividerResourceColor(int)
+    339:341:public com.dexafree.materialList.card.CardProvider setDrawable(java.lang.String)
+    352:353:public com.dexafree.materialList.card.CardProvider setDrawable(int)
+    368:370:public com.dexafree.materialList.card.CardProvider setDrawable(android.graphics.drawable.Drawable)
+    401:403:public com.dexafree.materialList.card.CardProvider setTitleColor(int)
+    426:428:public com.dexafree.materialList.card.CardProvider setTitleGravity(int)
+    439:439:public com.dexafree.materialList.card.CardProvider setTitleResourceColor(int)
+    461:463:public com.dexafree.materialList.card.CardProvider setSubtitleColor(int)
+    484:486:public com.dexafree.materialList.card.CardProvider setSubtitleGravity(int)
+    497:497:public com.dexafree.materialList.card.CardProvider setSubtitleResourceColor(int)
+    519:521:public com.dexafree.materialList.card.CardProvider setDescriptionColor(int)
+    542:544:public com.dexafree.materialList.card.CardProvider setDescriptionGravity(int)
+    555:555:public com.dexafree.materialList.card.CardProvider setDescriptionResourceColor(int)
+    567:568:public com.dexafree.materialList.card.CardProvider setDrawableConfiguration(com.dexafree.materialList.card.CardProvider$OnImageConfigListener)
+    598:600:public com.dexafree.materialList.card.CardProvider setDividerVisible(boolean)
+    621:623:public com.dexafree.materialList.card.CardProvider setFullWidthDivider(boolean)
+    635:636:public com.dexafree.materialList.card.CardProvider addAction(int,com.dexafree.materialList.card.Action)
+    646:646:public com.dexafree.materialList.card.Action getAction(int)
 com.dexafree.materialList.card.OnActionClickListener
 com.dexafree.materialList.card.action.TextViewAction
 com.dexafree.materialList.card.action.TextViewAction$1
@@ -5432,6 +5432,19 @@ com.google.gson.internal.bind.TypeAdapters$27:
     private static final java.lang.String MINUTE
     private static final java.lang.String SECOND
 com.google.gson.stream.JsonScope
+com.mlstudio.encryptdecrypt.R
+com.mlstudio.encryptdecrypt.R$anim
+com.mlstudio.encryptdecrypt.R$attr
+com.mlstudio.encryptdecrypt.R$bool
+com.mlstudio.encryptdecrypt.R$color
+com.mlstudio.encryptdecrypt.R$dimen
+com.mlstudio.encryptdecrypt.R$drawable
+com.mlstudio.encryptdecrypt.R$id
+com.mlstudio.encryptdecrypt.R$integer
+com.mlstudio.encryptdecrypt.R$layout
+com.mlstudio.encryptdecrypt.R$string
+com.mlstudio.encryptdecrypt.R$style
+com.mlstudio.encryptdecrypt.R$styleable
 com.nineoldandroids.animation.AnimatorSet$Dependency:
     static final int WITH
     static final int AFTER
@@ -5619,82 +5632,48 @@ com.tencent.open.TDialog$JsListener:
     369:370:public void showMsg(java.lang.String)
     379:380:public void onLoad(java.lang.String)
 com.tencent.open.utils.Util$TBufferedOutputStream
-com.yangyl.encryptdecrypt.R
-com.yangyl.encryptdecrypt.R$anim
-com.yangyl.encryptdecrypt.R$attr
-com.yangyl.encryptdecrypt.R$bool
-com.yangyl.encryptdecrypt.R$color
-com.yangyl.encryptdecrypt.R$dimen
-com.yangyl.encryptdecrypt.R$drawable
-com.yangyl.encryptdecrypt.R$id
-com.yangyl.encryptdecrypt.R$integer
-com.yangyl.encryptdecrypt.R$layout
-com.yangyl.encryptdecrypt.R$string
-com.yangyl.encryptdecrypt.R$style
-com.yangyl.encryptdecrypt.R$styleable
-com.yangyl.encryptdecrypt.secrect.EncryptDecryptTool:
-    private static final java.lang.String RSA
-    private static final java.lang.String NONE_PKCS1_PADDING
-    private static final int DEFAULT_KEY_SIZE
-    private static final int DEFAULT_BUFFERSIZE
-    public byte[] decryptByPrivateKey(byte[],java.lang.String)
-    public byte[] decryptByPrivateKey(byte[],byte[])
-com.yangyl.encryptdecrypt.secrect.base64.e:
-    public void encode(byte[],java.io.OutputStream)
-    private byte[] getBytes(java.nio.ByteBuffer)
-    public void encode(java.nio.ByteBuffer,java.io.OutputStream)
-    public java.lang.String encode(java.nio.ByteBuffer)
-    public void encodeBuffer(java.io.InputStream,java.io.OutputStream)
-    public void encodeBuffer(byte[],java.io.OutputStream)
-    public java.lang.String encodeBuffer(byte[])
-    public void encodeBuffer(java.nio.ByteBuffer,java.io.OutputStream)
-    public java.lang.String encodeBuffer(java.nio.ByteBuffer)
-io.github.yylyingy.yiji.BuildConfig
-io.github.yylyingy.yiji.R:
+io.github.mlstudio.yiji.BuildConfig
+io.github.mlstudio.yiji.R:
     10:10:public R()
-io.github.yylyingy.yiji.R$anim
-io.github.yylyingy.yiji.R$animator
-io.github.yylyingy.yiji.R$attr
-io.github.yylyingy.yiji.R$bool
-io.github.yylyingy.yiji.R$color
-io.github.yylyingy.yiji.R$dimen
-io.github.yylyingy.yiji.R$drawable
-io.github.yylyingy.yiji.R$id
-io.github.yylyingy.yiji.R$integer
-io.github.yylyingy.yiji.R$interpolator
-io.github.yylyingy.yiji.R$layout
-io.github.yylyingy.yiji.R$mipmap
-io.github.yylyingy.yiji.R$string
-io.github.yylyingy.yiji.R$style
-io.github.yylyingy.yiji.R$styleable:
-    9804:9804:public R$styleable()
-io.github.yylyingy.yiji.YiJiApplication$$Lambda$1:
-    private static java.lang.Runnable get$Lambda(io.github.yylyingy.yiji.YiJiApplication)
-io.github.yylyingy.yiji.activities.AddRecordActivity_ViewBinding:
-    19:20:public AddRecordActivity_ViewBinding(io.github.yylyingy.yiji.activities.AddRecordActivity)
-io.github.yylyingy.yiji.activities.BigImageActivity:
+io.github.mlstudio.yiji.R$anim
+io.github.mlstudio.yiji.R$animator
+io.github.mlstudio.yiji.R$attr
+io.github.mlstudio.yiji.R$bool
+io.github.mlstudio.yiji.R$color
+io.github.mlstudio.yiji.R$dimen
+io.github.mlstudio.yiji.R$drawable
+io.github.mlstudio.yiji.R$id
+io.github.mlstudio.yiji.R$integer
+io.github.mlstudio.yiji.R$interpolator
+io.github.mlstudio.yiji.R$layout
+io.github.mlstudio.yiji.R$mipmap
+io.github.mlstudio.yiji.R$string
+io.github.mlstudio.yiji.R$style
+io.github.mlstudio.yiji.R$styleable:
+    9731:9731:public R$styleable()
+io.github.mlstudio.yiji.YiJiApplication$$Lambda$1:
+    private static java.lang.Runnable get$Lambda(io.github.mlstudio.yiji.YiJiApplication)
+io.github.mlstudio.yiji.activities.AddRecordActivity:
+    private static final java.lang.String FRAGMENT_TAG
+io.github.mlstudio.yiji.activities.AddRecordActivity_ViewBinding:
+    19:20:public AddRecordActivity_ViewBinding(io.github.mlstudio.yiji.activities.AddRecordActivity)
+io.github.mlstudio.yiji.activities.BigImageActivity:
     public static final java.lang.String IMAGE_URL
     public static final java.lang.String TRANSIT_PIC
-io.github.yylyingy.yiji.activities.BigImageActivity$$Lambda$1:
-    private static uk.co.senab.photoview.PhotoViewAttacher$OnViewTapListener get$Lambda(io.github.yylyingy.yiji.activities.BigImageActivity)
-io.github.yylyingy.yiji.activities.MainActivity$$Lambda$1:
-    private static com.afollestad.materialdialogs.MaterialDialog$SingleButtonCallback get$Lambda(io.github.yylyingy.yiji.activities.MainActivity)
-io.github.yylyingy.yiji.activities.MainActivity_Test:
-    78:92:public static java.lang.String Encrypt(java.lang.String,java.lang.String)
-    96:105:public static java.lang.String bytes2Hex(byte[])
-io.github.yylyingy.yiji.activities.MainActivity_Test_ViewBinding:
-    24:25:public MainActivity_Test_ViewBinding(io.github.yylyingy.yiji.activities.MainActivity_Test)
-io.github.yylyingy.yiji.activities.MainActivity_ViewBinding:
-    27:28:public MainActivity_ViewBinding(io.github.yylyingy.yiji.activities.MainActivity)
-io.github.yylyingy.yiji.activities.SplashActivity:
+io.github.mlstudio.yiji.activities.BigImageActivity$$Lambda$1:
+    private static uk.co.senab.photoview.PhotoViewAttacher$OnViewTapListener get$Lambda(io.github.mlstudio.yiji.activities.BigImageActivity)
+io.github.mlstudio.yiji.activities.MainActivity$$Lambda$1:
+    private static com.afollestad.materialdialogs.MaterialDialog$SingleButtonCallback get$Lambda(io.github.mlstudio.yiji.activities.MainActivity)
+io.github.mlstudio.yiji.activities.MainActivity_ViewBinding:
+    27:28:public MainActivity_ViewBinding(io.github.mlstudio.yiji.activities.MainActivity)
+io.github.mlstudio.yiji.activities.SplashActivity:
     private static final int REQUEST_PERMISSION_CODE
-    62:68:private void tryRequestPermission()
-io.github.yylyingy.yiji.activities.SplashActivity$$Lambda$1:
-    private static java.lang.Runnable get$Lambda(io.github.yylyingy.yiji.activities.SplashActivity)
-io.github.yylyingy.yiji.activities.SplashActivity$$Lambda$2:
-    private static java.lang.Runnable get$Lambda(io.github.yylyingy.yiji.activities.SplashActivity)
-io.github.yylyingy.yiji.activities.SplashActivity$1
-io.github.yylyingy.yiji.activities.WebActivity:
+    51:57:private void tryRequestPermission()
+io.github.mlstudio.yiji.activities.SplashActivity$$Lambda$1:
+    private static java.lang.Runnable get$Lambda(io.github.mlstudio.yiji.activities.SplashActivity)
+io.github.mlstudio.yiji.activities.SplashActivity$$Lambda$2:
+    private static java.lang.Runnable get$Lambda(io.github.mlstudio.yiji.activities.SplashActivity)
+io.github.mlstudio.yiji.activities.WebActivity:
     public static final java.lang.String EXTRA_URL
     public static final java.lang.String EXTRA_TITLE
     public static final java.lang.String EXTRA_PIC_URL
@@ -5703,36 +5682,82 @@ io.github.yylyingy.yiji.activities.WebActivity:
     private int miniY
     private int lastX
     private int lastY
-io.github.yylyingy.yiji.activities.WebActivity_ViewBinding:
-    35:36:public WebActivity_ViewBinding(io.github.yylyingy.yiji.activities.WebActivity)
-io.github.yylyingy.yiji.addrecord.AddRecordFragment:
+io.github.mlstudio.yiji.activities.WebActivity_ViewBinding:
+    35:36:public WebActivity_ViewBinding(io.github.mlstudio.yiji.activities.WebActivity)
+io.github.mlstudio.yiji.addrecord.AddRecordFragment:
     private static final java.lang.String ARG_PARAM1
     private static final java.lang.String ARG_PARAM2
-    81:86:public static io.github.yylyingy.yiji.addrecord.AddRecordFragment newInstance(java.lang.String,java.lang.String)
-io.github.yylyingy.yiji.base.BaseActivity:
-    67:71:protected void addSubscription(rx.Subscription)
-io.github.yylyingy.yiji.base.BaseIPresenter
-io.github.yylyingy.yiji.base.BaseIView
-io.github.yylyingy.yiji.base.BasePresenter
-io.github.yylyingy.yiji.base.zhihubase.BaseCompatActivity:
-    15:16:protected java.lang.String pass(java.lang.String)
-    20:21:protected java.lang.String pass(java.lang.Integer)
-io.github.yylyingy.yiji.base.zhihubase.BaseListFragment:
+    69:74:public static io.github.mlstudio.yiji.addrecord.AddRecordFragment newInstance(java.lang.String,java.lang.String)
+io.github.mlstudio.yiji.base.BaseActivity:
+    64:68:protected void addSubscription(rx.Subscription)
+io.github.mlstudio.yiji.base.BaseIPresenter
+io.github.mlstudio.yiji.base.BaseIView
+io.github.mlstudio.yiji.base.BasePresenter
+io.github.mlstudio.yiji.base.zhihubase.BaseCompatActivity:
+    13:14:protected java.lang.String pass(java.lang.String)
+    18:19:protected java.lang.String pass(java.lang.Integer)
+io.github.mlstudio.yiji.base.zhihubase.BaseListFragment:
     public abstract void getData()
-io.github.yylyingy.yiji.base.zhihubase.BaseSwipeBackCompatActivity:
+io.github.mlstudio.yiji.base.zhihubase.BaseSwipeBackCompatActivity:
     65:65:public top.wefor.now.ui.widget.swipeback.SwipeBackLayout getSwipeBackLayout()
     70:71:public void setSwipeBackEnable(boolean)
     75:77:public void scrollToFinishActivity()
-io.github.yylyingy.yiji.main.account.AccountFragment:
-    37:40:public static io.github.yylyingy.yiji.main.account.AccountFragment getInstance()
-io.github.yylyingy.yiji.main.showrecord.MainFragment:
-    io.github.yylyingy.yiji.main.showrecord.MainFragment$OnBindToolbar mBindToolbar
-    89:89:public android.support.v7.widget.Toolbar getToolbar()
-io.github.yylyingy.yiji.main.showrecord.RecordCheckDialogRecyclerViewAdapter:
-    35:40:public RecordCheckDialogRecyclerViewAdapter(android.content.Context,java.util.List)
-io.github.yylyingy.yiji.main.showrecord.ShowChartsAdapter:
+io.github.mlstudio.yiji.javabeans.Tag:
+    private int dragId
+    25:25:public int getDragId()
+    29:30:public void setDragId(int)
+    40:43:public void set(io.github.mlstudio.yiji.javabeans.Tag)
+io.github.mlstudio.yiji.javabeans.User:
+    private java.lang.Boolean isMonthLimit
+    private java.lang.Integer monthLimit
+    private java.lang.Integer monthWarning
+    private java.lang.Boolean isColorRemind
+    private java.lang.Integer remindColor
+    private java.lang.Boolean isForbidden
+    private java.lang.String accountBookName
+    private java.lang.String accountBookPassword
+    private java.lang.Boolean showPicture
+    private java.lang.Boolean isHollow
+    49:49:public java.lang.String getAndroidId()
+    57:57:public java.lang.String getLogoObjectId()
+    65:65:public java.lang.Boolean getIsMonthLimit()
+    69:70:public void setIsMonthLimit(java.lang.Boolean)
+    73:73:public java.lang.Integer getMonthLimit()
+    77:78:public void setMonthLimit(java.lang.Integer)
+    81:81:public java.lang.Integer getMonthWarning()
+    85:86:public void setMonthWarning(java.lang.Integer)
+    89:89:public java.lang.Boolean getIsColorRemind()
+    93:94:public void setIsColorRemind(java.lang.Boolean)
+    97:97:public java.lang.Integer getRemindColor()
+    101:102:public void setRemindColor(java.lang.Integer)
+    105:105:public java.lang.Boolean getIsForbidden()
+    109:110:public void setIsForbidden(java.lang.Boolean)
+    113:113:public java.lang.String getAccountBookName()
+    117:118:public void setAccountBookName(java.lang.String)
+    121:121:public java.lang.String getAccountBookPassword()
+    125:126:public void setAccountBookPassword(java.lang.String)
+    129:129:public java.lang.Boolean getShowPicture()
+    133:134:public void setShowPicture(java.lang.Boolean)
+    137:137:public java.lang.Boolean getIsHollow()
+    141:142:public void setIsHollow(java.lang.Boolean)
+io.github.mlstudio.yiji.javabeans.YiJiRecord:
+    22:47:public YiJiRecord(long,float,java.lang.String,int,java.util.Calendar,java.lang.String)
+    72:81:public void set(io.github.mlstudio.yiji.javabeans.YiJiRecord)
+    84:84:public boolean isInTime(java.util.Calendar,java.util.Calendar)
+    88:89:public boolean isInMoney(double,double,java.lang.String)
+    148:149:public void setCalendar(java.util.Calendar)
+    160:160:public java.lang.String getLocalObjectId()
+    164:165:public void setLocalObjectId(java.lang.String)
+io.github.mlstudio.yiji.main.account.AccountFragment:
+    30:33:public static io.github.mlstudio.yiji.main.account.AccountFragment getInstance()
+io.github.mlstudio.yiji.main.showrecord.MainFragment:
+    io.github.mlstudio.yiji.main.showrecord.MainFragment$OnBindToolbar mBindToolbar
+    83:83:public android.support.v7.widget.Toolbar getToolbar()
+io.github.mlstudio.yiji.main.showrecord.RecordCheckDialogRecyclerViewAdapter:
+    33:38:public RecordCheckDialogRecyclerViewAdapter(android.content.Context,java.util.List)
+io.github.mlstudio.yiji.main.showrecord.ShowChartsAdapter:
     private static final int DATA_SET_CHANGED
-io.github.yylyingy.yiji.main.showrecord.ShowChartsFragment:
+io.github.mlstudio.yiji.main.showrecord.ShowChartsFragment:
     static final int TODAY
     static final int YESTERDAY
     static final int THIS_WEEK
@@ -5741,8 +5766,7 @@ io.github.yylyingy.yiji.main.showrecord.ShowChartsFragment:
     static final int LAST_MONTH
     static final int THIS_YEAR
     static final int LAST_YEAR
-io.github.yylyingy.yiji.main.showrecord.ShowChartsRecyclerViewAdapter:
-    private io.github.yylyingy.yiji.main.showrecord.ShowChartsRecyclerViewAdapter$OnItemClickListener onItemClickListener
+io.github.mlstudio.yiji.main.showrecord.ShowChartsRecyclerViewAdapter:
     static final int TYPE_HEADER
     static final int TYPE_BODY
     static final int TODAY
@@ -5753,18 +5777,15 @@ io.github.yylyingy.yiji.main.showrecord.ShowChartsRecyclerViewAdapter:
     static final int LAST_MONTH
     static final int THIS_YEAR
     static final int LAST_YEAR
-    957:964:public void dataSet(int,int)
-io.github.yylyingy.yiji.main.showrecord.ShowChartsRecyclerViewAdapter$OnItemClickListener
-io.github.yylyingy.yiji.sync.ISyncPresenter
-io.github.yylyingy.yiji.sync.SyncPresenter:
+    private io.github.mlstudio.yiji.main.showrecord.ShowChartsRecyclerViewAdapter$OnItemClickListener onItemClickListener
+    842:849:public void dataSet(int,int)
+io.github.mlstudio.yiji.main.showrecord.ShowChartsRecyclerViewAdapter$OnItemClickListener
+io.github.mlstudio.yiji.sync.ISyncPresenter
+io.github.mlstudio.yiji.sync.SyncPresenter:
     public static final int SYNC_FAIL
     public static final int SYNC_SUCCESS
     public static final int HAS_STARTED_SYNC
-io.github.yylyingy.yiji.tools.App:
-    private static io.github.yylyingy.yiji.tools.Toaster sToaster
-    15:18:public static io.github.yylyingy.yiji.tools.App getInstance()
-    29:32:public static void showToast(java.lang.String)
-io.github.yylyingy.yiji.tools.Constants:
+io.github.mlstudio.yiji.tools.Constants:
     public static final java.lang.String PREFS_NAME
     public static final java.lang.String MY_EMAIL_QQ
     public static final java.lang.String MY_EMAIL_GOOGLE
@@ -5796,58 +5817,58 @@ io.github.yylyingy.yiji.tools.Constants:
     public static final long VALUE_REFRESH_INTERVAL
     public static final long VALUE_FINISH_DELAYED_TIME
     7:7:public Constants()
-io.github.yylyingy.yiji.tools.NativeString
-io.github.yylyingy.yiji.tools.PasswordHashCodeTool:
+io.github.mlstudio.yiji.tools.PasswordHashCodeTool:
     10:10:public PasswordHashCodeTool()
-io.github.yylyingy.yiji.tools.ThreadPoolTool:
+io.github.mlstudio.yiji.tools.ThreadPoolTool:
     10:10:public ThreadPoolTool()
-io.github.yylyingy.yiji.tools.Toaster:
+io.github.mlstudio.yiji.tools.Toaster:
     23:23:public android.widget.Toast getToast(int)
     31:31:public android.widget.Toast getLongToast(int)
     35:35:public android.widget.Toast getLongToast(java.lang.String)
     39:43:public void showToast(int)
     53:57:public void showLongToast(int)
     60:64:public void showLongToast(java.lang.String)
-io.github.yylyingy.yiji.tools.YiJiUtil:
-    28:28:public YiJiUtil()
-    442:448:public static java.lang.String GetCalendarString(android.content.Context,java.util.Calendar)
-    488:494:public static java.util.Calendar GetTodayRightRange(java.util.Calendar)
-    538:540:public static java.util.Calendar GetThisWeekRightRange(java.util.Calendar)
-    568:582:public static java.util.Calendar GetNextWeekLeftRange(java.util.Calendar)
-    586:588:public static java.util.Calendar GetNextWeekRightRange(java.util.Calendar)
-    592:594:public static java.util.Calendar GetNextWeekRightShownRange(java.util.Calendar)
-    621:629:public static java.util.Calendar GetThisMonthRightRange(java.util.Calendar)
-    668:677:public static java.util.Calendar GetThisYearRightRange(java.util.Calendar)
-io.github.yylyingy.yiji.tools.db.DB:
+io.github.mlstudio.yiji.tools.YiJiUtil:
+    25:25:public YiJiUtil()
+    322:322:public static double ToDollas(double,java.lang.String)
+    435:441:public static java.lang.String GetCalendarString(android.content.Context,java.util.Calendar)
+    481:487:public static java.util.Calendar GetTodayRightRange(java.util.Calendar)
+    531:533:public static java.util.Calendar GetThisWeekRightRange(java.util.Calendar)
+    561:575:public static java.util.Calendar GetNextWeekLeftRange(java.util.Calendar)
+    579:581:public static java.util.Calendar GetNextWeekRightRange(java.util.Calendar)
+    585:587:public static java.util.Calendar GetNextWeekRightShownRange(java.util.Calendar)
+    614:622:public static java.util.Calendar GetThisMonthRightRange(java.util.Calendar)
+    661:670:public static java.util.Calendar GetThisYearRightRange(java.util.Calendar)
+io.github.mlstudio.yiji.tools.db.DB:
     public static final java.lang.String DB_NAME_STRING
     public static final java.lang.String RECORD_DB_NAME_STRING
     public static final java.lang.String TAG_DB_NAME_STRING
+    public static final int VERSION
     private static final java.lang.String QUERY_TAG
     private static final java.lang.String QUERY_RECORD
-    public static final int VERSION
-io.github.yylyingy.yiji.tools.db.DBHelper:
+io.github.mlstudio.yiji.tools.db.DBHelper:
     private static final java.lang.String CREATE_RECORD_SQL
     private static final java.lang.String CREATE_TAG_SQL
-io.github.yylyingy.yiji.tools.db.DataManager$$Lambda$1:
-    private static java.lang.Runnable get$Lambda(io.github.yylyingy.yiji.tools.db.DataManager,io.github.yylyingy.yiji.javabeans.YiJiRecord)
-io.github.yylyingy.yiji.tools.permissions.PermissionRequestListener
-io.github.yylyingy.yiji.tools.permissions.PermissionRequestUtil
-io.github.yylyingy.yiji.tools.permissions.PermissionTools:
-    31:31:public static io.github.yylyingy.yiji.tools.permissions.PermissionTools with(android.support.v4.app.Fragment)
+io.github.mlstudio.yiji.tools.db.DataManager$$Lambda$1:
+    private static java.lang.Runnable get$Lambda(io.github.mlstudio.yiji.tools.db.DataManager,io.github.mlstudio.yiji.javabeans.YiJiRecord)
+io.github.mlstudio.yiji.tools.permissions.PermissionRequestListener
+io.github.mlstudio.yiji.tools.permissions.PermissionRequestUtil
+io.github.mlstudio.yiji.tools.permissions.PermissionTools:
+    35:35:public static io.github.mlstudio.yiji.tools.permissions.PermissionTools with(android.support.v4.app.Fragment)
     151:152:public void setIsPositive(boolean)
-io.github.yylyingy.yiji.ui.EditMoneyFragment:
+io.github.mlstudio.yiji.ui.EditMoneyFragment:
     android.app.Activity activity
-    103:103:public void updateTags()
-    128:128:public java.lang.String getHelpText()
-    136:140:public void editRequestFocus()
-    152:152:public void setEditColor(boolean)
-    163:166:public void getTagPosition(int[])
-io.github.yylyingy.yiji.ui.EditMoneyFragment$OnTagItemSelectedListener
-io.github.yylyingy.yiji.ui.TagChooseFragment:
-    24:24:public io.github.yylyingy.yiji.ui.TagChooseGridViewAdapter getTagAdapter()
-    28:29:public void setTagAdapter(io.github.yylyingy.yiji.ui.TagChooseGridViewAdapter)
-    95:98:public void updateTags()
-io.github.yylyingy.yiji.ui.YiJiScrollableViewPager
+    104:104:public void updateTags()
+    129:129:public java.lang.String getHelpText()
+    137:141:public void editRequestFocus()
+    153:153:public void setEditColor(boolean)
+    164:167:public void getTagPosition(int[])
+io.github.mlstudio.yiji.ui.EditMoneyFragment$OnTagItemSelectedListener
+io.github.mlstudio.yiji.ui.TagChooseFragment:
+    38:38:public io.github.mlstudio.yiji.ui.TagChooseGridViewAdapter getTagAdapter()
+    42:43:public void setTagAdapter(io.github.mlstudio.yiji.ui.TagChooseGridViewAdapter)
+    88:91:public void updateTags()
+io.github.mlstudio.yiji.ui.YiJiScrollableViewPager
 io.realm.BaseRealm:
     protected static final long UNVERSIONED
     private static final java.lang.String INCORRECT_THREAD_CLOSE_MESSAGE
@@ -8523,8 +8544,8 @@ top.wefor.now.PreferencesHelper:
     58:59:public void setHeadImages(java.lang.String)
     62:62:public java.lang.String getCoverImage()
     66:67:public void setCoverImage(java.lang.String)
-    70:71:public void setNgImages(java.lang.String)
-    74:74:public java.lang.String getNgImages()
+    70:70:public java.lang.String getNgImages()
+    74:75:public void setNgImages(java.lang.String)
 top.wefor.now.data.database.ZhihuDbHelper:
     38:44:public void getFromDatabase()
 top.wefor.now.data.http.ApiService:
@@ -8549,9 +8570,6 @@ top.wefor.now.ui.widget.swipeback.SwipeBackActivityBase
 top.wefor.now.ui.widget.swipeback.SwipeBackActivityHelper:
     75:75:public top.wefor.now.ui.widget.swipeback.SwipeBackLayout getSwipeBackLayout()
 top.wefor.now.ui.widget.swipeback.SwipeBackLayout:
-    private static final int MIN_FLING_VELOCITY
-    private static final int DEFAULT_SCRIM_COLOR
-    private static final int FULL_ALPHA
     public static final int EDGE_LEFT
     public static final int EDGE_RIGHT
     public static final int EDGE_BOTTOM
@@ -8559,16 +8577,18 @@ top.wefor.now.ui.widget.swipeback.SwipeBackLayout:
     public static final int STATE_IDLE
     public static final int STATE_DRAGGING
     public static final int STATE_SETTLING
+    private static final int MIN_FLING_VELOCITY
+    private static final int DEFAULT_SCRIM_COLOR
+    private static final int FULL_ALPHA
     private static final float DEFAULT_SCROLL_THRESHOLD
     private static final int OVERSCROLL_DISTANCE
-    173:174:public void setSensitivity(android.content.Context,float)
-    260:264:public void removeSwipeListener(top.wefor.now.ui.widget.swipeback.SwipeBackLayout$SwipeListener)
-    311:328:public void scrollToFinishActivity()
+    163:164:public void setSensitivity(android.content.Context,float)
+    250:254:public void removeSwipeListener(top.wefor.now.ui.widget.swipeback.SwipeBackLayout$SwipeListener)
+    273:290:public void scrollToFinishActivity()
 top.wefor.now.ui.widget.swipeback.Utils:
     28:29:private Utils()
     45:50:public static void convertActivityFromTranslucent(android.app.Activity)
 top.wefor.now.ui.widget.swipeback.ViewDragHelper:
-    private static final java.lang.String TAG
     public static final int INVALID_POINTER
     public static final int STATE_IDLE
     public static final int STATE_DRAGGING
@@ -8582,28 +8602,29 @@ top.wefor.now.ui.widget.swipeback.ViewDragHelper:
     public static final int DIRECTION_VERTICAL
     public static final int DIRECTION_ALL
     public static final int EDGE_SIZE
+    private static final java.lang.String TAG
     private static final int BASE_SETTLE_DURATION
     private static final int MAX_SETTLE_DURATION
-    398:400:public static top.wefor.now.ui.widget.swipeback.ViewDragHelper create(android.view.ViewGroup,float,top.wefor.now.ui.widget.swipeback.ViewDragHelper$Callback)
-    440:443:public void setSensitivity(android.content.Context,float)
-    476:476:public float getMinVelocity()
-    517:517:public int getEdgeSize()
-    558:558:public android.view.View getCapturedView()
-    566:566:public int getActivePointerId()
-    574:574:public int getTouchSlop()
-    597:607:public void abort()
-    628:631:public boolean smoothSlideViewTo(android.view.View,int,int)
-    786:797:public void flingCapturedView(int,int,int,int)
-    1009:1032:protected boolean canScroll(android.view.View,boolean,int,int,int,int)
-    1394:1400:public boolean checkTouchSlop(int)
-    1422:1439:public boolean checkTouchSlop(int,int)
-    1454:1460:public boolean isEdgeTouched(int)
+    185:187:public static top.wefor.now.ui.widget.swipeback.ViewDragHelper create(android.view.ViewGroup,float,top.wefor.now.ui.widget.swipeback.ViewDragHelper$Callback)
+    198:201:public void setSensitivity(android.content.Context,float)
+    223:223:public float getMinVelocity()
+    272:272:public int getEdgeSize()
+    312:312:public android.view.View getCapturedView()
+    320:320:public int getActivePointerId()
+    328:328:public int getTouchSlop()
+    351:361:public void abort()
+    382:385:public boolean smoothSlideViewTo(android.view.View,int,int)
+    540:551:public void flingCapturedView(int,int,int,int)
+    763:786:protected boolean canScroll(android.view.View,boolean,int,int,int,int)
+    1148:1154:public boolean checkTouchSlop(int)
+    1176:1193:public boolean checkTouchSlop(int,int)
+    1208:1214:public boolean isEdgeTouched(int)
 top.wefor.now.utils.NowAppUtils:
     14:14:public NowAppUtils()
     17:19:public static java.lang.Integer getWidth()
     23:24:public static java.lang.Integer getHeight()
-    38:46:public static boolean isNetworkConnected(android.content.Context)
-    50:50:public static boolean isBelowLollipop()
+    35:43:public static boolean isNetworkConnected(android.content.Context)
+    47:47:public static boolean isBelowLollipop()
 top.wefor.now.utils.PrefUtil:
     15:15:public PrefUtil()
 top.wefor.now.utils.RetrofitUtil:
